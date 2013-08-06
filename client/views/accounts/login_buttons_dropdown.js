@@ -213,27 +213,52 @@ Template._loginButtonsLoggedOutPasswordService.fields = function () {
   ];
 
   var signupFields = [
-    {fieldName: 'username', fieldLabel: 'Username',
+    {fieldName: 'username', fieldLabel: 'Username', class: 'primary',
      visible: function () {
        return _.contains(
          ["USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL", "USERNAME_ONLY"],
          Accounts.ui._passwordSignupFields());
      }},
-    {fieldName: 'email', fieldLabel: 'Email', inputType: 'email',
+    {fieldName: 'email', fieldLabel: 'Email', inputType: 'email', class: 'primary',
      visible: function () {
        return _.contains(
          ["USERNAME_AND_EMAIL", "EMAIL_ONLY"],
          Accounts.ui._passwordSignupFields());
      }},
-    {fieldName: 'email', fieldLabel: 'Email (optional)', inputType: 'email',
+    {fieldName: 'email', fieldLabel: 'Email (optional)', inputType: 'email', class: 'primary',
      visible: function () {
        return Accounts.ui._passwordSignupFields() === "USERNAME_AND_OPTIONAL_EMAIL";
      }},
-    {fieldName: 'password', fieldLabel: 'Password', inputType: 'password',
+    {fieldName: 'password', fieldLabel: 'Password', inputType: 'password', class: 'primary',
      visible: function () {
        return true;
      }},
-    {fieldName: 'password-again', fieldLabel: 'Password (again)',
+    {fieldName: 'contact_name', fieldLabel: 'Contact Name', inputType: 'text', class: 'profile',
+     visible: function () {
+       return true;
+     }},
+    {fieldName: 'agency_name', fieldLabel: 'Agency Name', inputType: 'text', class: 'profile',
+     visible: function () {
+       return true;
+     }},
+    {fieldName: 'address', fieldLabel: 'Address', inputType: 'text', class: 'profile',
+     visible: function () {
+       return true;
+     }},
+    {fieldName: 'phone', fieldLabel: 'Phone', inputType: 'text', class: 'profile',
+     visible: function () {
+       return true;
+     }},
+    {fieldName: 'fax', fieldLabel: 'Fax', inputType: 'text', class: 'profile',
+     visible: function () {
+       return true;
+     }},
+    {fieldName: 'aiga_id', fieldLabel: 'AIGA Member Number', inputType: 'text', class: 'profile',
+     visible: function () {
+       return true;
+     }},
+
+    {fieldName: 'password-again', fieldLabel: 'Password (again)', class: 'primary',
      inputType: 'password',
      visible: function () {
        // No need to make users double-enter their password if
@@ -413,6 +438,8 @@ var signup = function () {
 
   if (!matchPasswordAgainIfPresent())
     return;
+
+  options.profile = $('.profile').serializeObject();
 
   Accounts.createUser(options, function (error) {
     if (error) {

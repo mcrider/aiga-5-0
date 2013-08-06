@@ -1,0 +1,14 @@
+<template name="entry_list">
+  <div class="row">
+    <span class="span4"><h2>List of Entries</h2></span>
+    <span class="span3"><a class="btn" id="newEntry" href='#'>Add An Entry</a></span>
+  </div>
+
+  <ul>
+    {{#each entries}}
+      <li>{{title}}</li>
+    {{else}}
+      <li>No Entries</li>
+    {{/each}}
+  </ul>
+</template>

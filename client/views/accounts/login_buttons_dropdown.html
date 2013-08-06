@@ -139,8 +139,8 @@ https://gist.github.com/968927
 
 <template name="_loginButtonsFormField">
   {{#if visible}}
-    <label id="login-{{fieldName}}-label" for="login-{{fieldName}}">{{fieldLabel}}</label>
-    <input id="login-{{fieldName}}" type="{{inputType}}" />
+    <label id="login-{{fieldName}}-label" class="{{class}}" for="login-{{fieldName}}">{{fieldLabel}}</label>
+    <input id="login-{{fieldName}}" name="{{fieldName}}" class="{{class}}" type="{{inputType}}" />
   {{/if}}
 </template>
 

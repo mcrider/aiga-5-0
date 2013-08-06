@@ -1,0 +1,66 @@
+<template name="entry">
+{{#with page}}
+  <div class="container">
+    <div class="row">
+      <div class="span10">
+        <h1>{{title}}</h1>
+        <p>{{{contents}}}</p>
+        <div class="blocks blocks-body">
+          {{{renderBlocks zone="body"}}}
+        </div>
+
+        <div class="entry-container container">
+          {{#if currentUser}}
+            {{#if loggingIn}}
+              {{! We aren't actually logged in yet; we're just setting Meteor.userId
+                  optimistically during an at-startup login-with-token. We expose this
+                  state so other UIs can treat it specially, but we'll just treat it
+                  as logged out. }}
+              {{#if dropdown}}
+                {{> _loginButtonsLoggingIn }}
+              {{else}}
+                <div class="login-buttons-with-only-one-button">
+                  {{> _loginButtonsLoggingInSingleLoginButton }}
+                </div>
+              {{/if}}
+            {{else}}
+              <div class="row top">
+                <div class="span7 entry-list-container">
+                  {{#if currentlyEntering}}
+                    {{> new_entry}}
+                  {{else}}
+                    {{> entry_list}}
+                  {{/if}}
+                </div>
+                <div class="span4">
+                  <h3>Total Cost</h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="span8">
+                  {{#with currentUser}}
+                    <div class="user-info">
+                      <p>{{agency_name}}</p>
+                      <p>{{contact_name}} ({{displayName}})</p>
+                      <p>{{address}}</p>
+                      <p>{{phone}}</p>
+                      <p>{{fax}}</p>
+                    </div>
+                  {{/with}}
+                  <div class="btn login-button single-login-button" id="login-buttons-logout">Sign Out</div>
+                </div>
+                <div class="span4">
+                  <a class="btn" href="#">Pay Online</a>
+                </div>
+              </div>
+            {{/if}}
+          {{else}}
+            {{> _loginButtonsLoggedOutAllServices}}
+          {{/if}}
+        </div>
+
+      </div>
+    </div>
+  </div>
+{{/with}}
+</template>

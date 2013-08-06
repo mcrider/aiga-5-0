@@ -137,4 +137,24 @@ Meteor.startup(function () {
     Navigation.insert({location: "footer_active", pages: nav});
     Navigation.insert({location: "footer_disabled", pages: []});
   }
+
+   // Pages
+  Entries = new Meteor.Collection("entries");
+  Meteor.publish('entries', function () {
+    return Entries.find({userId: this.userId});
+  });
+  Entries.allow({
+    insert: function (userId, doc) {
+      // the user must be logged in, and the document must be owned by the user
+      return true;
+    },
+    update: function (userId, doc, fields, modifier) {
+      // can only change your own documents
+      return doc.userId === userId;
+    },
+    remove: function (userId, doc) {
+      // can only remove your own documents
+      return doc.userId === userId;
+    },
+  });
 });
