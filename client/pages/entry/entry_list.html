@@ -4,11 +4,20 @@
     <span class="span3"><a class="btn" id="newEntry" href='#'>Add An Entry</a></span>
   </div>
 
-  <ul>
-    {{#each entries}}
-      <li>{{title}}</li>
-    {{else}}
-      <li>No Entries</li>
-    {{/each}}
-  </ul>
+  {{#each entries}}
+    <div class="row entry">
+      <div class="span4">
+        <h3>Project: {{project_name}}</h3>
+        <h4>Client: {{client_name}}</h4>
+        <span class="file-list">Attachments</span>
+      </div>
+      <div class="span2">
+        <a class="btn edit-project">Edit</a>
+        <a class="btn remove-project"><i class="icon-middle icon-remove"></i></a>
+      </div>
+    </div>
+  {{else}}
+    <div>No Entries</div>
+  {{/each}}
+
 </template>
