@@ -22,6 +22,13 @@ Template.entry.currentlyEntering = function() {
   return Session.get('newEntry');
 }
 
+Template.entry.totalFee = function() {
+  var costPerEntry = 40;
+  var numEntries = Entries.find().count();
+
+  return numEntries * costPerEntry;
+}
+
 // shared between dropdown and single mode
 Template.entry.events({
   'click #login-buttons-logout': function() {

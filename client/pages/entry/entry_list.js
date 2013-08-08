@@ -14,6 +14,11 @@ Template.entry_list.events({
   },
   'click .remove-project': function(e) {
     e.preventDefault();
-    debugger;
+    $('#deleteEntryModal').modal('show');
+    Session.set('currentEntry', this._id);
+  },
+  'click .delete-entry': function(e) {
+    $('#deleteEntryModal').modal('hide');
+    Entries.remove(Session.get('currentEntry'));
   }
 });
