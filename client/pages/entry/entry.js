@@ -23,10 +23,10 @@ Template.entry.currentlyEntering = function() {
 }
 
 Template.entry.totalFee = function() {
-  var costPerEntry = 40;
+  if (!Session.get('currentRate')) Session.set('currentRate', 40)
   var numEntries = Entries.find().count();
 
-  return numEntries * costPerEntry;
+  return numEntries * Session.get('currentRate');
 }
 
 // shared between dropdown and single mode
@@ -35,6 +35,10 @@ Template.entry.events({
     Meteor.logout(function () {
       loginButtonsSession.closeDropdown();
     });
+  },
+  'change #rate': function(e) {
+    var rate = $(e.currentTarget).val();
+    Session.set('currentRate', rate);
   }
 });
 
