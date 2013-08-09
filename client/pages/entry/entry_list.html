@@ -7,9 +7,12 @@
   {{#each entries}}
     <div class="row entry">
       <div class="span4">
-        <h4>{{project_name}}</h4>
-        <h5>{{client_name}}</h5>
-        <span class="file-list">Attachments</span>
+        <div class="entry-info">
+          <h4>{{project_name}}</h4>
+          <h5>{{client_name}}</h5>
+          <span class="file-list">Attachments</span>
+        </div>
+        {{> edit_entry}}
       </div>
       <div class="span2 entry-buttons">
         <a class="btn remove-project pull-right"><i class="icon-middle icon-remove"></i></a>

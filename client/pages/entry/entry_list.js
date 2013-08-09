@@ -10,7 +10,20 @@ Template.entry_list.events({
   },
   'click .edit-project': function(e) {
     e.preventDefault();
-    debugger;
+    if($(e.currentTarget).hasClass('editing')) {
+      $(e.currentTarget).text('Edit').removeClass('editing');
+      var $container = $(e.currentTarget).parent().parent();
+      $container.find('.edit-entry-form').fadeOut(200, function(){
+        $container.find('.entry-info').fadeIn(200);
+      });
+    } else {
+      $(e.currentTarget).text('Cancel').addClass('editing');
+      var $container = $(e.currentTarget).parent().parent();
+      $container.find('.entry-info').fadeOut(200, function(){
+        $container.find('.edit-entry-form').fadeIn(200);
+      });
+    }
+
   },
   'click .remove-project': function(e) {
     e.preventDefault();
