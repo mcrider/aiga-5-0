@@ -11,8 +11,9 @@
           <h4>{{project_name}}</h4>
           <h5>{{client_name}}</h5>
           <span class="file-list">Attachments</span>
+          {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="icon-file-alt"></i> <a href="{{url}}" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
         </div>
-        {{> edit_entry}}
+        {{#isolate}}{{> edit_entry}}{{/isolate}}
       </div>
       <div class="span2 entry-buttons">
         <a class="btn remove-project pull-right"><i class="icon-middle icon-remove"></i></a>
