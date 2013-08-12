@@ -99,6 +99,10 @@ Handlebars.registerHelper("humanReadableTime", function (timestamp) {
   return utils.displayHumanReadableTime(timestamp);
 });
 
+Handlebars.registerHelper("humanReadableDate", function (timestamp) {
+  return utils.displayHumanReadableDate(timestamp);
+});
+
 // Get a setting value
 Handlebars.registerHelper("getSetting", function (settingName) {
   var settingValue = utils.getSetting(settingName);

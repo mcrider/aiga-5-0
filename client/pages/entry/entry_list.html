@@ -18,6 +18,7 @@
       <div class="span2 entry-buttons">
         <a class="btn remove-project pull-right"><i class="icon-middle icon-remove"></i></a>
         <a class="btn edit-project pull-right">Edit</a>
+        {{#if paid}}<p class="squared-away pull-right">Paid on {{humanReadableDate paid}}</p>{{/if}}
       </div>
     </div>
   {{else}}

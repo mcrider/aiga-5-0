@@ -158,3 +158,31 @@ Meteor.startup(function () {
     },
   });
 });
+
+Meteor.methods({
+  makePayment: function(token, amount, userId) {
+    var Stripe = StripeAPI('sk_test_F5IQWM1HHXVARFptnFLOkGTe');
+    Stripe.charges.create({
+      amount: amount,
+      currency: "USD",
+      card: token
+    }, function (err, res) {
+      if(err) {
+        console.log('Error making payment');
+      } else {
+        console.log(err, res);
+      }
+    });
+  },
+  setAsPaid: function(userId) {
+    Entries.find({userId: userId, paid: false}).forEach(function(entry) {
+      Entries.update(entry._id, {$set: {paid: Date.now()}});
+    })
+
+  },
+  setAsUnpaid: function(userId) {
+    Entries.find({userId: userId}).forEach(function(entry) {
+      Entries.update(entry._id, {$set: {paid: false}});
+    })
+  }
+});

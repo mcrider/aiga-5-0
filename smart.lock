@@ -14,7 +14,8 @@
       "filepicker": {},
       "bootstrap-wysiwyg": {},
       "analyticsjs": {},
-      "ncp": {}
+      "ncp": {},
+      "stripe": {}
     },
     "packages": {
       "underscore-string": {
@@ -61,6 +62,11 @@
         "git": "https://github.com/kidovate/meteor-ncp.git",
         "tag": "v0.2.1",
         "commit": "18019d468893dc9a62ddedfdc616632daae17a7d"
+      },
+      "stripe": {
+        "git": "https://github.com/appleifreak/stripe-meteor.git",
+        "tag": "v1.2.0",
+        "commit": "4f156b5d8208fd449a5689cc259a95e673ef1252"
       },
       "page-js-ie-support": {
         "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",

@@ -24,7 +24,7 @@ Template.entry.currentlyEntering = function() {
 
 Template.entry.totalFee = function() {
   if (!Session.get('currentRate')) Session.set('currentRate', 40)
-  var numEntries = Entries.find().count();
+  var numEntries = Entries.find({paid: false}).count();
 
   return numEntries * Session.get('currentRate');
 }
@@ -39,6 +39,27 @@ Template.entry.events({
   'change #rate': function(e) {
     var rate = $(e.currentTarget).val();
     Session.set('currentRate', rate);
+  },
+  'click .payup-sucka': function(e) {
+    e.preventDefault();
+
+    var amount = Template.entry.totalFee() * 100;
+    var userId = Meteor.userId();
+    StripeCheckout.open({
+        key: 'pk_test_6Tuzfip0q53BIzRSCHhaeuUU',
+        amount: amount,
+        name: 'AIGA 5-0',
+        description: 'Entrance fee for the AIGA 5-0 Awards',
+        panelLabel: 'Pay Now',
+        token: function(res) {
+          if(!res.error) {
+            Meteor.call('makePayment', res.id, amount, userId);
+
+            // FIXME: This should be called in makePayment but there are weird issues calling meteor methods inside a callback
+            Meteor.call('setAsPaid', userId);
+          }
+        }
+    });
   }
 });
 

@@ -12,6 +12,7 @@
     "filepicker": {},
     "bootstrap-wysiwyg": {},
     "analyticsjs": {},
-    "ncp": {}
+    "ncp": {},
+    "stripe": {}
   }
 }

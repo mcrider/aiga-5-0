@@ -24,6 +24,7 @@ Template.new_entry.events({
     e.preventDefault();
     var entryData = utils.getFormValues("#newEntryForm");
     entryData.userId = Meteor.userId();
+    entryData.paid = false;
 
     // Add any uploaded files
     var files = Session.get('entry-files');
