@@ -75,30 +75,109 @@
   {{#if inForgotPasswordFlow}}
     {{> _forgotPasswordForm}}
   {{else}}
-    {{#each fields}}
-      {{> _loginButtonsFormField}}
-    {{/each}}
-    {{> _loginButtonsMessages}}
-    <button class="btn btn-primary" id="login-buttons-password" type="button">
+    <div class="span6 offset2">
       {{#if inSignupFlow}}
-        Create
+        <fieldset>
+          <legend>Create an account</legend>
+          <div class="control-group">
+            <label id="login-email-label" class="primary" for="login-email">Email</label>
+            <div class="controls controls-row">
+              <input id="login-email" type="email" name="email" class="primary span4">
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label id="login-password-label" class="primary" for="login-password">Password</label>
+            <div class="controls">
+              <input id="login-password" type="password" name="password" class="primary span4">
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label id="login-contact_name-label" class="profile" for="login-contact_name">Contact Name</label>
+            <div class="controls">
+              <input id="login-contact_name" name="contact_name" class="profile span4" type="text">
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label id="login-agency_name-label" class="profile" for="login-agency_name">Agency Name</label>
+            <div class="controls">
+              <input id="login-agency_name" name="agency_name" class="profile span4" type="text">
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label id="login-address-label" class="profile" for="login-address">Address</label>
+            <div class="controls">
+              <input id="login-address" name="address" class="profile span4" type="text">
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label id="login-phone-label" class="profile" for="login-phone">Phone</label>
+            <div class="controls">
+              <input id="login-phone" name="phone" class="profile span4" type="text">
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label id="login-fax-label" class="profile" for="login-fax">Fax</label>
+            <div class="controls">
+              <input id="login-fax" name="fax" class="profile span4" type="text">
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label id="login-aiga_id-label" class="profile" for="login-aiga_id">AIGA Member Number</label>
+            <div class="controls">
+              <input id="login-aiga_id" name="aiga_id" class="profile span4" type="text">
+            </div>
+          </div>
+        </fieldset>
       {{else}}
-        Sign in
+        <fieldset>
+          <legend>Login to your account</legend>
+          <div class="control-group">
+            <label id="login-email-label" class="profile" for="login-email">Email</label>
+            <div class="controls">
+              <input id="login-email" name="email" type="text">
+            </div>
+          </div>
+          <div class="control-group">
+            <label id="login-password-label" class="profile" for="login-aiga_id">Password</label>
+            <div class="controls">
+              <input id="login-password" name="password" type="password">
+            </div>
+          </div>
+        </fieldset>
       {{/if}}
-    </button>
-    {{#if inLoginFlow}}
-      {{#if showCreateAccountLink}}
-        <hr />
-        <a id="signup-link">Create account</a>
-      {{/if}}
-      {{#if showForgotPasswordLink}}
-        <span class="login-link-separator">•</span>
-        <a id="forgot-password-link">Retrieve password</a>
-      {{/if}}
-    {{/if}}
-    {{#if inSignupFlow}}
-      {{> _loginButtonsBackToLoginLink}}
-    {{/if}}
+    </div>
+    {{> _loginButtonsMessages}}
+
+      <div class="span6 offset2">
+        <button class="btn btn-primary" id="login-buttons-password" type="button">
+          {{#if inSignupFlow}}
+            Create
+          {{else}}
+            Sign in
+          {{/if}}
+        </button>
+        {{#if inLoginFlow}}
+          {{#if showCreateAccountLink}}
+            <hr />
+            <a id="signup-link">Create account</a>
+          {{/if}}
+          {{#if showForgotPasswordLink}}
+            <span class="login-link-separator">•</span>
+            <a id="forgot-password-link">Retrieve password</a>
+          {{/if}}
+        {{/if}}
+        {{#if inSignupFlow}}
+          {{> _loginButtonsBackToLoginLink}}
+        {{/if}}
+      </div>
+
   {{/if}}
 </template>
 

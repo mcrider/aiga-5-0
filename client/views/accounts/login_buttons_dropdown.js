@@ -63,24 +63,24 @@ Template._loginButtonsLoggedOutAllServices.events({
 		event.stopPropagation();
 	},
   'click #login-buttons-password': function (event) {
-    Accounts.ui.currentSelectorScope = $(event.currentTarget).parent();
+    Accounts.ui.currentSelectorScope = $(event.currentTarget).parent().parent();
     loginOrSignup();
   },
 
   'keypress #forgot-password-email': function (event) {
-    Accounts.ui.currentSelectorScope = $(event.currentTarget).parent();
+    Accounts.ui.currentSelectorScope = $(event.currentTarget).parent().parent();
     if (event.keyCode === 13)
       forgotPassword();
   },
 
   'click #login-buttons-forgot-password': function (event) {
-    Accounts.ui.currentSelectorScope = $(event.currentTarget).parent();
+    Accounts.ui.currentSelectorScope = $(event.currentTarget).parent().parent();
     event.stopPropagation();
     forgotPassword();
   },
 
   'click #signup-link': function (event) {
-    Accounts.ui.currentSelectorScope = $(event.currentTarget).parent();
+    Accounts.ui.currentSelectorScope = $(event.currentTarget).parent().parent();
     event.stopImmediatePropagation();
     loginButtonsSession.resetMessages();
 
@@ -108,7 +108,7 @@ Template._loginButtonsLoggedOutAllServices.events({
     return false;
   },
   'click #forgot-password-link': function (event) {
-    Accounts.ui.currentSelectorScope = $(event.currentTarget).parent();
+    Accounts.ui.currentSelectorScope = $(event.currentTarget).parent().parent();
     event.stopPropagation();
     loginButtonsSession.resetMessages();
 
@@ -145,7 +145,7 @@ Template._loginButtonsLoggedOutAllServices.events({
       document.getElementById('login-username-or-email').value = email || username;
   },
   'keypress #login-username, keypress #login-email, keypress #login-username-or-email, keypress #login-password, keypress #login-password-again': function (event) {
-    Accounts.ui.currentSelectorScope = $(event.currentTarget).parent();
+    Accounts.ui.currentSelectorScope = $(event.currentTarget).parent().parent();
     if (event.keyCode === 13)
       loginOrSignup();
   }

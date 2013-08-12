@@ -3,8 +3,6 @@
   <div class="container">
     <div class="row">
       <div class="span10">
-
-
         <div class="entry-container container">
           {{#if currentUser}}
             {{#if loggingIn}}
@@ -45,13 +43,14 @@
                   {{#with currentUser}}
                     <div class="user-info">
                       <p>{{agency_name}}</p>
-                      <p>{{contact_name}} ({{displayName}})</p>
+                      {{#if contact_name}}<p>{{contact_name}} ({{displayName}})</p>{{else}}<p>{{displayName}}</p>{{/if}}
                       <p>{{address}}</p>
                       <p>{{phone}}</p>
                       <p>{{fax}}</p>
                     </div>
                   {{/with}}
-                  <div class="btn login-button single-login-button" id="login-buttons-logout">Sign Out</div>
+                  <div class="btn btn-mini edit-profile">Edit Profile</div>
+                  <div class="btn btn-mini login-button single-login-button" id="login-buttons-logout">Sign Out</div>
                 </div>
               </div>
             {{/if}}
