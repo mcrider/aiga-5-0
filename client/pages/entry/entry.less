@@ -55,7 +55,7 @@ legend {
     /*border-bottom: 3px solid #596974;
     margin: -12px -12px 0 -12px;
 */
-    .entry-list-container {
+    .entry-list-container, .admin-entries-container {
       /*border-right: 3px solid #596974;*/
 
       .entry {
@@ -140,4 +140,76 @@ legend {
       margin-bottom: 0;
     }
   }
+}
+
+.admin-entries-container {
+  .title-row {
+    margin-left: -15px;
+    margin-bottom: 5px;
+  }
+  h4 {
+    margin: 0 30px 3px 0;
+  }
+  h5 {
+    margin-top: 2px;
+  }
+  .span4 {
+    margin-left: 16px;
+    margin-top: 5px;
+  }
+  .entry {
+    background: white;
+    padding-top: 8px;
+    padding-bottom: 20px;
+    margin-left: 0;
+    margin-bottom: 30px;
+
+    -webkit-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.2);
+    -moz-box-shadow:    2px 2px 5px rgba(50, 50, 50, 0.2);
+    box-shadow:         2px 2px 5px rgba(50, 50, 50, 0.2);
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+
+    .entry-buttons {
+      margin-top: 12px;
+
+      .edit-project {
+        margin-right: 12px;
+      }
+      .remove-project {
+
+      }
+    }
+
+  }
+  .entry-buttons {
+    text-align: left;
+  }
+  .squared-away {
+    text-align: left;
+  }
+}
+
+
+.numberCircle {
+  cursor: pointer;
+
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  border-radius: 999px;
+
+  width: 12px;
+  height: 12px;
+  padding: 4px;
+  line-height: 12px;
+
+  background: #596974;
+  border: 2px solid #596974;
+  color: white;
+  text-align: center;
+
+  font-size: 12px;
 }

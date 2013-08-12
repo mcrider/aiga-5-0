@@ -141,7 +141,11 @@ Meteor.startup(function () {
    // Pages
   Entries = new Meteor.Collection("entries");
   Meteor.publish('entries', function () {
-    return Entries.find({userId: this.userId});
+    if (this.userId && Roles.userIsInRole(this.userId, ['admin'])) {
+      return Entries.find();
+    } else {
+      return Entries.find({userId: this.userId});
+    }
   });
   Entries.allow({
     insert: function (userId, doc) {

@@ -11,8 +11,9 @@
             <thead>
               <tr>
                 <th>Roles</th>
+                <th>Entries</th>
+                <th>Name</th>
                 <th>Email</th>
-                <th>Joined</th>
                 {{#if isInRole 'admin'}}<th>Remove</th>{{/if}}
                 <th style="width: 36px;"></th>
               </tr>
@@ -24,9 +25,10 @@
                     <a class="admin" title="Admin"><i class="icon-key{{#ifAdmin this._id}} enabled{{/ifAdmin}}"></i></a>
                     <a class="author" title="Author"><i class="icon-book{{#ifAuthor this._id}} enabled{{/ifAuthor}}"></i></a>
                   </td>
+                  <td><div class="numberCircle">{{entryCount}}</div></td>
                   <!--<td>{{profile.name}}</td>-->
+                  <td>{{profile.contact_name}}</td>
                   <td>{{emails.0.address}}</td>
-                  <td>{{humanReadableTime createdAt}}</td>
                   {{#if isInRole 'admin'}}<td>
                       <!--<a href="#"><i class="icon-pencil"></i></a>-->
                       <a class="delete-user remove" href="#"><i class="icon-remove"></i></a>
@@ -36,6 +38,9 @@
             </tbody>
           </table>
         </div>
+      </div>
+      <div class="span4 admin-entries-container">
+        {{{renderSidebar}}}
       </div>
     </div>
   </div>

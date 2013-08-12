@@ -1,9 +1,16 @@
 
-Template.entry_list.entries = function() {
-  return Entries.find({userId: Meteor.userId()});
+Template.admin_entry_list.entries = function() {
+  return Entries.find({userId: Session.get('adminUserId')});
 }
 
-Template.entry_list.events({
+Template.admin_entry_list.user = function() {
+  var user = Meteor.users.findOne(Session.get('adminUserId'));
+  if (user && user.profile && user.profile.contact_name) return user.profile.contact_name;
+  else if (user && user.emails[0].address) return user.emails[0].address;
+  else return '';
+}
+
+Template.admin_entry_list.events({
   'click #newEntry': function(e) {
     Session.set('entry-files', null);
     e.preventDefault();

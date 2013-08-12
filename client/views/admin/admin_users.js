@@ -2,6 +2,11 @@ Template.admin_users.users = function() {
   return Meteor.users.find();
 };
 
+Template.admin_users.entryCount = function() {
+  var userId = this._id;
+  return Entries.find({userId: userId}).count();
+}
+
 Template.admin_users.events = {
   'click .admin': function() {
     if(!this._id) return false;
@@ -30,5 +35,20 @@ Template.admin_users.events = {
     Roles.removeUsersFromRoles([userId], ['admin']);
     Roles.removeUsersFromRoles([userId], ['author']);
     Meteor.users.remove(userId);
+  },
+  'click .numberCircle': function(e) {
+    Session.set('adminUserId', this._id);
   }
 };
+
+// Renders the header template (delaying load until site settings are available)
+Template.admin_users.helpers({
+  renderSidebar: function (block) {
+    if (Session.get('adminUserId')) {
+      var fragment = Template['admin_entry_list'](); // this calls the template and returns the HTML.
+      return fragment;
+    } else {
+      return '';
+    }
+  }
+});
