@@ -22,6 +22,10 @@ Template.entry.currentlyEntering = function() {
   return Session.get('newEntry');
 }
 
+Template.entry.notEditingUser = function() {
+  return Session.get('notEditingUser')
+}
+
 Template.entry.totalFee = function() {
   if (!Session.get('currentRate')) Session.set('currentRate', 40)
   var numEntries = Entries.find({userId: Meteor.userId(), paid: false}).count();
@@ -60,6 +64,16 @@ Template.entry.events({
           }
         }
     });
+  },
+  'click .edit-profile': function() {
+    Session.set('notEditingUser', false);
+  },
+  'click .save-profile': function() {
+    Meteor.users.update({ _id: Meteor.userId()}, {$set: {profile: utils.getFormValues('.edit-user-info-form')}});
+    Session.set('notEditingUser', true);
+  },
+  'click .cancel-save-profile': function() {
+    Session.set('notEditingUser', true);
   }
 });
 

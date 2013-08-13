@@ -41,16 +41,62 @@
               <div class="row">
                 <div class="span12 user-info-container">
                   {{#with currentUser}}
-                    <div class="user-info">
-                      <p>{{agency_name}}</p>
-                      {{#if contact_name}}<p>{{contact_name}} ({{displayName}})</p>{{else}}<p>{{displayName}}</p>{{/if}}
-                      <p>{{address}}</p>
-                      <p>{{phone}}</p>
-                      <p>{{fax}}</p>
-                    </div>
+                    {{#if notEditingUser}}
+                      <div class="user-info">
+                        {{#if agency_name}}<p>{{agency_name}}</p>{{/if}}
+                        {{#if contact_name}}<p>{{contact_name}} ({{displayName}})</p>{{else}}<p>{{displayName}}</p>{{/if}}
+                        {{#if address}}<p>{{address}}</p>{{/if}}
+                        {{#if phone}}<p>Phone: {{phone}}</p>{{/if}}
+                        {{#if fax}}<p>Fax: {{fax}}</p>{{/if}}
+                        {{#if aiga_id}}<p>AIGA #: {{aiga_id}}</p>{{/if}}
+                      </div>
+                    {{else}}
+                      <div class="edit-user-info row">
+                        <form class="edit-user-info-form">
+                          <div class="row">
+                            <div class="span4">
+                              <span class="help-inline">Agency Name</span>
+                              <input value="{{agency_name}}" id="login-agency_name" name="agency_name" class="profile span4" type="text">
+                            </div>
+                            <div class="span4">
+                              <span class="help-inline">Contact Name</span>
+                              <input value="{{contact_name}}" id="login-contact_name" name="contact_name" class="profile span4" type="text">
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="span8">
+                              <span class="help-inline">Address</span>
+                              <input value="{{address}}" id="login-address" name="address" class="profile span8" type="text">
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="span4">
+                              <span class="help-inline">Phone</span>
+                              <input value="{{phone}}" id="login-phone" name="phone" class="profile span4" type="text">
+                            </div>
+                            <div class="span4">
+                              <span class="help-inline">Fax</span>
+                              <input value="{{fax}}" id="login-fax" name="fax" class="profile span4" type="text">
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="span4">
+                              <span class="help-inline">AIGA Member ID</span>
+                              <input value="{{aiga_id}}" id="login-aiga_id" name="aiga_id" class="profile span4" type="text">
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    {{/if}}
                   {{/with}}
-                  <div class="btn btn-mini edit-profile">Edit Profile</div>
-                  <div class="btn btn-mini login-button single-login-button" id="login-buttons-logout">Sign Out</div>
+                  {{#if notEditingUser}}
+                    <div class="btn btn-mini edit-profile">Edit Profile</div>
+                    <div class="btn btn-mini login-button single-login-button" id="login-buttons-logout">Sign Out</div>
+                  {{else}}
+                    <div class="btn btn-mini save-profile">Save Profile</div>
+                    <div class="btn btn-mini cancel-save-profile">Cancel</div>
+                  {{/if}}
+
                 </div>
               </div>
             {{/if}}
