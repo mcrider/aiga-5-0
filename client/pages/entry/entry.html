@@ -41,16 +41,7 @@
               <div class="row">
                 <div class="span12 user-info-container">
                   {{#with currentUser}}
-                    {{#if notEditingUser}}
-                      <div class="user-info">
-                        {{#if agency_name}}<p>{{agency_name}}</p>{{/if}}
-                        {{#if contact_name}}<p>{{contact_name}} ({{displayName}})</p>{{else}}<p>{{displayName}}</p>{{/if}}
-                        {{#if address}}<p>{{address}}</p>{{/if}}
-                        {{#if phone}}<p>Phone: {{phone}}</p>{{/if}}
-                        {{#if fax}}<p>Fax: {{fax}}</p>{{/if}}
-                        {{#if aiga_id}}<p>AIGA #: {{aiga_id}}</p>{{/if}}
-                      </div>
-                    {{else}}
+                    {{#if editingUser}}
                       <div class="edit-user-info row">
                         <form class="edit-user-info-form">
                           <div class="row">
@@ -87,14 +78,23 @@
                           </div>
                         </form>
                       </div>
+                    {{else}}
+                      <div class="user-info">
+                        {{#if agency_name}}<p>{{agency_name}}</p>{{/if}}
+                        {{#if contact_name}}<p>{{contact_name}} ({{displayName}})</p>{{else}}<p>{{displayName}}</p>{{/if}}
+                        {{#if address}}<p>{{address}}</p>{{/if}}
+                        {{#if phone}}<p>Phone: {{phone}}</p>{{/if}}
+                        {{#if fax}}<p>Fax: {{fax}}</p>{{/if}}
+                        {{#if aiga_id}}<p>AIGA #: {{aiga_id}}</p>{{/if}}
+                      </div>
                     {{/if}}
                   {{/with}}
-                  {{#if notEditingUser}}
-                    <div class="btn btn-mini edit-profile">Edit Profile</div>
-                    <div class="btn btn-mini login-button single-login-button" id="login-buttons-logout">Sign Out</div>
-                  {{else}}
+                  {{#if editingUser}}
                     <div class="btn btn-mini save-profile">Save Profile</div>
                     <div class="btn btn-mini cancel-save-profile">Cancel</div>
+                  {{else}}
+                    <div class="btn btn-mini edit-profile">Edit Profile</div>
+                    <div class="btn btn-mini login-button single-login-button" id="login-buttons-logout">Sign Out</div>
                   {{/if}}
 
                 </div>

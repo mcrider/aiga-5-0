@@ -22,8 +22,9 @@ Template.entry.currentlyEntering = function() {
   return Session.get('newEntry');
 }
 
-Template.entry.notEditingUser = function() {
-  return Session.get('notEditingUser')
+Template.entry.editingUser = function() {
+
+  return Session.get('editingUser')
 }
 
 Template.entry.totalFee = function() {
@@ -66,14 +67,14 @@ Template.entry.events({
     });
   },
   'click .edit-profile': function() {
-    Session.set('notEditingUser', false);
+    Session.set('editingUser', true);
   },
   'click .save-profile': function() {
     Meteor.users.update({ _id: Meteor.userId()}, {$set: {profile: utils.getFormValues('.edit-user-info-form')}});
-    Session.set('notEditingUser', true);
+    Session.set('editingUser', false);
   },
   'click .cancel-save-profile': function() {
-    Session.set('notEditingUser', true);
+    Session.set('editingUser', false);
   }
 });
 
