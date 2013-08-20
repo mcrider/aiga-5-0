@@ -50,7 +50,7 @@ Template.entry.events({
     var amount = Template.entry.totalFee() * 100;
     var userId = Meteor.userId();
     StripeCheckout.open({
-        key: 'pk_test_6Tuzfip0q53BIzRSCHhaeuUU',
+        key: 'pk_test_2hkkBATkmUpbqaxMFJX1aXWQ',
         amount: amount,
         name: 'AIGA 5-0',
         description: 'Entrance fee for the AIGA 5-0 Awards',
