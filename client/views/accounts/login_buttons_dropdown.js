@@ -449,6 +449,7 @@ var signup = function () {
     if (error) {
       loginButtonsSession.errorMessage(error.reason || "Unknown error");
     } else {
+      Meteor.call('sendWelcomeEmail', email);
       loginButtonsSession.closeDropdown();
     }
   });

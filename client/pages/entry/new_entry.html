@@ -6,16 +6,16 @@
   <form id="newEntryForm">
     <fieldset id="project_information">
       <h4>Project Information</h4>
-      <input class="input-block-level" type="text" id="project_name" name="project_name" placeholder="Project Name" class="required" />
+      <input class="input-block-level" type="text" id="project_name" name="project_name" placeholder="Project Name*" class="required" />
       <input class="input-block-level" type="text" id="client_name" name="client_name" placeholder="Client Name" class="required" />
       <select class="input-block-level" id="type" name="type">
-        <option>Project Type</option>
+        <option value="none">Project Type*</option>
         <option value="print">Print / Environmental</option>
         <option value="web">Web / Interactive</option>
         <option value="motion">Motion Graphics</option>
       </select>
       <div id="print_fields" class="project_fields hidden">
-        <input class="input-block-level" type="text" id="url" name="url" placeholder="URL" />
+        <input class="input-block-level" type="text" id="url" name="url" placeholder="Print Company" />
         <a class="btn filepicker-file" title="File(s)"><i class="icon-left icon-file"></i>Add File(s)</a>
         {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="file-icon icon-remove-sign"></i> <a href="{{url}}" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
       </div>
@@ -25,22 +25,34 @@
         {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="file-icon icon-remove-sign"></i> <a href="{{url}}" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
       </div>
       <div id="motion_fields" class="project_fields hidden">
-        <input class="input-block-level" type="text" id="url" name="url" placeholder="Print Company" />
+        <input class="input-block-level" type="text" id="url" name="url" placeholder="URL" />
         <a class="btn filepicker-file" title="File(s)"><i class="icon-left icon-file"></i>Add File(s)</a>
         {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="file-icon icon-remove-sign"></i> <a href="{{url}}" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
       </div>
+      {{#if entryErrorMessage}}
+        <div class="alert alert-error">{{entryErrorMessage}}</div>
+      {{/if}}
       <button id="entry_next" class="btn pull-right">Next<i class="icon-right icon-caret-right"></i></button>
     </fieldset>
     <fieldset id="project_team" class="hidden">
-      <h4>Project Team</h4>
-      <input class="input-block-level" type="text" id="art_director" name="art_director" placeholder="Art Director" class="required" />
-      <input class="input-block-level" type="text" id="designer" name="designer" placeholder="Designer" class="required" />
-      <input class="input-block-level" type="text" id="paper" name="paper" placeholder="Paper" />
-      <input class="input-block-level" type="text" id="illustrator" name="illustrator" placeholder="Illustrator" />
-      <input class="input-block-level" type="text" id="developer" name="developer" placeholder="Developer" />
-      <input class="input-block-level" type="text" id="copywriter" name="copywriter" placeholder="Copywriter" />
-      <input class="input-block-level" type="text" id="photographer" name="photographer" placeholder="Photographer" />
-      <input class="input-block-level" type="text" id="special_consultant" name="special_consultant" placeholder="Special Consultant" />
+      <h4 class="pull-left">Project Team</h4>
+      <p class="team_info pull-right">Use commas for multiple names.</p>
+      <input type="text" id="art_director" name="art_director" placeholder="Art Director(s)"
+        class="input-block-level required team_member show_for_print show_for_web show_for_motion" />
+      <input type="text" id="designer" name="designer" placeholder="Designer(s)"
+        class="input-block-level required team_member show_for_print show_for_web show_for_motion" />
+      <input type="text" id="paper" name="paper" placeholder="Paper"
+        class="input-block-level team_member show_for_print" />
+      <input type="text" id="illustrator" name="illustrator" placeholder="Illustrator(s)"
+        class="input-block-level team_member show_for_print show_for_web show_for_motion" />
+      <input type="text" id="developer" name="developer" placeholder="Developer(s)"
+        class="input-block-level team_member show_for_web" />
+      <input type="text" id="copywriter" name="copywriter" placeholder="Copywriter(s)"
+        class="input-block-level team_member show_for_print show_for_web show_for_motion" />
+      <input type="text" id="photographer" name="photographer" placeholder="Photographer(s)"
+        class="input-block-level team_member show_for_print show_for_web show_for_motion" />
+      <input type="text" id="special_consultant" name="special_consultant" placeholder="Special Consultant(s)"
+        class="input-block-level team_member show_for_print show_for_web show_for_motion" />
       <button id="entry_back" class="btn"><i class="icon-caret-left icon-left"></i>Back</button>
       <button type="submit" class="btn pull-right">Add<i class="icon-plus icon-right"></i></button>
     </fieldset>

@@ -8,10 +8,22 @@ Template.new_entry.events({
   'change #type': function(e) {
     var type = $(e.currentTarget).val();
     $('.project_fields').addClass('hidden');
+
+    // Adjust project team fields
+    $('.team_member').hide();
+    $('.show_for_' + type).show();
+
     $('#' + type + '_fields').hide().removeClass('hidden').slideDown(200);
   },
   'click #entry_next': function(e) {
     e.preventDefault();
+
+    // Form Validation
+    if($('#type').val() == "none" || !$('#project_name').val()) {
+      Session.set('entryErrorMessage', 'Please ensure all required fields are completed.');
+      return false;
+    }
+
     $("#project_information").addClass('hidden');
     $("#project_team").hide().removeClass('hidden').fadeIn(200);
   },
@@ -83,6 +95,10 @@ Template.new_entry.events({
 
   }
 });
+
+Template.new_entry.entryErrorMessage = function() {
+  return Session.get('entryErrorMessage');
+}
 
 Template.new_entry.files = function() {
   var files = Session.get('entry-files');

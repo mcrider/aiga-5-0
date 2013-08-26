@@ -10,7 +10,7 @@
       <option value="motion" {{#if typeEquals type "motion"}}selected="selected"{{/if}}>Motion Graphics</option>
     </select>
     <div id="print_fields" class="project_fields {{#if typeNotEquals type 'print'}}hidden{{/if}}">
-      <input class="input-block-level" value="{{url}}" type="text" id="url" name="url" placeholder="URL" />
+      <input class="input-block-level" value="{{url}}" type="text" id="url" name="url" placeholder="Print Company" />
       <a class="btn filepicker-file" title="File(s)"><i class="icon-left icon-file"></i>Add File(s)</a>
       {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="file-icon icon-remove-sign"></i> <a href="{{url}}" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
     </div>
@@ -20,20 +20,29 @@
       {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="file-icon icon-remove-sign"></i> <a href="{{url}}" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
     </div>
     <div id="motion_fields" class="project_fields {{#if typeNotEquals type 'motion'}}hidden{{/if}}">
-      <input class="input-block-level" value="{{url}}" type="text" id="url" name="url" placeholder="Print Company" />
+      <input class="input-block-level" value="{{url}}" type="text" id="url" name="url" placeholder="URL" />
       <a class="btn filepicker-file" title="File(s)"><i class="icon-left icon-file"></i>Add File(s)</a>
       {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="file-icon icon-remove-sign"></i> <a href="{{url}}" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
     </div>
 
     <h4>Project Team</h4>
+
     <input class="input-block-level" value="{{art_director}}" type="text" id="art_director" name="art_director" placeholder="Art Director" class="required" />
     <input class="input-block-level" value="{{designer}}" type="text" id="designer" name="designer" placeholder="Designer" class="required" />
-    <input class="input-block-level" value="{{paper}}" type="text" id="paper" name="paper" placeholder="Paper" />
     <input class="input-block-level" value="{{illustrator}}" type="text" id="illustrator" name="illustrator" placeholder="Illustrator" />
-    <input class="input-block-level" value="{{developer}}" type="text" id="developer" name="developer" placeholder="Developer" />
     <input class="input-block-level" value="{{copywriter}}" type="text" id="copywriter" name="copywriter" placeholder="Copywriter" />
     <input class="input-block-level" value="{{photographer}}" type="text" id="photographer" name="photographer" placeholder="Photographer" />
     <input class="input-block-level" value="{{special_consultant}}" type="text" id="special_consultant" name="special_consultant" placeholder="Special Consultant" />
+    {{#if typeEquals type "print"}}
+      <input class="input-block-level" value="{{paper}}" type="text" id="paper" name="paper" placeholder="Paper" />
+    {{/if}}
+    {{#if typeEquals type "web"}}
+      <input class="input-block-level" value="{{developer}}" type="text" id="developer" name="developer" placeholder="Developer" />
+    {{/if}}
+    {{#if typeEquals type "motion"}}
+    {{/if}}
+
+
     <button class="entry-back btn">Cancel</button>
     <button type="submit" class="btn pull-right">Save</button>
   </form>

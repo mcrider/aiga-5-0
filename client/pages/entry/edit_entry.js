@@ -10,6 +10,16 @@ Template.edit_entry.events({
       $container.parent().find('.editing').text('Edit').removeClass('editing');
     });
   },
+  'change #type': function(e) {
+    var type = $(e.currentTarget).val();
+    $('.project_fields').addClass('hidden');
+
+    // Adjust project team fields
+    $('.team_member').hide();
+    $('.show_for_' + type).show();
+
+    $('#' + type + '_fields').hide().removeClass('hidden').slideDown(200);
+  },
   'submit .edit-entry-form': function (e) {
     e.preventDefault();
 

@@ -62,6 +62,7 @@ Template.entry.events({
 
             // FIXME: This should be called in makePayment but there are weird issues calling meteor methods inside a callback
             Meteor.call('setAsPaid', userId);
+            Meteor.call('sendPaymentEmail', Meteor.user().emails[0].address);
           }
         }
     });
