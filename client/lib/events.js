@@ -10,7 +10,8 @@ events = {
       type: 'success',
       icon: false,
       addclass: "stack-bottomright",
-			stack: utils.pnotify_stack_bottomright
+			stack: utils.pnotify_stack_bottomright,
+			sticker: false
     });
   },
   showDeletePageModal: function (e) {
@@ -35,7 +36,8 @@ events = {
       type: 'success',
       icon: false,
       addclass: "stack-bottomright",
-      stack: utils.pnotify_stack_bottomright
+      stack: utils.pnotify_stack_bottomright,
+      sticker: false
     });
   }
 };

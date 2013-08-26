@@ -431,7 +431,11 @@ var signup = function () {
 
   // notably not trimmed. a password could (?) start or end with a space
   var password = elementValueById('login-password');
-  if (!Accounts._loginButtons.validatePassword(password))
+  var passwordAgain = elementValueById('login-password-confirm');
+  var contact = elementValueById('login-contact_name');
+  if (!Accounts._loginButtons.validatePassword(password) ||
+      !Accounts._loginButtons.validatePasswordsMatch(password, passwordAgain) ||
+      !Accounts._loginButtons.validateContactName(contact))
     return;
   else
     options.password = password;

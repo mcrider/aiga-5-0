@@ -22,7 +22,8 @@ Template.delete_block.events = {
       type: 'success',
       icon: false,
       addclass: "stack-bottomright",
-      stack: utils.pnotify_stack_bottomright
+      stack: utils.pnotify_stack_bottomright,
+      sticker: false
     });
   },
   // Delete a pageBlock and the corresponding block

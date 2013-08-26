@@ -293,3 +293,22 @@ Accounts._loginButtons.validatePassword = function (password) {
     return false;
   }
 };
+
+/* MC: Custom Validators */
+Accounts._loginButtons.validatePasswordsMatch = function (password, passwordAgain) {
+  if (password == passwordAgain) {
+    return true;
+  } else {
+    loginButtonsSession.errorMessage("Passwords do not match");
+    return false;
+  }
+};
+
+Accounts._loginButtons.validateContactName = function (contact) {
+  if (contact.length >= 1) {
+    return true;
+  } else {
+    loginButtonsSession.errorMessage("Please include a contact name");
+    return false;
+  }
+};

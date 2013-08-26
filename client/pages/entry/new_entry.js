@@ -38,7 +38,8 @@ Template.new_entry.events({
       type: 'success',
       icon: false,
       addclass: "stack-bottomright",
-      stack: utils.pnotify_stack_bottomright
+      stack: utils.pnotify_stack_bottomright,
+      sticker: false
     });
     Session.set('newEntry', false);
   },

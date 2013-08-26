@@ -34,7 +34,8 @@ Template.site_settings.events = {
       type: 'success',
       icon: false,
       addclass: "stack-bottomright",
-      stack: utils.pnotify_stack_bottomright
+      stack: utils.pnotify_stack_bottomright,
+      sticker: false
     });
   },
   'click .theme-option': function(e) {

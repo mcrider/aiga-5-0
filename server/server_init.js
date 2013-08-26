@@ -188,5 +188,22 @@ Meteor.methods({
     Entries.find({userId: userId}).forEach(function(entry) {
       Entries.update(entry._id, {$set: {paid: false}});
     })
+  },
+  sendWelcomEmail: function (to) {
+    // Note: SMTP must be set up as an environment variable such as
+    // export MAIL_URL=smtp://foo%40gmail.com:password@smtp.gmail.com:465/
+
+    check([to], [String]);
+
+    // Let other method calls from the same client start running,
+    // without waiting for the email sending to complete.
+    this.unblock();
+
+    Email.send({
+      to: to,
+      from: 'noreply@aigahonolulu.org',
+      subject: 'Your AIGA Honolulu 5-0 Awards account is ready!',
+      text: 'You have been signed up to submit entries for the AIGA Honolulu 5-0 Award show.\n\nLog in to http://enter.aigahonolulu.org to start submitting entries!\n\n- The AIGA Honolulu Team'
+    });
   }
 });

@@ -20,7 +20,8 @@ Template.edit_entry.events({
       type: 'success',
       icon: false,
       addclass: "stack-bottomright",
-      stack: utils.pnotify_stack_bottomright
+      stack: utils.pnotify_stack_bottomright,
+      sticker: false
     });
 
     var $container = $(e.currentTarget).parent().parent();

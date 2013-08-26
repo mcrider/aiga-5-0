@@ -75,108 +75,125 @@
   {{#if inForgotPasswordFlow}}
     {{> _forgotPasswordForm}}
   {{else}}
-    <div class="span6 offset2">
+    <div class="span10 offset2">
       {{#if inSignupFlow}}
-        <fieldset>
-          <legend>Create an account</legend>
-          <div class="control-group">
-            <label id="login-email-label" class="primary" for="login-email">Email</label>
-            <div class="controls controls-row">
-              <input id="login-email" type="email" name="email" class="primary span4">
+        <fieldset class="register-form">
+          <div class="row"><legend class="span8">Create an account</legend></div>
+          <div class="row">
+            <div class="span10">
+              <label id="login-email-label" class="primary" for="login-email">Email<span class="required-star">*</span></label>
+              <div class="controls controls-row">
+                <input id="login-email" type="email" name="email" class="primary span4">
+              </div>
             </div>
           </div>
 
-          <div class="control-group">
-            <label id="login-password-label" class="primary" for="login-password">Password</label>
-            <div class="controls">
-              <input id="login-password" type="password" name="password" class="primary span4">
+          <div class="row">
+            <div class="span4">
+              <label id="login-password-label" class="primary" for="login-password">Password<span class="required-star">*</span></label>
+              <div class="controls">
+                <input id="login-password" type="password" name="password" class="primary span4">
+              </div>
+            </div>
+            <div class="span4">
+              <label id="login-password-confirm-label" class="primary" for="login-password-confirm">Confirm Password<span class="required-star">*</span></label>
+              <div class="controls">
+                <input id="login-password-confirm" type="password" name="password" class="primary span4">
+              </div>
             </div>
           </div>
 
-          <div class="control-group">
-            <label id="login-contact_name-label" class="profile" for="login-contact_name">Contact Name</label>
-            <div class="controls">
-              <input id="login-contact_name" name="contact_name" class="profile span4" type="text">
+          <div class="row">
+            <div class="span4">
+              <label id="login-contact_name-label" class="profile" for="login-contact_name">Contact Name<span class="required-star">*</span></label>
+              <div class="controls">
+                <input id="login-contact_name" name="contact_name" class="profile span4" type="text">
+              </div>
+            </div>
+            <div class="span4">
+              <label id="login-agency_name-label" class="profile" for="login-agency_name">Agency Name</label>
+              <div class="controls">
+                <input id="login-agency_name" name="agency_name" class="profile span4" type="text">
+              </div>
             </div>
           </div>
 
-          <div class="control-group">
-            <label id="login-agency_name-label" class="profile" for="login-agency_name">Agency Name</label>
-            <div class="controls">
-              <input id="login-agency_name" name="agency_name" class="profile span4" type="text">
+          <div class="row">
+            <div class="span8">
+              <label id="login-address-label" class="profile" for="login-address">Address</label>
+              <div class="controls">
+                <input id="login-address" name="address" class="profile span8" type="text">
+              </div>
             </div>
           </div>
 
-          <div class="control-group">
-            <label id="login-address-label" class="profile" for="login-address">Address</label>
-            <div class="controls">
-              <input id="login-address" name="address" class="profile span4" type="text">
+          <div class="row">
+            <div class="span2">
+              <label id="login-phone-label" class="profile" for="login-phone">Phone</label>
+              <div class="controls">
+                <input id="login-phone" name="phone" class="profile span2" type="text">
+              </div>
             </div>
-          </div>
-
-          <div class="control-group">
-            <label id="login-phone-label" class="profile" for="login-phone">Phone</label>
-            <div class="controls">
-              <input id="login-phone" name="phone" class="profile span4" type="text">
+            <div class="span2">
+              <label id="login-fax-label" class="profile" for="login-fax">Fax</label>
+              <div class="controls">
+                <input id="login-fax" name="fax" class="profile span2" type="text">
+              </div>
             </div>
-          </div>
-
-          <div class="control-group">
-            <label id="login-fax-label" class="profile" for="login-fax">Fax</label>
-            <div class="controls">
-              <input id="login-fax" name="fax" class="profile span4" type="text">
-            </div>
-          </div>
-
-          <div class="control-group">
-            <label id="login-aiga_id-label" class="profile" for="login-aiga_id">AIGA Member Number</label>
-            <div class="controls">
-              <input id="login-aiga_id" name="aiga_id" class="profile span4" type="text">
+            <div class="span4">
+              <label id="login-aiga_id-label" class="profile" for="login-aiga_id">AIGA Member Number</label>
+              <div class="controls">
+                <input id="login-aiga_id" name="aiga_id" class="profile span4" type="text">
+              </div>
             </div>
           </div>
         </fieldset>
       {{else}}
-        <fieldset>
-          <legend>Login to your account</legend>
-          <div class="control-group">
-            <label id="login-email-label" class="profile" for="login-email">Email</label>
-            <div class="controls">
-              <input id="login-email" name="email" type="text">
+        <fieldset class="login-form">
+          <div class="row"><legend class="span4">Login to your account</legend></div>
+          <div class="row">
+            <div class="span4">
+              <label id="login-email-label" class="profile" for="login-email">Email</label>
+              <div class="controls">
+                <input id="login-email" name="email" class="span4" type="text">
+              </div>
             </div>
           </div>
-          <div class="control-group">
-            <label id="login-password-label" class="profile" for="login-aiga_id">Password</label>
-            <div class="controls">
-              <input id="login-password" name="password" type="password">
+          <div class="row">
+            <div class="span4">
+              <label id="login-password-label" class="profile" for="login-aiga_id">Password</label>
+              <div class="controls">
+                <input id="login-password" name="password" class="span4" type="password">
+              </div>
             </div>
           </div>
         </fieldset>
       {{/if}}
     </div>
-    {{> _loginButtonsMessages}}
 
-      <div class="span6 offset2">
-        <button class="btn btn-primary" id="login-buttons-password" type="button">
-          {{#if inSignupFlow}}
-            Create
-          {{else}}
-            Sign in
-          {{/if}}
-        </button>
-        {{#if inLoginFlow}}
-          {{#if showCreateAccountLink}}
-            <hr />
-            <a id="signup-link">Create account</a>
-          {{/if}}
-          {{#if showForgotPasswordLink}}
-            <span class="login-link-separator">•</span>
-            <a id="forgot-password-link">Retrieve password</a>
-          {{/if}}
+    <div class="span8 offset2">{{> _loginButtonsMessages}}</div>
+
+    {{#if inLoginFlow}}
+      <div class="span4 offset2">
+        <button class="btn btn-primary" id="login-buttons-password" type="button">Sign in</button>
+        {{#if showForgotPasswordLink}}
+          <a id="forgot-password-link" class="pull-right"><i class="icon-question-sign"></i>Forgot password?</a>
         {{/if}}
-        {{#if inSignupFlow}}
-          {{> _loginButtonsBackToLoginLink}}
+        {{#if showCreateAccountLink}}
+          <hr />
+          <div class="signup-container">
+            <span class="create_cta">Not a member yet?</span>
+            <a id="signup-link" class="btn btn-primary">Create An Account</a>
+          </div>
         {{/if}}
       </div>
+    {{/if}}
+    {{#if inSignupFlow}}
+      <div class="span8 offset2">
+        <button class="btn btn-primary" id="login-buttons-password" type="button">Create</button>
+        {{> _loginButtonsBackToLoginLink}}
+      </div>
+    {{/if}}
 
   {{/if}}
 </template>

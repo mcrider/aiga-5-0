@@ -18,6 +18,9 @@ legend {
   display: inherit;
   width: 100%;
 }
+.required-star {
+  color: #F38AA4;
+}
 .btn-mini {
   font-size: 14px;
 }
@@ -27,6 +30,32 @@ legend {
 .entry-container {
   /*border: 3px solid #596974;*/
   padding: 12px;
+
+  .register-form, .login-form {
+    margin-bottom: 25px;
+
+    legend {
+      margin-bottom: 20px;
+    }
+  }
+
+  #forgot-password-link i {
+    font-size: 16px;
+    color: rgb(130, 146, 167);
+    line-height: 18px;
+    margin-right: 7px;
+  }
+
+  .signup-container {
+    text-align: center;
+    padding-top: 16px;
+
+    .btn {
+      margin-left: 8px;
+      font-weight: bold;
+      font-size: inherit;
+    }
+  }
 
   .no-entries {
     font-size: 20px;
@@ -216,4 +245,10 @@ legend {
   text-align: center;
 
   font-size: 12px;
+}
+
+.ui-pnotify-closer {
+  .icon-remove {
+    line-height: 21px;
+  }
 }
