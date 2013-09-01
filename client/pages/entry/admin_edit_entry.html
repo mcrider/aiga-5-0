@@ -28,12 +28,22 @@
     <h4>Project Team</h4>
     <input class="input-block-level" value="{{art_director}}" type="text" id="art_director" name="art_director" placeholder="Art Director" class="required" />
     <input class="input-block-level" value="{{designer}}" type="text" id="designer" name="designer" placeholder="Designer" class="required" />
-    <input class="input-block-level" value="{{paper}}" type="text" id="paper" name="paper" placeholder="Paper" />
     <input class="input-block-level" value="{{illustrator}}" type="text" id="illustrator" name="illustrator" placeholder="Illustrator" />
-    <input class="input-block-level" value="{{developer}}" type="text" id="developer" name="developer" placeholder="Developer" />
     <input class="input-block-level" value="{{copywriter}}" type="text" id="copywriter" name="copywriter" placeholder="Copywriter" />
     <input class="input-block-level" value="{{photographer}}" type="text" id="photographer" name="photographer" placeholder="Photographer" />
     <input class="input-block-level" value="{{special_consultant}}" type="text" id="special_consultant" name="special_consultant" placeholder="Special Consultant" />
+    {{#if typeEquals type "print"}}
+      <input class="input-block-level" value="{{paper}}" type="text" id="paper" name="paper" placeholder="Paper" />
+    {{/if}}
+    {{#if typeEquals type "web"}}
+      <input class="input-block-level" value="{{developer}}" type="text" id="developer" name="developer" placeholder="Developer" />
+    {{/if}}
+    {{#if typeEquals type "motion"}}
+    {{/if}}
+    {{#if typeEquals type "web"}}
+    	<h4>Technical Information</h4>
+      <input class="input-block-level" value="{{tech_info}}" type="text" id="tech_info" name="tech_info" placeholder="e.g. Server stack, frameworks used, etc." />
+    {{/if}}
     <button class="entry-back btn">Cancel</button>
     <button type="submit" class="btn pull-right">Save</button>
   </form>
