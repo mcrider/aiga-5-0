@@ -1,20 +1,28 @@
 <template name="admin_entry_list">
   <div class="row title-row">
-    <span class="span4"><h4>Entries for {{user}}</h4></span>
+    <span class="span4"><h4>{{user_label}}</h4></span>
+  </div>
+  <div class="admin-user-profile">
+    <p>Email: {{user.emails.0.address}}</p>
+    <p>Agency: {{user.profile.agency_name}}</p>
+    <p>Address: {{user.profile.address}}</p>
+    <p>Phone{{#if user.profile.fax}}/Fax{{/if}}: {{user.profile.phone}}{{#if user.profile.fax}}/{{user.profile.fax}}{{/if}}</p>
+    <p>AIGA ID: {{user.profile.aiga_id}}</p>
   </div>
 
+  <h4>Entries</h4>
   {{#each entries}}
     <div class="row entry">
-      <div class="span4">
+      <div class="span3">
         <div class="entry-info">
           <h4>{{project_name}}</h4>
           <h5>{{client_name}}</h5>
           <span class="file-list">Attachments</span>
           {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="icon-file-alt"></i> <a href="{{url}}" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
         </div>
-        <div class="admin-edit-entry hidden">{{#isolate}}{{> edit_entry}}{{/isolate}}</div>
+        <div class="admin-edit-entry hidden">{{#isolate}}{{> admin_edit_entry}}{{/isolate}}</div>
       </div>
-      <div class="span4 entry-buttons">
+      <div class="span3 entry-buttons">
         <a class="btn remove-project"><i class="icon-middle icon-remove"></i></a>
         <a class="btn edit-project">Edit</a>
         {{#if paid}}<p class="squared-away">Paid on {{humanReadableDate paid}}</p>{{/if}}

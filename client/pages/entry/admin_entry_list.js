@@ -3,11 +3,17 @@ Template.admin_entry_list.entries = function() {
   return Entries.find({userId: Session.get('adminUserId')});
 }
 
-Template.admin_entry_list.user = function() {
+Template.admin_entry_list.user_label = function() {
   var user = Meteor.users.findOne(Session.get('adminUserId'));
   if (user && user.profile && user.profile.contact_name) return user.profile.contact_name;
   else if (user && user.emails[0].address) return user.emails[0].address;
   else return '';
+}
+
+Template.admin_entry_list.user = function() {
+  var user = Meteor.users.findOne(Session.get('adminUserId'));
+  if (user && user.profile) return user;
+  else return null;
 }
 
 Template.admin_entry_list.events({
@@ -18,18 +24,17 @@ Template.admin_entry_list.events({
   },
   'click .edit-project': function(e) {
     e.preventDefault();
+
     if($(e.currentTarget).hasClass('editing')) {
       $(e.currentTarget).text('Edit').removeClass('editing');
       var $container = $(e.currentTarget).parent().parent();
-      $container.find('.edit-entry-form').fadeOut(200, function(){
-        $container.find('.entry-info').fadeIn(200);
-      });
+      $container.find('.admin-edit-entry').addClass('hidden');
+      $container.find('.entry-info').removeClass('hidden');
     } else {
       $(e.currentTarget).text('Cancel').addClass('editing');
       var $container = $(e.currentTarget).parent().parent();
-      $container.find('.entry-info').fadeOut(200, function(){
-        $container.find('.edit-entry-form').fadeIn(200);
-      });
+      $container.find('.entry-info').addClass('hidden');
+      $container.find('.admin-edit-entry').removeClass('hidden')
     }
 
   },

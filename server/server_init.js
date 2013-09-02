@@ -154,11 +154,11 @@ Meteor.startup(function () {
     },
     update: function (userId, doc, fields, modifier) {
       // can only change your own documents
-      return doc.userId === userId;
+      return doc.userId === userId || authorize.admins;
     },
     remove: function (userId, doc) {
       // can only remove your own documents
-      return doc.userId === userId;
+      return doc.userId === userId || authorize.admins;
     },
   });
 });

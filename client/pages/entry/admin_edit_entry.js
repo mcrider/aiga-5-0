@@ -1,16 +1,5 @@
-
-
 Template.admin_edit_entry.events({
-  'click .entry-back': function(e) {
-    e.preventDefault();
-
-    var $container = $(e.currentTarget).parent().parent();
-    $container.find('.edit-entry-form').fadeOut(200, function(){
-      $container.find('.entry-info').fadeIn(200);
-      $container.parent().find('.editing').text('Edit').removeClass('editing');
-    });
-  },
-  'submit .edit-entry-form': function (e) {
+  'submit .admin-edit-entry-form': function (e) {
     e.preventDefault();
 
     var entryData = utils.getFormValues($(e.currentTarget));
@@ -25,10 +14,9 @@ Template.admin_edit_entry.events({
     });
 
     var $container = $(e.currentTarget).parent().parent();
-    $container.find('.edit-entry-form').fadeOut(200, function(){
-      $container.find('.entry-info').fadeIn(200);
-      $container.parent().find('.editing').text('Edit').removeClass('editing');
-    });
+    $container.find('.admin-edit-entry-form').addClass('hidden');
+    $container.find('.entry-info').removeClass('hidden');
+    $container.parent().find('.editing').text('Edit').removeClass('editing');
   },
   'click .filepicker-file': function(e) {
     e.preventDefault();
@@ -51,7 +39,7 @@ Template.admin_edit_entry.events({
     );
   },
   'click .icon-remove-sign': function(e) {
-    var entryId = $(e.currentTarget).closest('.edit-entry-form').data('entry-id');
+    var entryId = $(e.currentTarget).closest('.admin-edit-entry-form').data('entry-id');
     var entry = Entries.findOne(entryId);
 
     var fileKey = this.key;

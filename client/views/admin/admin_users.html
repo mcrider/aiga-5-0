@@ -13,7 +13,7 @@
                 <th>Roles</th>
                 <th>Entries</th>
                 <th>Name</th>
-                <th>Email</th>
+                <th>Agency</th>
                 {{#if isInRole 'admin'}}<th>Remove</th>{{/if}}
                 <th style="width: 36px;"></th>
               </tr>
@@ -28,7 +28,7 @@
                   <td><div class="numberCircle">{{entryCount}}</div></td>
                   <!--<td>{{profile.name}}</td>-->
                   <td>{{profile.contact_name}}</td>
-                  <td>{{emails.0.address}}</td>
+                  <td>{{profile.agency_name}}</td>
                   {{#if isInRole 'admin'}}<td>
                       <!--<a href="#"><i class="icon-pencil"></i></a>-->
                       <a class="delete-user remove" href="#"><i class="icon-remove"></i></a>
