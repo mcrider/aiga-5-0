@@ -30,9 +30,9 @@
                   <h5 class="">Total Entry Fee</h3>
                   <h3 class="">${{totalFee}}</h3>
                   <select class="input-block-level" id="rate" name="rate">
-                    <option value="40">Member's Rate • $40/Entry</option>
-                    <option value="60">Non-Member's Rate • $60/Entry</option>
-                    <option value="20">Student Rate • $20/Entry</option>
+                    <option value="{{rate_member}}">Member's Rate • ${{rate_member}}/Entry</option>
+                    <option value="{{rate_nonmember}}">Non-Member's Rate • ${{rate_nonmember}}/Entry</option>
+                    <option value="{{rate_student}}">Student Rate • ${{rate_student}}/Entry</option>
                   </select>
                   <p>Membership ID numbers required for AIGA, AAF-Hawaii and Ad2 Honolulu Member's discounted rates.</p>
                   <a class="btn payup-sucka" href="#">Pay Online</a>

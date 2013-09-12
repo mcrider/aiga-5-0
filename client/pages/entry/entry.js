@@ -34,6 +34,26 @@ Template.entry.totalFee = function() {
   return numEntries * Session.get('currentRate');
 }
 
+Template.entry.rate_student = function() {
+  var lateDate = new Date('10/5/2013');
+  var now = new Date();
+  if (now.getTime() < lateDate.getTime()) return 30;
+  else return 40;
+}
+Template.entry.rate_member = function() {
+  var lateDate = new Date('10/5/2013');
+  var now = new Date();
+  if (now.getTime() < lateDate.getTime()) return 60;
+  else return 70;
+}
+Template.entry.rate_nonmember = function() {
+  var lateDate = new Date('10/5/2013');
+  var now = new Date();
+  if (now.getTime() < lateDate.getTime()) return 90;
+  else return 100;
+}
+
+
 // shared between dropdown and single mode
 Template.entry.events({
   'click #login-buttons-logout': function() {
