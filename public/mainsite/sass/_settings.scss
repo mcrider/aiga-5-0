@@ -1238,7 +1238,7 @@ $topbar-bg: #FFF;
 
 // Height and margin
 
-$topbar-height: 95px;
+$topbar-height: 115px;
 $topbar-margin-bottom: emCalc(0px);
 
 // Control Input height for top bar
@@ -1247,7 +1247,7 @@ $topbar-margin-bottom: emCalc(0px);
 
 // Controlling the styles for the title in the top bar
 
-// $topbar-title-weight: bold;
+$topbar-title-weight: normal;
 $topbar-title-font-size: emCalc(24px);
 
 // Style the top bar dropdown elements

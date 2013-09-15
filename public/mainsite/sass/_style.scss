@@ -22,14 +22,27 @@ body {
 
 .top-bar {
   position: relative;
+  .name {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    h1 {
+      background: url(../images/aiga-flag.png) no-repeat;
+      @include background-size(190px auto);
+      a {
+        padding: 0 30px 0 187px
+      }
+    }
+  }
   .secondary {
     position: absolute;
     z-index: 10;
     top: 8px;
     right: 30px;
     li a {
+      font-family: $slab;
+      color: #000;
       text-transform: uppercase;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.1em;
       font-size: emCalc(12px);
     }
   }

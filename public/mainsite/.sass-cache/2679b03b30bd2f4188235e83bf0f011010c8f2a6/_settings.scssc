@@ -1,5 +1,5 @@
 3.2.9 (Media Mark)
-841778a69a873c0928e81fe1bfe0d6f37e87d162
+7335353cf392e6cb8f7afb019c788325755a922a
 o:Sass::Tree::RootNode
 :@template"‹//
 // Foundation Variables
@@ -1241,7 +1241,7 @@ $topbar-bg: #FFF;
 
 // Height and margin
 
-$topbar-height: 95px;
+$topbar-height: 115px;
 $topbar-margin-bottom: emCalc(0px);
 
 // Control Input height for top bar
@@ -1250,7 +1250,7 @@ $topbar-margin-bottom: emCalc(0px);
 
 // Controlling the styles for the title in the top bar
 
-// $topbar-title-weight: bold;
+$topbar-title-weight: normal;
 $topbar-title-font-size: emCalc(24px);
 
 // Style the top bar dropdown elements
@@ -2568,15 +2568,14 @@ Arial;@;i£o;/	;;0;"sans-serif;@;i£;@;i£;(;8;@;	[ ;i£o;;0;
 
 ;;;["+/* Background color for the top bar */;@;	[ ;iÓo;;0;"topbar-bg;o;1	;0;2{	;3iÿ;4iÿ;5i;6iÿ;@;iÕ;@;	[ ;iÕo;
 
-;;;["/* Height and margin */;@;	[ ;i×o;;0;"topbar-height;o;;[ ;["px;id;@;"	95px;iÙ;@;	[ ;iÙo;;0;"topbar-margin-bottom;o;$;"emCalc;%{ ;@;"0;iÚ;#[o;;[ ;["px;i ;@;"0px;iÚ;@;	[ ;iÚo;
+;;;["/* Height and margin */;@;	[ ;i×o;;0;"topbar-height;o;;[ ;["px;ix;@;"
+115px;iÙ;@;	[ ;iÙo;;0;"topbar-margin-bottom;o;$;"emCalc;%{ ;@;"0;iÚ;#[o;;[ ;["px;i ;@;"0px;iÚ;@;	[ ;iÚo;
 
 ;;;["+/* Control Input height for top bar */;@;	[ ;iÜo;
 
 ;;;["(/* $topbar-input-height: 2.45em; */;@;	[ ;iÞo;
 
-;;;[">/* Controlling the styles for the title in the top bar */;@;	[ ;iào;
-
-;;;["&/* $topbar-title-weight: bold; */;@;	[ ;iâo;;0;"topbar-title-font-size;o;$;"emCalc;%{ ;@;"0;iã;#[o;;[ ;["px;i;@;"	24px;iã;@;	[ ;ião;
+;;;[">/* Controlling the styles for the title in the top bar */;@;	[ ;iào;;0;"topbar-title-weight;o;/	;;0;"normal;@;iâ;@;	[ ;iâo;;0;"topbar-title-font-size;o;$;"emCalc;%{ ;@;"0;iã;#[o;;[ ;["px;i;@;"	24px;iã;@;	[ ;ião;
 
 ;;;["./* Style the top bar dropdown elements */;@;	[ ;iåo;;0;"topbar-dropdown-bg;o;1	;0;2{	;3i³;4i ;5i;6iˆ;@;iç;@;	[ ;iço;;0;"topbar-dropdown-link-color;o;1	;0;2{	;3i³;4i ;5i;6iˆ;@;iè;@;	[ ;ièo;;0;"topbar-dropdown-link-bg;o;1	;0;2{	;3iÿ;4iÿ;5i;6iÿ;@;ié;@;	[ ;iéo;
 
