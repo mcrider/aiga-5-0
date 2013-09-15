@@ -1,7 +1,7 @@
 3.2.9 (Media Mark)
-93c631ffe11dbaabfe0bafe2f34aaae156931509
+841778a69a873c0928e81fe1bfe0d6f37e87d162
 o:Sass::Tree::RootNode
-:@template"÷Š//
+:@template"‹//
 // Foundation Variables
 //
 
@@ -54,9 +54,9 @@ $em-base: 16 !default;
 
 $default-float: left;
 
-// $body-bg: #fff;
-// $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-bg: #395b6e;
+$body-font-color: #FFF;
+$body-font-family: "adobe-caslon-pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -163,8 +163,8 @@ $default-float: left;
 
 // Control header font styles
 
-// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// $header-font-weight: bold;
+$header-font-family: "atrament-web", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-weight: normal;
 // $header-font-style: normal;
 // $header-font-color: #222;
 // $header-line-height: 1.4;
@@ -1237,12 +1237,12 @@ $default-float: left;
 
 // Background color for the top bar
 
-// $topbar-bg: #111;
+$topbar-bg: #FFF;
 
 // Height and margin
 
-// $topbar-height: 45px;
-// $topbar-margin-bottom: emCalc(30);
+$topbar-height: 95px;
+$topbar-margin-bottom: emCalc(0px);
 
 // Control Input height for top bar
 
@@ -1251,40 +1251,40 @@ $default-float: left;
 // Controlling the styles for the title in the top bar
 
 // $topbar-title-weight: bold;
-// $topbar-title-font-size: emCalc(17);
+$topbar-title-font-size: emCalc(24px);
 
 // Style the top bar dropdown elements
 
-// $topbar-dropdown-bg: #222;
-// $topbar-dropdown-link-color: #fff;
-// $topbar-dropdown-link-bg: lighten($topbar-bg, 5%);
+$topbar-dropdown-bg: #0088b3;
+$topbar-dropdown-link-color: #0088b3;
+$topbar-dropdown-link-bg: white;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: #fff;
 // $topbar-dropdown-toggle-alpha: 0.5;
 
 // Set the link colors and styles for top-level nav
 
-// $topbar-link-color: #fff;
-// $topbar-link-color-hover: #fff;
+$topbar-link-color: #0088b3;
+$topbar-link-color-hover: darken($topbar-link-color, 50%);
 // $topbar-link-color-active: #fff;
 // $topbar-link-weight: bold;
-// $topbar-link-font-size: emCalc(13);
+$topbar-link-font-size: emCalc(18px);
 // $topbar-link-hover-lightness: -30%; // Darken by 30%
-// $topbar-link-bg-hover: darken($topbar-bg, 3%);
+$topbar-link-bg-hover: rgba(255,255,255,1);
 // $topbar-link-bg-active: darken($topbar-bg, 3%);
 
 // $topbar-dropdown-label-color: #555;
 // $topbar-dropdown-label-text-transform: uppercase;
 // $topbar-dropdown-label-font-weight: bold;
-// $topbar-dropdown-label-font-size: emCalc(10);
+$topbar-dropdown-label-font-size: emCalc(14);
 
 // Top menu icon styles
 
 // $topbar-menu-link-transform: uppercase;
 // $topbar-menu-link-font-size: emCalc(13);
 // $topbar-menu-link-weight: bold;
-// $topbar-menu-link-color: #fff;
-// $topbar-menu-icon-color: #fff;
+$topbar-menu-link-color: #0088b3;;
+$topbar-menu-icon-color: #0088b3;;
 // $topbar-menu-link-color-toggled: #888;
 // $topbar-menu-icon-color-toggled: #888;
 
@@ -1302,7 +1302,7 @@ $default-float: left;
 // Sticky Class
 
 // $topbar-sticky-class: ".sticky";
-:@has_childrenT:@options{ :@children[xo:Sass::Tree::CommentNode
+:@has_childrenT:@options{ :@children[Œo:Sass::Tree::CommentNode
 :
 @type:silent:@value["%/*
  * Foundation Variables
@@ -1382,13 +1382,14 @@ space;@;	[ ;i-o;
 ;;;["U/* Change whether or not you include browser prefixes
  * $experimental: true; */;@;	[ ;i4o;
 
-;;;[" /* Various global styles */;@;	[ ;i7o;;0;"default-float;o:Sass::Script::String	;:identifier;"	left;@;i9;@;	[ ;i9o;
+;;;[" /* Various global styles */;@;	[ ;i7o;;0;"default-float;o:Sass::Script::String	;:identifier;"	left;@;i9;@;	[ ;i9o;;0;"body-bg;o:Sass::Script::Color	;0:@attrs{	:	blueis:redi>:
+alphai:
+greeni`;@;i;;@;	[ ;i;o;;0;"body-font-color;o;1	;0;2{	;3iÿ;4iÿ;5i;6iÿ;@;i<;@;	[ ;i<o;;0;"body-font-family;o;'	;[o;/	;:string;"adobe-caslon-pro;@;i=o;/	;;7;"Helvetica Neue;@;i=o;/	;;7;"Helvetica;@;i=o;/	;;0;"Helvetica;@;i=o;/	;;0;"
+Arial;@;i=o;/	;;0;"sans-serif;@;i=;@;i=;(:
+comma;@;	[ ;i=o;
 
-;;;["¾/* $body-bg: #fff;
- * $body-font-color: #222;
- * $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
- * $body-font-weight: normal;
- * $body-font-style: normal; */;@;	[ ;i;o;
+;;;["B/* $body-font-weight: normal;
+ * $body-font-style: normal; */;@;	[ ;i>o;
 
 ;;;["/* Font-smoothing */;@;	[ ;iAo;
 
@@ -1491,16 +1492,15 @@ space;@;	[ ;i-o;
  * Typography Variables
  * */;@;	[ ;io;
 
-;;;["%/* Control header font styles */;@;	[ ;i¡o;
+;;;["%/* Control header font styles */;@;	[ ;i¡o;;0;"header-font-family;o;'	;[o;/	;;7;"atrament-web;@;i£o;/	;;7;"Helvetica Neue;@;i£o;/	;;7;"Helvetica;@;i£o;/	;;0;"Helvetica;@;i£o;/	;;0;"
+Arial;@;i£o;/	;;0;"sans-serif;@;i£;@;i£;(;8;@;	[ ;i£o;;0;"header-font-weight;o;/	;;0;"normal;@;i¤;@;	[ ;i¤o;
 
-;;;[":/* $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
- * $header-font-weight: bold;
- * $header-font-style: normal;
+;;;["Ç/* $header-font-style: normal;
  * $header-font-color: #222;
  * $header-line-height: 1.4;
  * $header-top-margin: .2em;
  * $header-bottom-margin: .5em;
- * $header-text-rendering: optimizeLegibility; */;@;	[ ;i£o;
+ * $header-text-rendering: optimizeLegibility; */;@;	[ ;i¥o;
 
 ;;;["$/* Control header font sizes */;@;	[ ;i¬o;
 
@@ -2566,14 +2566,9 @@ space;@;	[ ;i-o;
  * Top Bar Variables
  * */;@;	[ ;iÏo;
 
-;;;["+/* Background color for the top bar */;@;	[ ;iÓo;
+;;;["+/* Background color for the top bar */;@;	[ ;iÓo;;0;"topbar-bg;o;1	;0;2{	;3iÿ;4iÿ;5i;6iÿ;@;iÕ;@;	[ ;iÕo;
 
-;;;["/* $topbar-bg: #111; */;@;	[ ;iÕo;
-
-;;;["/* Height and margin */;@;	[ ;i×o;
-
-;;;["F/* $topbar-height: 45px;
- * $topbar-margin-bottom: emCalc(30); */;@;	[ ;iÙo;
+;;;["/* Height and margin */;@;	[ ;i×o;;0;"topbar-height;o;;[ ;["px;id;@;"	95px;iÙ;@;	[ ;iÙo;;0;"topbar-margin-bottom;o;$;"emCalc;%{ ;@;"0;iÚ;#[o;;[ ;["px;i ;@;"0px;iÚ;@;	[ ;iÚo;
 
 ;;;["+/* Control Input height for top bar */;@;	[ ;iÜo;
 
@@ -2581,43 +2576,35 @@ space;@;	[ ;i-o;
 
 ;;;[">/* Controlling the styles for the title in the top bar */;@;	[ ;iào;
 
-;;;["N/* $topbar-title-weight: bold;
- * $topbar-title-font-size: emCalc(17); */;@;	[ ;iâo;
+;;;["&/* $topbar-title-weight: bold; */;@;	[ ;iâo;;0;"topbar-title-font-size;o;$;"emCalc;%{ ;@;"0;iã;#[o;;[ ;["px;i;@;"	24px;iã;@;	[ ;ião;
 
-;;;["./* Style the top bar dropdown elements */;@;	[ ;iåo;
+;;;["./* Style the top bar dropdown elements */;@;	[ ;iåo;;0;"topbar-dropdown-bg;o;1	;0;2{	;3i³;4i ;5i;6iˆ;@;iç;@;	[ ;iço;;0;"topbar-dropdown-link-color;o;1	;0;2{	;3i³;4i ;5i;6iˆ;@;iè;@;	[ ;ièo;;0;"topbar-dropdown-link-bg;o;1	;0;2{	;3iÿ;4iÿ;5i;6iÿ;@;ié;@;	[ ;iéo;
 
-;;;["ñ/* $topbar-dropdown-bg: #222;
- * $topbar-dropdown-link-color: #fff;
- * $topbar-dropdown-link-bg: lighten($topbar-bg, 5%);
- * $topbar-dropdown-toggle-size: 5px;
+;;;["|/* $topbar-dropdown-toggle-size: 5px;
  * $topbar-dropdown-toggle-color: #fff;
- * $topbar-dropdown-toggle-alpha: 0.5; */;@;	[ ;iço;
+ * $topbar-dropdown-toggle-alpha: 0.5; */;@;	[ ;iêo;
 
-;;;[";/* Set the link colors and styles for top-level nav */;@;	[ ;iîo;
+;;;[";/* Set the link colors and styles for top-level nav */;@;	[ ;iîo;;0;"topbar-link-color;o;1	;0;2{	;3i³;4i ;5i;6iˆ;@;ið;@;	[ ;iðo;;0;"topbar-link-color-hover;o;$;"darken;%{ ;@;"0;iñ;#[o;	;"topbar-link-color;@;iñ;"topbar_link_coloro;;[ ;["%;i7;@;"50%;iñ;@;	[ ;iño;
 
-;;;["H/* $topbar-link-color: #fff;
- * $topbar-link-color-hover: #fff;
- * $topbar-link-color-active: #fff;
- * $topbar-link-weight: bold;
- * $topbar-link-font-size: emCalc(13);
- * $topbar-link-hover-lightness: -30%; // Darken by 30%
- * $topbar-link-bg-hover: darken($topbar-bg, 3%);
- * $topbar-link-bg-active: darken($topbar-bg, 3%); */;@;	[ ;iðo;
+;;;["I/* $topbar-link-color-active: #fff;
+ * $topbar-link-weight: bold; */;@;	[ ;iòo;;0;"topbar-link-font-size;o;$;"emCalc;%{ ;@;"0;iô;#[o;;[ ;["px;i;@;"	18px;iô;@;	[ ;iôo;
 
-;;;["¼/* $topbar-dropdown-label-color: #555;
+;;;["?/* $topbar-link-hover-lightness: -30%; // Darken by 30% */;@;	[ ;iõo;;0;"topbar-link-bg-hover;o;$;"	rgba;%{ ;@;"0;iö;#[	o;;@*;[ ;iÿ;@;"255;iöo;;@*;[ ;iÿ;@;"255;iöo;;@*;[ ;iÿ;@;"255;iöo;;@*;[ ;i;@;"1;iö;@;	[ ;iöo;
+
+;;;[":/* $topbar-link-bg-active: darken($topbar-bg, 3%); */;@;	[ ;i÷o;
+
+;;;["‹/* $topbar-dropdown-label-color: #555;
  * $topbar-dropdown-label-text-transform: uppercase;
- * $topbar-dropdown-label-font-weight: bold;
- * $topbar-dropdown-label-font-size: emCalc(10); */;@;	[ ;iùo;
+ * $topbar-dropdown-label-font-weight: bold; */;@;	[ ;iùo;;0;"$topbar-dropdown-label-font-size;o;$;"emCalc;%{ ;@;"0;iü;#[o;;@*;[ ;i;@;"14;iü;@;	[ ;iüo;
 
 ;;;["/* Top menu icon styles */;@;	[ ;iþo;
 
-;;;["/* $topbar-menu-link-transform: uppercase;
+;;;["|/* $topbar-menu-link-transform: uppercase;
  * $topbar-menu-link-font-size: emCalc(13);
- * $topbar-menu-link-weight: bold;
- * $topbar-menu-link-color: #fff;
- * $topbar-menu-icon-color: #fff;
- * $topbar-menu-link-color-toggled: #888;
- * $topbar-menu-icon-color-toggled: #888; */;@;	[ ;i o;
+ * $topbar-menu-link-weight: bold; */;@;	[ ;i o;;0;"topbar-menu-link-color;o;1	;0;2{	;3i³;4i ;5i;6iˆ;@;i;@;	[ ;io;;0;"topbar-menu-icon-color;o;1	;0;2{	;3i³;4i ;5i;6iˆ;@;i;@;	[ ;io;
+
+;;;["[/* $topbar-menu-link-color-toggled: #888;
+ * $topbar-menu-icon-color-toggled: #888; */;@;	[ ;io;
 
 ;;;[",/* Transitions and breakpoint styles */;@;	[ ;io;
 

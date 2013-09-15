@@ -1,1 +1,202 @@
 // Style SCSS
+
+// Colors
+$darkblue: #39637c;
+$blue: #0088b3;
+$red: #991f27;
+
+$slab: "ff-ernestine-web-pro", Georgia, serif;
+
+html {
+  background: #333;
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+
+.container {
+  background: white;
+  height: 100%;
+}
+
+.top-bar {
+  position: relative;
+  .secondary {
+    position: absolute;
+    z-index: 10;
+    top: 8px;
+    right: 30px;
+    li a {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: emCalc(12px);
+    }
+  }
+  .top-bar-section {
+    li a {
+      font-family: $header-font-family;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 300;
+    }
+    .dropdown > li a {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.starred {
+  position: relative;
+  display: inline-block;
+  &:before, &:after {
+    content: " ";
+    display: block;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    background: url(../images/star.png);
+    background-size: 100%;
+    top: 37%;
+  }
+  &:before {
+    left: -50px;
+  }
+  &:after {
+    right: -50px;
+  }
+}
+
+#intro {
+  min-height: 100%;
+  background: url(../images/bg-intro.jpg);
+  @include background-size(cover);
+  text-align: center;
+  padding: emCalc(80px) 0 0;
+  .graphic {
+    position: relative;
+    .early, .final {
+      position: absolute;
+      top: 40%;
+    }
+    .early {
+      left: 0;
+    }
+    .final {
+      right: 0;
+    }
+    h5 {
+      text-transform: uppercase;
+      font-size: emCalc(24px);
+      letter-spacing: 0.1em;
+    }
+  }
+  .eagle {
+    max-width: 400px;
+    margin-bottom: 50px;
+  }
+  h1 {
+    @extend .starred;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+  }
+  h3 {
+    text-align: justify;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 60px;
+    line-height: 2;
+  }
+  .cta {
+    @include clearfix;
+    background: $darkblue;
+    border-top: 1px solid #183a48;
+    border-bottom: 1px solid #183a48;
+    .columns {
+        @include transition(all 0.25s ease-in);
+      }
+    a:hover .columns {
+      background: #183a48;
+    }
+    a:first-child .columns {
+      border-right: 2px dotted #183a48;
+    }
+    h4 {
+      @extend .starred;
+      margin-top: emCalc(30px);
+      color: white;
+      text-transform: uppercase;
+      font-size: emCalc(40px);
+      letter-spacing: 0.3em;
+    }
+    p {
+      font-size: emCalc(24px);
+      margin-bottom: emCalc(60px);
+    }
+  }
+}
+
+#enough {
+  background: url(../images/Designer.jpg) no-repeat;
+  @include background-size(cover);
+  text-align: center;
+  h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: white;
+    font-size: emCalc(54px);
+    padding: emCalc(100px) 0;
+    margin: 0;
+  }
+}
+
+.slab {
+  font-family: $slab;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+#show {
+  background: url(../images/eaglehalftone.jpg);
+  @include background-size(cover);
+  padding: emCalc(120px) 0;
+  .panel {
+    background: #fff url(../images/ornate-top.gif) no-repeat;
+    background-position: top center;
+    padding-bottom: emCalc(30px);
+    position: relative;
+    &:before {
+      content: " ";
+      display: block;
+      width: 300px;
+      height: 90px;
+      background: url(../images/year-2013.png);
+      position: absolute;
+      top: -60px;
+      right: -10px;
+    }
+  }
+  text-align: center;
+  .seal {
+    max-width: 150px;
+    margin-top: -80px;
+  }
+  h2 {
+    font-size: emCalc(36px);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin: emCalc(20px) 0 emCalc(10px);
+  }
+  .subheader {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    em {
+      font-family: $body-font-family;
+      letter-spacing: 0.1em;
+    }
+  }
+}

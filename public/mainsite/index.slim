@@ -10,32 +10,79 @@ html.no-js
     meta name="viewport" content="width=device-width"
     title AIGA Honolulu's Hawaii 5-0 Awards
     link rel="stylesheet" href="stylesheets/app.css"  
-    script src="javascripts/vendor/custom.modernizr.js"
+    script type="text/javascript" src="//use.typekit.net/scs0rmb.js"
+    script try{Typekit.load();}catch(e){}
       
     body
       header
         nav.top-bar
           ul.title-area
             li.name
-              h1: a href="#" Foundation 4
+              h1: a href="#" AIGA Hawaii 5-0s
               li.toggle-topbar.menu-icon
                 a href="#"
                   span Menu
           section.top-bar-section
             ul.right
-              li: a href="#" Home
-              li: a href="#" Section A
-              li: a href="#" Section B
-              li: a href="#" Section C
-              li: a href="#" Section D
+              li: a href="#" Enter
+              li.has-dropdown
+                a href="#" Entry Criteria
+                ul.dropdown
+                  li: a href="#" Print
+                  li: a href="#" Web
+                  li: a href="#" Motion
+                  li: a href="#" Fees &amp; Deadlines
+                  li: a href="#" Drop Off Locations
+                  li: a href="#" Winners
+              li: a href="#" Judges
+              li: a href="#" The Show
+          ul.secondary.inline-list
+            li: a href="#" Join AIGA
+            li: a href="#" FAQs
+      section#intro
+        .row
+          .large-10.columns.large-centered
+            .graphic
+              img.eagle src="images/eagle.png"
+              .early
+                h5 Early Deadline
+                p 4 October 2013
+              .final
+                h5 Final Deadline
+                p 11 October 2013
+            h1 Call for Entries
+            h3
+              | As designers, we are a citizen army, tasked with the honorable pursuit and formidable challenge: good design. This is a call to all those fit to compete: submit your work to be considered for recognition among the Top 50 designs in Hawaii. <br /><br />
+              | Failure to comply will result in a missed opportunity to stand and be recognized, for camaraderie with fellow designers, and to bring honor to your profession and to Hawaii.
+        .cta
+          a href="#"
+            .large-6.columns
+              h4 Heed the Call
+              p Enter Now
+          a href="#"
+            .large-6.columns
+              h4 Compliance
+              p How to Enter
+      section#enough
+        h1 Are You Designer Enough?
+      section#show
+        .panel.row
+          .large-12.columns
+            img.seal src="images/seal-designersunite.png"
+            h2 Attend the Show
+            h3.subheader <span class="slab">Ad Aspera Ad Astra</span> / <em>Through Adversity to the Stars</em>
+            img src="images/temp-eventinfo.gif"
+
+
             
 
       script src="javascripts/vendor/jquery.js"
+      script src="javascripts/foundation/foundation.js"
       / script src="javascripts/foundation/foundation.abide.js"
       / script src="javascripts/foundation/foundation.alerts.js"
       / script src="javascripts/foundation/foundation.clearing.js"
       / script src="javascripts/foundation/foundation.cookie.js"
-      / script src="javascripts/foundation/foundation.dropdown.js"
+      script src="javascripts/foundation/foundation.dropdown.js"
       / script src="javascripts/foundation/foundation.forms.js"
       / script src="javascripts/foundation/foundation.interchange.js"
       / script src="javascripts/foundation/foundation.joyride.js"
@@ -45,5 +92,5 @@ html.no-js
       / script src="javascripts/foundation/foundation.reveal.js"
       / script src="javascripts/foundation/foundation.section.js"
       / script src="javascripts/foundation/foundation.tooltips.js"
-      / script src="javascripts/foundation/foundation.topbar.js"
+      script src="javascripts/foundation/foundation.topbar.js"
       script $(document).foundation();
