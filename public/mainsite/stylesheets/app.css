@@ -7218,33 +7218,44 @@ a.th {
   max-width: 800px;
 }
 
-/* line 10, ../sass/_style.scss */
+/* Table of Contents
+
+0.0 Variables
+0.0 Global
+0.0 Style Elements
+0.0 Typography
+0.0 Homepage Styles
+
+*/
+/* 0.0 Variables */
+/* 0.0 Global */
+/* line 38, ../sass/_style.scss */
 html {
   background: #333;
   height: 100%;
 }
 
-/* line 14, ../sass/_style.scss */
+/* line 42, ../sass/_style.scss */
 body {
   height: 100%;
 }
 
-/* line 18, ../sass/_style.scss */
+/* line 46, ../sass/_style.scss */
 .container {
   background: white;
   height: 100%;
 }
 
-/* line 23, ../sass/_style.scss */
+/* line 51, ../sass/_style.scss */
 .top-bar {
   position: relative;
 }
-/* line 25, ../sass/_style.scss */
+/* line 53, ../sass/_style.scss */
 .top-bar .name {
   text-transform: uppercase;
   letter-spacing: 0.2em;
 }
-/* line 28, ../sass/_style.scss */
+/* line 56, ../sass/_style.scss */
 .top-bar .name h1 {
   background: url(../images/aiga-flag.png) no-repeat;
   -webkit-background-size: 190px auto;
@@ -7252,18 +7263,18 @@ body {
   -o-background-size: 190px auto;
   background-size: 190px auto;
 }
-/* line 31, ../sass/_style.scss */
+/* line 59, ../sass/_style.scss */
 .top-bar .name h1 a {
   padding: 0 30px 0 187px;
 }
-/* line 36, ../sass/_style.scss */
+/* line 64, ../sass/_style.scss */
 .top-bar .secondary {
   position: absolute;
   z-index: 10;
   top: 8px;
   right: 30px;
 }
-/* line 41, ../sass/_style.scss */
+/* line 69, ../sass/_style.scss */
 .top-bar .secondary li a {
   font-family: "ff-ernestine-web-pro", Georgia, serif;
   color: #000;
@@ -7271,25 +7282,26 @@ body {
   letter-spacing: 0.1em;
   font-size: 0.75em;
 }
-/* line 50, ../sass/_style.scss */
+/* line 78, ../sass/_style.scss */
 .top-bar .top-bar-section li a {
   font-family: "atrament-web", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-weight: 300;
 }
-/* line 56, ../sass/_style.scss */
+/* line 84, ../sass/_style.scss */
 .top-bar .top-bar-section .dropdown > li a {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-/* line 63, ../sass/_style.scss */
+/* 0.0 Style Elements */
+/* line 98, ../sass/_style.scss */
 .starred, #intro h1, #intro .cta h4 {
   position: relative;
   display: inline-block;
 }
-/* line 66, ../sass/_style.scss */
+/* line 101, ../sass/_style.scss */
 .starred:before, #intro h1:before, #intro .cta h4:before, .starred:after, #intro h1:after, #intro .cta h4:after {
   content: " ";
   display: block;
@@ -7300,16 +7312,25 @@ body {
   background-size: 100%;
   top: 37%;
 }
-/* line 76, ../sass/_style.scss */
+/* line 111, ../sass/_style.scss */
 .starred:before, #intro h1:before, #intro .cta h4:before {
   left: -50px;
 }
-/* line 79, ../sass/_style.scss */
+/* line 114, ../sass/_style.scss */
 .starred:after, #intro h1:after, #intro .cta h4:after {
   right: -50px;
 }
 
-/* line 84, ../sass/_style.scss */
+/* line 121, ../sass/_style.scss */
+.slab {
+  font-family: "ff-ernestine-web-pro", Georgia, serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* 0.0 Homepage Styles */
+/* line 135, ../sass/_style.scss */
 #intro {
   min-height: 100%;
   background: url(../images/bg-intro.jpg);
@@ -7320,41 +7341,41 @@ body {
   text-align: center;
   padding: 5em 0 0;
 }
-/* line 90, ../sass/_style.scss */
+/* line 141, ../sass/_style.scss */
 #intro .graphic {
   position: relative;
 }
-/* line 92, ../sass/_style.scss */
+/* line 143, ../sass/_style.scss */
 #intro .graphic .early, #intro .graphic .final {
   position: absolute;
   top: 40%;
 }
-/* line 96, ../sass/_style.scss */
+/* line 147, ../sass/_style.scss */
 #intro .graphic .early {
   left: 0;
 }
-/* line 99, ../sass/_style.scss */
+/* line 150, ../sass/_style.scss */
 #intro .graphic .final {
   right: 0;
 }
-/* line 102, ../sass/_style.scss */
+/* line 153, ../sass/_style.scss */
 #intro .graphic h5 {
   text-transform: uppercase;
   font-size: 1.5em;
   letter-spacing: 0.1em;
 }
-/* line 108, ../sass/_style.scss */
+/* line 159, ../sass/_style.scss */
 #intro .eagle {
   max-width: 400px;
   margin-bottom: 50px;
 }
-/* line 112, ../sass/_style.scss */
+/* line 163, ../sass/_style.scss */
 #intro h1 {
   color: white;
   text-transform: uppercase;
   letter-spacing: 0.4em;
 }
-/* line 118, ../sass/_style.scss */
+/* line 169, ../sass/_style.scss */
 #intro h3 {
   text-align: justify;
   color: white;
@@ -7363,7 +7384,7 @@ body {
   margin-bottom: 60px;
   line-height: 2;
 }
-/* line 126, ../sass/_style.scss */
+/* line 177, ../sass/_style.scss */
 #intro .cta {
   *zoom: 1;
   background: #39637c;
@@ -7379,22 +7400,22 @@ body {
 #intro .cta:after {
   clear: both;
 }
-/* line 131, ../sass/_style.scss */
+/* line 182, ../sass/_style.scss */
 #intro .cta .columns {
   -webkit-transition: all 0.25s ease-in;
   -moz-transition: all 0.25s ease-in;
   -o-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
 }
-/* line 134, ../sass/_style.scss */
+/* line 185, ../sass/_style.scss */
 #intro .cta a:hover .columns {
   background: #183a48;
 }
-/* line 137, ../sass/_style.scss */
+/* line 188, ../sass/_style.scss */
 #intro .cta a:first-child .columns {
   border-right: 2px dotted #183a48;
 }
-/* line 140, ../sass/_style.scss */
+/* line 191, ../sass/_style.scss */
 #intro .cta h4 {
   margin-top: 1.875em;
   color: white;
@@ -7402,13 +7423,13 @@ body {
   font-size: 2.5em;
   letter-spacing: 0.3em;
 }
-/* line 148, ../sass/_style.scss */
+/* line 199, ../sass/_style.scss */
 #intro .cta p {
   font-size: 1.5em;
   margin-bottom: 3.75em;
 }
 
-/* line 155, ../sass/_style.scss */
+/* line 206, ../sass/_style.scss */
 #enough {
   background: url(../images/Designer.jpg) no-repeat;
   -webkit-background-size: cover;
@@ -7417,7 +7438,7 @@ body {
   background-size: cover;
   text-align: center;
 }
-/* line 159, ../sass/_style.scss */
+/* line 210, ../sass/_style.scss */
 #enough h1 {
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -7427,15 +7448,7 @@ body {
   margin: 0;
 }
 
-/* line 169, ../sass/_style.scss */
-.slab {
-  font-family: "ff-ernestine-web-pro", Georgia, serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-}
-
-/* line 176, ../sass/_style.scss */
+/* line 220, ../sass/_style.scss */
 #show {
   background: url(../images/eaglehalftone.jpg);
   -webkit-background-size: cover;
@@ -7445,14 +7458,14 @@ body {
   padding: 7.5em 0;
   text-align: center;
 }
-/* line 180, ../sass/_style.scss */
+/* line 224, ../sass/_style.scss */
 #show .panel {
   background: white url(../images/ornate-top.gif) no-repeat;
   background-position: top center;
   padding-bottom: 1.875em;
   position: relative;
 }
-/* line 185, ../sass/_style.scss */
+/* line 229, ../sass/_style.scss */
 #show .panel:before {
   content: " ";
   display: block;
@@ -7463,24 +7476,24 @@ body {
   top: -60px;
   right: -10px;
 }
-/* line 197, ../sass/_style.scss */
+/* line 241, ../sass/_style.scss */
 #show .seal {
   max-width: 150px;
   margin-top: -80px;
 }
-/* line 201, ../sass/_style.scss */
+/* line 245, ../sass/_style.scss */
 #show h2 {
   font-size: 2.25em;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   margin: 1.25em 0 0.625em;
 }
-/* line 207, ../sass/_style.scss */
+/* line 251, ../sass/_style.scss */
 #show .subheader {
   font-size: 1.3em;
   margin-bottom: 20px;
 }
-/* line 210, ../sass/_style.scss */
+/* line 254, ../sass/_style.scss */
 #show .subheader em {
   font-family: "adobe-caslon-pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   letter-spacing: 0.1em;

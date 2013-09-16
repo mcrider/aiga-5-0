@@ -1,11 +1,39 @@
 // Style SCSS
 
+///////////////////////////////////
+
+/* Table of Contents
+
+0.0 Variables
+0.0 Global
+0.0 Style Elements
+0.0 Typography
+0.0 Homepage Styles
+
+*/
+
+///////////////////////////////////
+
+
+///////////////////////////////////
+
+/* 0.0 Variables */
+
+///////////////////////////////////
+
 // Colors
 $darkblue: #39637c;
 $blue: #0088b3;
 $red: #991f27;
 
 $slab: "ff-ernestine-web-pro", Georgia, serif;
+
+
+///////////////////////////////////
+
+/* 0.0 Global */
+
+///////////////////////////////////
 
 html {
   background: #333;
@@ -60,7 +88,14 @@ body {
   }
 }
 
-.starred {
+
+///////////////////////////////////
+
+/* 0.0 Style Elements */
+
+///////////////////////////////////
+
+.starred { // Adds white stars arround headline
   position: relative;
   display: inline-block;
   &:before, &:after {
@@ -80,6 +115,22 @@ body {
     right: -50px;
   }
 }
+
+
+
+.slab { // Slab Small Caps
+  font-family: $slab;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+
+///////////////////////////////////
+
+/* 0.0 Homepage Styles */
+
+///////////////////////////////////
 
 #intro {
   min-height: 100%;
@@ -164,13 +215,6 @@ body {
     padding: emCalc(100px) 0;
     margin: 0;
   }
-}
-
-.slab {
-  font-family: $slab;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
 }
 
 #show {
