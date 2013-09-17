@@ -1,0 +1,17 @@
+// Variables
+
+// Colors
+$darkblue: #39637c;
+$blue: #0088b3;
+$red: #991f27;
+
+$headline: "atrament-web", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body: "adobe-caslon-pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$slab: "ff-ernestine-web-pro", Georgia, serif;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headline;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}

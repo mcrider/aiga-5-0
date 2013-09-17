@@ -1,0 +1,225 @@
+.icon-right {
+  line-height: 22px;
+  margin-right: 0;
+  margin-left: 8px;
+}
+.icon-left {
+  line-height: 24px;
+  margin-right: 8px;
+  margin-left: 2px;
+}
+.icon-middle {
+  line-height: 24px;
+  margin-right: 0;
+  margin-left: 0;
+}
+legend {
+  margin-bottom: 0;
+  display: inherit;
+  width: 100%;
+}
+.required-star {
+  color: #F38AA4;
+}
+.btn-mini {
+  font-size: 14px;
+}
+.edit-profile {
+  margin-right: 10px;
+}
+#notes {
+  margin-bottom: 30px;
+}
+.entry-container {
+  /*border: 3px solid #596974;*/
+
+  padding: 12px;
+}
+.entry-container .register-form,
+.entry-container .login-form {
+  margin-bottom: 25px;
+}
+.entry-container .register-form legend,
+.entry-container .login-form legend {
+  margin-bottom: 20px;
+}
+.entry-container #forgot-password-link {
+  padding-top: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+.entry-container #forgot-password-link i {
+  font-size: 16px;
+  color: #8292a7;
+  line-height: 18px;
+  margin-right: 7px;
+}
+.entry-container .signup-container {
+  text-align: center;
+  padding-top: 16px;
+}
+.entry-container .signup-container .btn {
+  margin-left: 8px;
+  font-weight: bold;
+  font-size: inherit;
+}
+.entry-container .no-entries {
+  font-size: 20px;
+}
+.entry-container #entryList {
+  margin-top: 25px;
+}
+.entry-container #newEntry {
+  margin-top: 25px;
+}
+.entry-container #newEntryForm {
+  width: 84.8%;
+}
+.entry-container #newEntryForm .team_info {
+  line-height: 33px;
+  margin: 13.5px 0;
+}
+.entry-container h3 {
+  margin-top: 0;
+}
+.entry-container h4 {
+  line-height: 32px;
+}
+.entry-container .top {
+  /*border-bottom: 3px solid #596974;
+    margin: -12px -12px 0 -12px;
+*/
+
+}
+.entry-container .top .entry-list-container,
+.entry-container .top .admin-entries-container {
+  /*border-right: 3px solid #596974;*/
+
+}
+.entry-container .top .entry-list-container .entry,
+.entry-container .top .admin-entries-container .entry {
+  background: white;
+  padding-top: 8px;
+  padding-bottom: 20px;
+  margin-left: 0;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.2);
+  box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.2);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.entry-container .top .entry-list-container .entry .entry-buttons,
+.entry-container .top .admin-entries-container .entry .entry-buttons {
+  margin-top: 12px;
+}
+.entry-container .top .entry-list-container .entry .entry-buttons .edit-project,
+.entry-container .top .admin-entries-container .entry .entry-buttons .edit-project {
+  margin-right: 12px;
+}
+.entry-container .edit-entry-form {
+  display: none;
+}
+.file-list {
+  margin-top: 6px;
+}
+.file-list .no-files {
+  color: #aaa;
+}
+.file-list li {
+  line-height: 32px;
+}
+.file-list .file-icon {
+  margin-right: 5px;
+}
+.file-list .icon-file-alt {
+  line-height: 20px;
+}
+.file-list .icon-remove-sign {
+  cursor: pointer;
+  line-height: 22px;
+}
+#newEntryForm .file-list {
+  font-size: 12px;
+}
+.payup-sucka {
+  margin-bottom: 20px;
+}
+.squared-away {
+  margin-top: 6px;
+  text-align: right;
+  width: 100%;
+  font-size: .8em;
+  font-weight: bold;
+}
+.user-info-container {
+  border-top: 1px solid #ddd;
+}
+.user-info-container .edit-user-info {
+  margin-left: 0;
+}
+.user-info-container .user-info {
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+.user-info-container .user-info p {
+  margin-bottom: 0;
+}
+.admin-entries-container .title-row {
+  margin-left: -15px;
+  margin-bottom: 5px;
+}
+.admin-entries-container h4 {
+  margin: 0 30px 3px 0;
+}
+.admin-entries-container h5 {
+  margin-top: 2px;
+}
+.admin-entries-container .span4 {
+  margin-left: 16px;
+  margin-top: 5px;
+}
+.admin-entries-container .entry {
+  background: white;
+  padding-top: 8px;
+  padding-bottom: 20px;
+  margin-left: 0;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.2);
+  box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.2);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.admin-entries-container .entry .entry-buttons {
+  margin-top: 12px;
+}
+.admin-entries-container .entry .entry-buttons .edit-project {
+  margin-right: 12px;
+}
+.admin-entries-container .entry-buttons {
+  text-align: left;
+}
+.admin-entries-container .squared-away {
+  text-align: left;
+}
+.numberCircle {
+  cursor: pointer;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  border-radius: 999px;
+  width: 12px;
+  height: 12px;
+  padding: 4px;
+  line-height: 12px;
+  background: #596974;
+  border: 2px solid #596974;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+}
+.ui-pnotify-closer .icon-remove {
+  line-height: 21px;
+}
