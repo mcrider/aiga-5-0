@@ -1,12 +1,12 @@
 <template name="footer">
   <footer class="footer" id="copyright">
     <div class="container">
-      <div class="span10 links">
+      <div class="span5 links">
         {{#each footerNav}}
           <a href="{{slug}}">{{title}}</a>
         {{/each}}
       </div>
-      <div class="span10">
+      <div class="span6">
         <p>{{{getSetting 'footerMessage'}}}</p>
       </div>
     </div>

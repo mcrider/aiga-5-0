@@ -75,7 +75,7 @@
   {{#if inForgotPasswordFlow}}
     {{> _forgotPasswordForm}}
   {{else}}
-    <div class="span10 offset2">
+    <div class="span12">
       {{#if inSignupFlow}}
         <fieldset class="register-form">
           <div class="row"><legend class="span8">Create an account</legend></div>
@@ -150,7 +150,12 @@
         </fieldset>
       {{else}}
         <fieldset class="login-form">
-          <div class="row"><legend class="span4">Login to your account</legend></div>
+          <div class="row">
+            <legend class="span4">
+              <h3>So Glad You Decided to Enter! Glory Awaits.</h3>
+              <h4>If you haven't already, please Create An Account so we can get started!</h4>
+            </legend>
+          </div>
           <div class="row">
             <div class="span4">
               <label id="login-email-label" class="profile" for="login-email">Email</label>
@@ -174,7 +179,7 @@
     <div class="span8 offset2">{{> _loginButtonsMessages}}</div>
 
     {{#if inLoginFlow}}
-      <div class="span4 offset2">
+      <div class="span4">
         <button class="btn btn-primary" id="login-buttons-password" type="button">Sign in</button>
         {{#if showForgotPasswordLink}}
           <a id="forgot-password-link" class="pull-right"><i class="icon-question-sign"></i>Forgot password?</a>

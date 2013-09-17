@@ -1,17 +1,95 @@
 // Variables
-
+@import "compass";
 // Colors
 $darkblue: #39637c;
 $blue: #0088b3;
 $red: #991f27;
 
 $headline: "atrament-web", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$body: "adobe-caslon-pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$slab: "ff-ernestine-web-pro", Georgia, serif;
+$body: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $headline;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+}
+
+.brand {
+  font-family: $headline;
+  font-weight: normal !important;
+  letter-spacing: 0.1;
+}
+
+p {
+  font-family: $body;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+a {
+  color: $blue;
+}
+
+.nav {
+  a {
+    font-family: $body;
+    font-size: 18px !important;
+    color: $blue !important;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    color: #333;
+  }
+  .icon-cogs {
+    color: #000 !important;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: url(/mainsite/images/eaglehalftone.jpg) no-repeat;
+  @include background-size(cover);
+  height: 100%;
+}
+
+
+#contents {
+  height: 100%;
+}
+
+#page > .container {
+  background: #fff url(/mainsite/images/ornate-top.gif) no-repeat;
+  background-position: top center;
+  padding: 50px 40px 40px;
+  margin: 50px auto;
+  @include box-shadow(0 0 8px rgba(0,0,0,0.3));
+}
+
+#adminMenu {
+  li a {
+    letter-spacing: 0;
+    font-weight: normal;
+  }
+}
+
+footer {
+  font-family: $body;
+  font-weight: bold;
+  text-transform: uppercase;
+  .links {
+    a {
+      color: $blue;
+      font-size: 12px !important;
+      letter-spacing: 0.1em;
+    }
+  }
+  p {
+    color: #000;
+    font-size: 12px !important;
+    text-align: right;
+    letter-spacing: 0.1em;
+  }
 }

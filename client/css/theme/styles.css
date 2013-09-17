@@ -1,1 +1,83 @@
-h1, h2, h3, h4, h5, h6 { font-family: "atrament-web", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-weight: normal; text-transform: uppercase; letter-spacing: 0.1em; }
+/* line 11, styles.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "atrament-web", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.1em; }
+
+/* line 18, styles.scss */
+.brand {
+  font-family: "atrament-web", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal !important;
+  letter-spacing: 0.1; }
+
+/* line 24, styles.scss */
+p {
+  font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5; }
+
+/* line 30, styles.scss */
+a {
+  color: #0088b3; }
+
+/* line 35, styles.scss */
+.nav a {
+  font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 18px !important;
+  color: #0088b3 !important;
+  letter-spacing: 0.1em;
+  font-weight: normal;
+  color: #333; }
+/* line 43, styles.scss */
+.nav .icon-cogs {
+  color: #000 !important; }
+
+/* line 48, styles.scss */
+html {
+  height: 100%; }
+
+/* line 52, styles.scss */
+body {
+  background: url(/mainsite/images/eaglehalftone.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%; }
+
+/* line 59, styles.scss */
+#contents {
+  height: 100%; }
+
+/* line 63, styles.scss */
+#page > .container {
+  background: white url(/mainsite/images/ornate-top.gif) no-repeat;
+  background-position: top center;
+  padding: 50px 40px 40px;
+  margin: 50px auto;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); }
+
+/* line 72, styles.scss */
+#adminMenu li a {
+  letter-spacing: 0;
+  font-weight: normal; }
+
+/* line 78, styles.scss */
+footer {
+  font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase; }
+  /* line 83, styles.scss */
+  footer .links a {
+    color: #0088b3;
+    font-size: 12px !important;
+    letter-spacing: 0.1em; }
+  /* line 89, styles.scss */
+  footer p {
+    color: #000;
+    font-size: 12px !important;
+    text-align: right;
+    letter-spacing: 0.1em; }
