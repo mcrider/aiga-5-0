@@ -31,7 +31,8 @@ a {
   color: $blue;
 }
 
-.nav {
+.navbar .nav {
+  float: right;
   a {
     font-family: $body;
     font-size: 18px !important;
@@ -87,7 +88,7 @@ body {
 
 .entry-container {
   h3 {
-    font-size: 50px !important;
+    font-size: 50px;
     font-family: $body;
     margin-bottom: 10px;
     letter-spacing: 0;
@@ -95,6 +96,31 @@ body {
   h5 {
     font-size: 18px;
   }
+  .row.entry {
+    margin: 10px 0 !important;
+    @include box-shadow(0 0 8px rgba(0,0,0,0.3) !important)
+  }
+}
+
+legend h3 {
+  font-family: $headline !important;
+  font-size: 40px !important;
+}
+
+#deleteEntryModal {
+  background: #fff url(/mainsite/images/ornate-top.gif) no-repeat;
+  background-position: top center;
+  padding: 50px 10px 30px;
+  h3 {
+    font-family: $headline;
+  }
+  .modal-header .close {
+    margin-top: -53px;
+  }
+}
+
+.edit-user-info-form {
+  margin: 20px 0 20px;
 }
 
 footer {
