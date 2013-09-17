@@ -78,10 +78,22 @@ body {
 .login-form {
   p {
     font-weight: normal;
-    font-size: 12px;
+    font-size: 14px;
     #signup-link {
       font-size: inherit;
     }
+  }
+}
+
+.entry-container {
+  h3 {
+    font-size: 50px !important;
+    font-family: $body;
+    margin-bottom: 10px;
+    letter-spacing: 0;
+  }
+  h5 {
+    font-size: 18px;
   }
 }
 

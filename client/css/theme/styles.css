@@ -68,22 +68,32 @@ body {
 /* line 79, styles.scss */
 .login-form p {
   font-weight: normal;
-  font-size: 12px; }
+  font-size: 14px; }
   /* line 82, styles.scss */
   .login-form p #signup-link {
     font-size: inherit; }
 
-/* line 88, styles.scss */
+/* line 89, styles.scss */
+.entry-container h3 {
+  font-size: 50px !important;
+  font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  margin-bottom: 10px;
+  letter-spacing: 0; }
+/* line 95, styles.scss */
+.entry-container h5 {
+  font-size: 18px; }
+
+/* line 100, styles.scss */
 footer {
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: bold;
   text-transform: uppercase; }
-  /* line 93, styles.scss */
+  /* line 105, styles.scss */
   footer .links a {
     color: #0088b3;
     font-size: 12px !important;
     letter-spacing: 0.1em; }
-  /* line 99, styles.scss */
+  /* line 111, styles.scss */
   footer p {
     color: #000;
     font-size: 12px !important;

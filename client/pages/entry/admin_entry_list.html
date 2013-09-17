@@ -18,7 +18,7 @@
           <h4>{{project_name}}</h4>
           <h5>{{client_name}}</h5>
           <span class="file-list">Attachments</span>
-          {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="icon-file-alt"></i> <a href="{{url}}" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
+          {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="icon-file-alt"></i> <a href="{{url}}" target="_blank" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
         </div>
         <div class="admin-edit-entry hidden">{{#isolate}}{{> admin_edit_entry}}{{/isolate}}</div>
       </div>
