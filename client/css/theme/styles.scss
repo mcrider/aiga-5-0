@@ -75,6 +75,16 @@ body {
   }
 }
 
+.login-form {
+  p {
+    font-weight: normal;
+    font-size: 12px;
+    #signup-link {
+      font-size: inherit;
+    }
+  }
+}
+
 footer {
   font-family: $body;
   font-weight: bold;

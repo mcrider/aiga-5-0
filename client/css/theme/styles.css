@@ -65,17 +65,25 @@ body {
   letter-spacing: 0;
   font-weight: normal; }
 
-/* line 78, styles.scss */
+/* line 79, styles.scss */
+.login-form p {
+  font-weight: normal;
+  font-size: 12px; }
+  /* line 82, styles.scss */
+  .login-form p #signup-link {
+    font-size: inherit; }
+
+/* line 88, styles.scss */
 footer {
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: bold;
   text-transform: uppercase; }
-  /* line 83, styles.scss */
+  /* line 93, styles.scss */
   footer .links a {
     color: #0088b3;
     font-size: 12px !important;
     letter-spacing: 0.1em; }
-  /* line 89, styles.scss */
+  /* line 99, styles.scss */
   footer p {
     color: #000;
     font-size: 12px !important;
