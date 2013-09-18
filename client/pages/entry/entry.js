@@ -68,6 +68,12 @@ Template.entry.events({
   'click .payup-sucka': function(e) {
     e.preventDefault();
 
+    if($("#aiga_id_pay").length > 0) {
+      var currentProfile = Meteor.users.findOne().profile;
+      currentProfile.aiga_id = $("#aiga_id_pay").val();
+      Meteor.users.update({ _id: Meteor.userId()}, {$set: {profile: currentProfile}});
+    }
+
     var amount = Template.entry.totalFee() * 100;
     var userId = Meteor.userId();
     StripeCheckout.open({

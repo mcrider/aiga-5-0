@@ -27,15 +27,20 @@
                   {{/if}}
                 </div>
                 <div class="span4">
-                  <h5 class="">Total Entry Fee</h3>
-                  <h3 class="">${{totalFee}}</h3>
+                <h5 class="">Select Rate</h3>
                   <select class="input-block-level" id="rate" name="rate">
                     <option value="{{rate_member}}">Member's Rate • ${{rate_member}}/Entry</option>
                     <option value="{{rate_nonmember}}">Non-Member's Rate • ${{rate_nonmember}}/Entry</option>
                     <option value="{{rate_student}}">Student Rate • ${{rate_student}}/Entry</option>
                   </select>
-                  <p>Membership ID numbers required for AIGA, AAF-Hawaii and Ad2 Honolulu Member's discounted rates.</p>
+                  <p>Only members of AIGA, AAF-Hawaii and Ad2 Honolulu qualify for the member rate. Please provide your member number below:</p>
+                  {{#with currentUser}}
+                    <input value="{{aiga_id}}" id="aiga_id_pay" name="aiga_id_pay" class="profile span4" placeholder="Membership No. (If Applicable)" type="text">
+                  {{/with}}
+                  <h5 class="">Total Entry Fee</h3>
+                  <h3 class="">${{totalFee}}</h3>
                   <a class="btn payup-sucka" href="#">Pay Online</a>
+                  <p>Once you pay, your total will return to $0. You can continue to add entries, paying as you go, until the deadline.</p>
                 </div>
               </div>
               <div class="row">
