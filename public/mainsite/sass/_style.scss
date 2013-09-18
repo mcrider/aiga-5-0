@@ -23,10 +23,15 @@
 
 // Colors
 $darkblue: #39637c;
-$blue: #0088b3;
-$red: #991f27;
+$blue:     #0088b3;
+$red:      #991f27;
+$grey:     #d4d4d4;
 
 $slab: "ff-ernestine-web-pro", Georgia, serif;
+
+$small-max: "only screen and (max-width: #{$small-screen})";
+$starred-breakpoint: "only screen and (max-width: 485px)";
+$topbar-media-query-max: "only screen and (max-width: #{$topbar-breakpoint})";
 
 
 ///////////////////////////////////
@@ -80,6 +85,9 @@ body {
       text-transform: uppercase;
       letter-spacing: 0.2em;
       font-weight: 300;
+      @media #{$topbar-media-query-max} {
+        color:#fff;
+      }
     }
     .dropdown > li a {
       padding-top: 20px;
@@ -107,6 +115,9 @@ body {
     background: url(../images/star.png);
     background-size: 100%;
     top: 37%;
+    @media #{$starred-breakpoint} {
+      display:none;
+    }
   }
   &:before {
     left: -50px;
@@ -143,6 +154,9 @@ body {
     .early, .final {
       position: absolute;
       top: 40%;
+      @media #{$small-max} {
+        top:100%;
+      }
     }
     .early {
       left: 0;
@@ -158,6 +172,7 @@ body {
   }
   .eagle {
     max-width: 400px;
+    width:100%;
     margin-bottom: 50px;
   }
   h1 {
@@ -165,6 +180,9 @@ body {
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.4em;
+    @media #{$small-max} {
+      margin-top:100px;
+    }
   }
   h3 {
     text-align: justify;
@@ -173,6 +191,7 @@ body {
     letter-spacing: 0.1em;
     margin-bottom: 60px;
     line-height: 2;
+    font-weight:100;
   }
   .cta {
     @include clearfix;
@@ -221,6 +240,10 @@ body {
   background: url(../images/eaglehalftone.jpg);
   @include background-size(cover);
   padding: emCalc(120px) 0;
+  span {
+    font-family:$body-font-family;
+    font-weight:600;
+  }
   .panel {
     background: #fff url(../images/ornate-top.gif) no-repeat;
     background-position: top center;
@@ -235,12 +258,90 @@ body {
       position: absolute;
       top: -60px;
       right: -10px;
+      @media only screen and (max-width: 1020px) {
+        right: 0px;
+      }
+    }
+    .date {
+        text-transform: uppercase;
+        text-align:left;
+        @media only screen and (min-width: #{$small-screen}) {
+          position:relative;
+          bottom:-65px;
+        }
+      h5 {
+        letter-spacing:3px;
+      }
+      h1 {
+        letter-spacing:16px;
+        color:$red;
+        font-size:$h1-font-size * 1.25;
+        line-height:1;
+        @media #{$small-max} {
+          font-size:$h2-font-size;
+        }
+      }
+    }
+    .info {
+      text-transform: uppercase;
+      text-align:left;
+      border-bottom:1px solid $grey;
+      border-left:1px solid $grey;
+      border-right:1px solid $grey;
+      &.info-top {
+        border-top:1px solid $grey;
+      }
+      &:last-child {
+        border:#fff;
+        h5 {
+          padding-top:10px;
+        }
+      }
+      h2 {
+        margin:10px 0 10px;
+      }
+      h5 {
+        letter-spacing:5px;
+      }
+      .theader {
+        @media #{$small-max} {
+          h5 {
+            letter-spacing:0px;
+          }
+        }
+      }
+      .small-2 {
+        h5 {
+          padding-top:15px;
+          text-align:right;
+        }
+      }
+      .small-10 {
+        border-left:4px double $grey;
+      }
+      .border-right {
+        @media only screen and (min-width: #{$small-screen}) {
+          border-right-width:4px;
+          border-right: double $grey;
+        }
+      }
+      .cost {
+        margin-top:10px;
+        padding-top:15px;
+        h5 span {
+          font-size:$h2-font-size;
+          line-height:1;
+        }
+      }
     }
   }
   text-align: center;
   .seal {
     max-width: 150px;
-    margin-top: -80px;
+    margin-top:70px;
+    @media only screen and (min-width: #{$small-screen}) {
+      margin-top: -80px;
+    }
   }
   h2 {
     font-size: emCalc(36px);
