@@ -1,0 +1,143 @@
+// Variables
+@import "compass";
+// Colors
+$darkblue: #39637c;
+$blue: #0088b3;
+$red: #991f27;
+
+$headline: "atrament-web", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headline;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.brand {
+  font-family: $headline;
+  font-weight: normal !important;
+  letter-spacing: 0.1;
+}
+
+p {
+  font-family: $body;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+a {
+  color: $blue;
+}
+
+.navbar .nav {
+  float: right;
+  a {
+    font-family: $body;
+    font-size: 18px !important;
+    color: $blue !important;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    color: #333;
+  }
+  .icon-cogs {
+    color: #000 !important;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: url(/mainsite/images/eaglehalftone.jpg) no-repeat;
+  @include background-size(cover);
+  height: 100%;
+}
+
+
+#contents {
+  height: 100%;
+}
+
+#page > .container {
+  background: #fff url(/mainsite/images/ornate-top.gif) no-repeat;
+  background-position: top center;
+  padding: 50px 40px 40px;
+  margin: 50px auto;
+  @include box-shadow(0 0 8px rgba(0,0,0,0.3));
+}
+
+#adminMenu {
+  li a {
+    letter-spacing: 0;
+    font-weight: normal;
+  }
+}
+
+.login-form {
+  p {
+    font-weight: normal;
+    font-size: 14px;
+    #signup-link {
+      font-size: inherit;
+    }
+  }
+}
+
+.entry-container {
+  h3 {
+    font-size: 50px;
+    font-family: $body;
+    margin-bottom: 10px;
+    letter-spacing: 0;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  .row.entry {
+    margin: 10px 0 !important;
+    @include box-shadow(0 0 8px rgba(0,0,0,0.3) !important)
+  }
+}
+
+legend h3 {
+  font-family: $headline !important;
+  font-size: 40px !important;
+}
+
+#deleteEntryModal {
+  background: #fff url(/mainsite/images/ornate-top.gif) no-repeat;
+  background-position: top center;
+  padding: 50px 10px 30px;
+  h3 {
+    font-family: $headline;
+  }
+  .modal-header .close {
+    margin-top: -53px;
+  }
+}
+
+.edit-user-info-form {
+  margin: 20px 0 20px;
+}
+
+footer {
+  font-family: $body;
+  font-weight: bold;
+  text-transform: uppercase;
+  .links {
+    a {
+      color: $blue;
+      font-size: 12px !important;
+      letter-spacing: 0.1em;
+    }
+  }
+  p {
+    color: #000;
+    font-size: 12px !important;
+    text-align: right;
+    letter-spacing: 0.1em;
+  }
+}

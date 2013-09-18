@@ -17,17 +17,17 @@
       <div id="print_fields" class="project_fields hidden">
         <input class="input-block-level" type="text" id="url" name="url" placeholder="Print Company" />
         <a class="btn filepicker-file" title="File(s)"><i class="icon-left icon-file"></i>Add File(s)</a>
-        {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="file-icon icon-remove-sign"></i> <a href="{{url}}" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
+        {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="file-icon icon-remove-sign"></i> <a href="{{url}}" target="_blank" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
       </div>
       <div id="web_fields" class="project_fields hidden">
         <input class="input-block-level" type="text" id="url" name="url" placeholder="URL" />
         <a class="btn filepicker-file" title="File(s)"><i class="icon-left icon-file"></i>Add File(s)</a>
-        {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="file-icon icon-remove-sign"></i> <a href="{{url}}" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
+        {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="file-icon icon-remove-sign"></i> <a href="{{url}}" target="_blank" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
       </div>
       <div id="motion_fields" class="project_fields hidden">
         <input class="input-block-level" type="text" id="url" name="url" placeholder="URL" />
         <a class="btn filepicker-file" title="File(s)"><i class="icon-left icon-file"></i>Add File(s)</a>
-        {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="file-icon icon-remove-sign"></i> <a href="{{url}}" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
+        {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="file-icon icon-remove-sign"></i> <a href="{{url}}" target="_blank" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
       </div>
       {{#if entryErrorMessage}}
         <div class="alert alert-error">{{entryErrorMessage}}</div>

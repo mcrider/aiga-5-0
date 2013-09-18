@@ -75,7 +75,7 @@
   {{#if inForgotPasswordFlow}}
     {{> _forgotPasswordForm}}
   {{else}}
-    <div class="span10 offset2">
+    <div class="span12">
       {{#if inSignupFlow}}
         <fieldset class="register-form">
           <div class="row"><legend class="span8">Create an account</legend></div>
@@ -150,20 +150,25 @@
         </fieldset>
       {{else}}
         <fieldset class="login-form">
-          <div class="row"><legend class="span4">Login to your account</legend></div>
           <div class="row">
-            <div class="span4">
+            <legend class="span6">
+              <h3>So Glad You Decided to Enter!<br />Glory Awaits.</h3>
+              <p>If you haven't already, please <a id="signup-link">Create An Account</a> so we can get started!</p>
+            </legend>
+          </div>
+          <div class="row">
+            <div class="span6">
               <label id="login-email-label" class="profile" for="login-email">Email</label>
               <div class="controls">
-                <input id="login-email" name="email" class="span4" type="text">
+                <input id="login-email" name="email" class="span6" type="text">
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="span4">
+            <div class="span6">
               <label id="login-password-label" class="profile" for="login-aiga_id">Password</label>
               <div class="controls">
-                <input id="login-password" name="password" class="span4" type="password">
+                <input id="login-password" name="password" class="span6" type="password">
               </div>
             </div>
           </div>
@@ -174,7 +179,7 @@
     <div class="span8 offset2">{{> _loginButtonsMessages}}</div>
 
     {{#if inLoginFlow}}
-      <div class="span4 offset2">
+      <div class="span6">
         <button class="btn btn-primary" id="login-buttons-password" type="button">Sign in</button>
         {{#if showForgotPasswordLink}}
           <a id="forgot-password-link" class="pull-right"><i class="icon-question-sign"></i>Forgot password?</a>
