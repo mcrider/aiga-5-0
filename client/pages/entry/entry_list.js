@@ -6,6 +6,7 @@ Template.entry_list.entries = function() {
 Template.entry_list.events({
   'click #newEntry': function(e) {
     Session.set('entry-files', null);
+    Session.set('entryErrorMessage', false);
     e.preventDefault();
     Session.set('newEntry', true)
   },

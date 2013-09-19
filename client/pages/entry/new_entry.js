@@ -13,26 +13,16 @@ Template.new_entry.events({
     $('.team_member').hide();
     $('.show_for_' + type).show();
 
-    $('#' + type + '_fields').hide().removeClass('hidden').slideDown(200);
+    $('#' + type + '_fields').hide().removeClass('hidden').fadeIn(200);
+    $("#project_team").hide().removeClass('hidden').fadeIn(200);
   },
-  'click #entry_next': function(e) {
-    e.preventDefault();
-
+  'submit #newEntryForm': function (e) {
     // Form Validation
     if($('#type').val() == "none" || !$('#project_name').val()) {
       Session.set('entryErrorMessage', 'Please ensure all required fields are completed.');
       return false;
     }
 
-    $("#project_information").addClass('hidden');
-    $("#project_team").hide().removeClass('hidden').fadeIn(200);
-  },
-  'click #entry_back': function(e) {
-    e.preventDefault();
-    $("#project_team").addClass('hidden');
-    $("#project_information").hide().removeClass('hidden').fadeIn(200);
-  },
-  'submit #newEntryForm': function (e) {
     e.preventDefault();
     var entryData = utils.getFormValues("#newEntryForm");
     entryData.userId = Meteor.userId();
