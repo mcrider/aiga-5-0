@@ -129,3 +129,7 @@ footer {
     font-size: 12px !important;
     text-align: right;
     letter-spacing: 0.1em; }
+
+/* line 145, styles.scss */
+.file-message {
+  font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
