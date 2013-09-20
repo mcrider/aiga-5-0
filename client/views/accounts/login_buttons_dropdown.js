@@ -79,7 +79,7 @@ Template._loginButtonsLoggedOutAllServices.events({
     forgotPassword();
   },
 
-  'click #signup-link': function (event) {
+  'click .signup-link': function (event) {
     Accounts.ui.currentSelectorScope = $(event.currentTarget).parent().parent();
     event.stopImmediatePropagation();
     loginButtonsSession.resetMessages();
