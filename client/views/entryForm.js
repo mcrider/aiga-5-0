@@ -16,3 +16,12 @@ Template.print_form.user = function() {
 Template.print_form.entries = function() {
   return Entries.find({userId: Meteor.userId()});
 }
+
+
+Template.print_form.typeEquals = function (typeOne, typeTwo) {
+  return typeOne === typeTwo;
+};
+
+Template.print_form.typeNotEquals = function (typeOne, typeTwo) {
+  return typeOne !== typeTwo;
+};
