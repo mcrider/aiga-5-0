@@ -1,7 +1,7 @@
 // Server-side startup code (set up collections, add default data if needed)
 
 Meteor.startup(function () {
-  process.env.MAIL_URL="smtp://aiga50entry%40gmail.com:aiga1914HNL@smtp.gmail.com:465/";
+  process.env.MAIL_URL="smtp://entries%40aigahonolulu.org:aiga1914HNL@mail.aigahonolulu.org/";
 
   // Helper functions for authorization
   authorize = {
@@ -206,7 +206,7 @@ Meteor.methods({
       to: to,
       from: 'noreply@aigahonolulu.org',
       subject: 'Your AIGA Honolulu 5-0 Awards account is ready!',
-      text: 'You have been signed up to submit entries for the AIGA Honolulu 5-0 Award show.\n\nLog in to http://enter.aigahonolulu.org to start submitting entries!\n\n- The AIGA Honolulu Team'
+      text: 'You have been signed up to submit entries for the AIGA Honolulu 5-0 Award show.\n\nLog in to http://50.aigahonolulu.org to start submitting entries!\n\n- The AIGA Honolulu Team'
     });
   },
   sendPaymentEmail: function (to) {
