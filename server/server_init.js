@@ -1,6 +1,7 @@
 // Server-side startup code (set up collections, add default data if needed)
 
 Meteor.startup(function () {
+  process.env.MAIL_URL="smtp://aiga50entry%40gmail.com:aiga1914HNL@smtp.gmail.com:465/";
 
   // Helper functions for authorization
   authorize = {
