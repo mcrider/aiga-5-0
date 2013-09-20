@@ -28,7 +28,7 @@ Template.entry.editingUser = function() {
 }
 
 Template.entry.totalFee = function() {
-  if (!Session.get('currentRate')) Session.set('currentRate', 40)
+  if (!Session.get('currentRate')) Session.set('currentRate', Template.entry.rate_member());
   var numEntries = Entries.find({userId: Meteor.userId(), paid: false}).count();
 
   return numEntries * Session.get('currentRate');
