@@ -26,13 +26,15 @@ Meteor.Router.add({
   "/login": function() {
     return 'loginButtonsFullPage';
   },
-
   "/users": function() {
     if (!Roles.userIsInRole(Meteor.user(), ['admin'])) {
       return false;
     }
     return 'admin_users';
 	},
+  "/printForm": function() {
+    return 'print_form';
+  },
   "/": function() {
     // Don't render until we have our data
     if (!pagesSubscription.ready() || !settingsSubscription.ready()) {

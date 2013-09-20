@@ -1,0 +1,55 @@
+<template name="print_form">
+  {{#each entries}}
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <div class="admin-user-profile">
+            {{user_label}}
+            <p>Email: {{user.emails.0.address}}</p>
+            <p>Agency: {{user.profile.agency_name}}</p>
+            <p>Address: {{user.profile.address}}</p>
+            <p>Phone{{#if user.profile.fax}}/Fax{{/if}}: {{user.profile.phone}}{{#if user.profile.fax}}/{{user.profile.fax}}{{/if}}</p>
+            <p>AIGA ID: {{user.profile.aiga_id}}</p>
+
+
+
+            <h2>Id: {{_id}}</h2>
+            <p>Project Name:{{project_name}}</p>
+            <p>Client name:{{client_name}}</p>
+
+            {{#if typeEquals type "print"}}<p>Type: Print / Environmental</p>{{/if}}
+            {{#if typeEquals type "web"}}<p>Type: Web</p>{{/if}}
+            {{#if typeEquals type "motion"}}<p>Type: Motion Graphics</p>{{/if}}
+
+
+            <h4>Project Team</h4>
+
+            <p>Art Director: {{art_director}}</p>
+            <p>Designer: {{designer}}</p>
+            <p>Illustrator: {{illustrator}}</p>
+            <p>Copywriter: {{copywriter}}</p>
+            <p>Photographer: {{photographer}}</p>
+            <p>Special Consultant: {{special_consultant}}</p>
+            {{#if typeEquals type "print"}}
+              <p>Paper: {{paper}}</p>
+            {{/if}}
+            {{#if typeEquals type "web"}}
+              <p>Developer: {{developer}}</p>
+            {{/if}}
+
+            {{#if typeEquals type "web"}}
+              <h4>Technical Information</h4>
+              <p>{{tech_info}}</p>
+            {{/if}}
+            <h4>Notes</h4>
+            <p>{{notes}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</template>
+
+
+
+
