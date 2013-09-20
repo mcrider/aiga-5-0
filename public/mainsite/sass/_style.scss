@@ -30,6 +30,7 @@ $grey:     #d4d4d4;
 $slab: "ff-ernestine-web-pro", Georgia, serif;
 
 $small-max: "only screen and (max-width: #{$small-screen})";
+$medium-max: "only screen and (max-width: #{$medium-screen})";
 $starred-breakpoint: "only screen and (max-width: 485px)";
 $topbar-media-query-max: "only screen and (max-width: #{$topbar-breakpoint})";
 
@@ -43,6 +44,9 @@ $topbar-media-query-max: "only screen and (max-width: #{$topbar-breakpoint})";
 html {
   background: #333;
   height: 100%;
+  @media #{$medium-max} {
+    background-color: #395b6e;
+  }
 }
 body {
   height: 100%;
@@ -67,6 +71,7 @@ body {
     }
   }
   .secondary {
+    display: none;
     position: absolute;
     z-index: 10;
     top: 8px;
@@ -146,6 +151,9 @@ body {
 #intro {
   min-height: 100%;
   background: url(../images/bg-intro.jpg);
+  @media #{$medium-max} {
+    background: none !important;
+  }
   @include background-size(cover);
   text-align: center;
   padding: emCalc(80px) 0 0;
@@ -165,6 +173,7 @@ body {
       right: 0;
     }
     h5 {
+      color: #FFF;
       text-transform: uppercase;
       font-size: emCalc(24px);
       letter-spacing: 0.1em;
