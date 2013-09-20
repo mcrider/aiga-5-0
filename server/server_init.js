@@ -204,7 +204,7 @@ Meteor.methods({
 
     Email.send({
       to: to,
-      from: 'noreply@aigahonolulu.org',
+      from: 'entries@aigahonolulu.org',
       subject: 'Your AIGA Honolulu 5-0 Awards account is ready!',
       text: 'You have been signed up to submit entries for the AIGA Honolulu 5-0 Award show.\n\nLog in to http://50.aigahonolulu.org to start submitting entries!\n\n- The AIGA Honolulu Team'
     });
@@ -221,7 +221,7 @@ Meteor.methods({
 
     Email.send({
       to: to,
-      from: 'noreply@aigahonolulu.org',
+      from: 'entries@aigahonolulu.org',
       subject: 'Your payment has been received',
       text: 'We have received your payment for your entries to the AIGA Honolulu 5-0 Awards.  Please note that you may still submit entries and pay for them separately.\n\n- The AIGA Honolulu Team'
     });
