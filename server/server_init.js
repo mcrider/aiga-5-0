@@ -166,7 +166,7 @@ Meteor.startup(function () {
 
 Meteor.methods({
   makePayment: function(token, amount, userId) {
-    var Stripe = StripeAPI('sk_test_c1VKEVobavL9uRG8NdkePVU3');
+    var Stripe = StripeAPI('sk_live_Wy5a74apSHUQZikpCtzt6IwY');
     Stripe.charges.create({
       amount: amount,
       currency: "USD",

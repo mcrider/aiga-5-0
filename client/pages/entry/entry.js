@@ -77,10 +77,10 @@ Template.entry.events({
     var amount = Template.entry.totalFee() * 100;
     var userId = Meteor.userId();
     StripeCheckout.open({
-        key: 'pk_test_2hkkBATkmUpbqaxMFJX1aXWQ',
+        key: 'pk_live_PmNo53ndYwowc4Q46Qk5mktv',
         amount: amount,
         name: 'AIGA 5-0',
-        description: 'Entrance fee for the AIGA 5-0 Awards',
+        description: 'Submit payment to complete your entry. If you are entering printed pieces, please see Entry Criteria for instructions on submitting samples for judging.',
         panelLabel: 'Pay Now',
         token: function(res) {
           if(!res.error) {
