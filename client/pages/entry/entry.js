@@ -88,7 +88,16 @@ Template.entry.events({
 
             // FIXME: This should be called in makePayment but there are weird issues calling meteor methods inside a callback
             Meteor.call('setAsPaid', userId);
-            Meteor.call('sendPaymentEmail', Meteor.user().emails[0].address);
+
+            var entries = Entries.find({userId: Meteor.userId()});
+            var receipt = '';
+            var entryNum = 1;
+            entries.forEach(function(entry) {
+              receipt = receipt + 'Entry ' + entryNum + ': ' + entry.project_name + ' ('+entry.type+')\n';
+              entryNum++;
+            });
+            receipt = receipt + 'Total: $' + amount + '\n\n';
+            Meteor.call('sendPaymentEmail', Meteor.user().emails[0].address, receipt);
           }
         }
     });

@@ -206,10 +206,12 @@ Meteor.methods({
       to: to,
       from: 'entries@aigahonolulu.org',
       subject: 'Your AIGA Honolulu 5-0 Awards account is ready!',
-      text: 'You have been signed up to submit entries for the AIGA Honolulu 5-0 Award show.\n\nLog in to http://50.aigahonolulu.org to start submitting entries!\n\n- The AIGA Honolulu Team'
+      text: 'You have been signed up to submit entries for the AIGA Honolulu 5-0 Award show.\n\n'+
+      'Log in to http://50.aigahonolulu.org to start submitting entries!\n\n'+
+      '- The AIGA Honolulu Team'
     });
   },
-  sendPaymentEmail: function (to) {
+  sendPaymentEmail: function (to, receipt) {
     // Note: SMTP must be set up as an environment variable such as
     // export MAIL_URL=smtp://foo%40gmail.com:password@smtp.gmail.com:465/
 
@@ -223,7 +225,10 @@ Meteor.methods({
       to: to,
       from: 'entries@aigahonolulu.org',
       subject: 'Your payment has been received',
-      text: 'We have received your payment for your entries to the AIGA Honolulu 5-0 Awards.  Please note that you may still submit entries and pay for them separately.\n\n- The AIGA Honolulu Team'
+      text: 'We have received your payment for your entries to the AIGA Honolulu 5-0 Awards.  Please note that you may still submit entries and pay for them separately.\n\n'+
+      'Your entries:\n'+
+      receipt+'\n\n'+
+      '- The AIGA Honolulu Team'
     });
   }
 });
