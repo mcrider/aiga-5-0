@@ -1,27 +1,30 @@
 <template name="print_form">
   {{#each entries}}
-    <div class="container">
+    <div class="print-form-container container">
       <div class="row">
         <div class="span12 print-top">
           <h1>AIGA Honolulu 5-0 Awards Entry Form</h1>
-          <h2>Id: {{_id}}</h2>
-          <p>Client name:{{client_name}}</p>
-          <p>Project Name:{{project_name}}</p>
-          {{#if typeEquals type "print"}}<p>Type: Print / Environmental</p>{{/if}}
-          {{#if typeEquals type "web"}}<p>Type: Web</p>{{/if}}
-          {{#if typeEquals type "motion"}}<p>Type: Motion Graphics</p>{{/if}}
+          <h2><span class="project-label">Id:</span>{{_id}}</h2>
+          <br /><br />
+          <p><span class="project-label">Client name: </span>{{client_name}}</p>
+          <p><span class="project-label">Project Name: </span>{{project_name}}</p>
+          {{#if typeEquals type "print"}}<p>Type: </span>Print / Environmental</p>{{/if}}
+          {{#if typeEquals type "web"}}<p>Type: </span>Web</p>{{/if}}
+          {{#if typeEquals type "motion"}}<p>Type: </span>Motion Graphics</p>{{/if}}
+          <br />
         </div>
       </div>
       <div class="row">
         <div class="span6">
           <div class="print-profile">
             <h4>Contact Information</h4>
-            <p>Name: {{user_label}}</p>
-            <p>Email: {{user.emails.0.address}}</p>
-            <p>Agency: {{user.profile.agency_name}}</p>
-            <p>Address: {{user.profile.address}}</p>
-            <p>Phone{{#if user.profile.fax}}/Fax{{/if}}: {{user.profile.phone}}{{#if user.profile.fax}}/{{user.profile.fax}}{{/if}}</p>
-            <p>AIGA ID: {{user.profile.aiga_id}}</p>
+            <p><span class="project-label">Name:</span>{{user_project-label}}</p>
+            <p><span class="project-label">Email: </span>{{user.emails.0.address}}</p>
+            <p><span class="project-label">Agency: </span>{{user.profile.agency_name}}</p>
+            <p><span class="project-label">Address: </span>{{user.profile.address}}</p>
+            <p><span class="project-label">Phone{{#if user.profile.fax}}/Fax{{/if}}: </span>{{user.profile.phone}}{{#if user.profile.fax}}/{{user.profile.fax}}{{/if}}</p>
+            <p><span class="project-label">AIGA ID: </span>{{user.profile.aiga_id}}</p>
+            <br />
           </div>
           <h4>Notes</h4>
           <p>{{#if notes}}{{notes}}{{else}}(none){{/if}}</p>
@@ -29,53 +32,53 @@
         <div class="span6 print-team">
           <h4>Project Team</h4>
 
-          <p>Art Director: {{art_director}}</p>
-          <p>Designer: {{designer}}</p>
-          <p>Illustrator: {{illustrator}}</p>
-          <p>Copywriter: {{copywriter}}</p>
-          <p>Photographer: {{photographer}}</p>
-          <p>Special Consultant: {{special_consultant}}</p>
+          <p><span class="project-label">Art Director: </span>{{art_director}}</p>
+          <p><span class="project-label">Designer: </span>{{designer}}</p>
+          <p><span class="project-label">Illustrator: </span>{{illustrator}}</p>
+          <p><span class="project-label">Copywriter: </span>{{copywriter}}</p>
+          <p><span class="project-label">Photographer: </span>{{photographer}}</p>
+          <p><span class="project-label">Special Consultant: </span>{{special_consultant}}</p>
           {{#if typeEquals type "print"}}
-            <p>Paper: {{paper}}</p>
+            <p><span class="project-label">Paper: {{paper}}</p>
           {{/if}}
           {{#if typeEquals type "web"}}
-            <p>Developer: {{developer}}</p>
+            <p><span class="project-label">Developer: {{developer}}</p>
           {{/if}}
 
           {{#if typeEquals type "web"}}
+            <br />
             <h4>Technical Information</h4>
             <p>{{tech_info}}</p>
           {{/if}}
         </div>
       </div>
+      <div class="row cutout-instructions">
+        <div class="span12 centered">------------------------------------------------------------ Cut these out and attach to all parts of your print entry ------------------------------------------------------------</div>
+      </div>
       <div class="row cutouts">
         <div class="span6 print-cutout">
           <h4>{{project_name}}</h4>
           <h2>{{_id}}</h2>
-          {{#if typeEquals type "print"}}<p>Type: Print / Environmental</p>{{/if}}
-          {{#if typeEquals type "web"}}<p>Type: Web</p>{{/if}}
-          {{#if typeEquals type "motion"}}<p>Type: Motion Graphics</p>{{/if}}
         </div>
         <div class="span6 print-cutout">
           <h4>{{project_name}}</h4>
           <h2>{{_id}}</h2>
-          {{#if typeEquals type "print"}}<p>Type: Print / Environmental</p>{{/if}}
-          {{#if typeEquals type "web"}}<p>Type: Web</p>{{/if}}
-          {{#if typeEquals type "motion"}}<p>Type: Motion Graphics</p>{{/if}}
         </div>
         <div class="span6 print-cutout">
           <h4>{{project_name}}</h4>
           <h2>{{_id}}</h2>
-          {{#if typeEquals type "print"}}<p>Type: Print / Environmental</p>{{/if}}
-          {{#if typeEquals type "web"}}<p>Type: Web</p>{{/if}}
-          {{#if typeEquals type "motion"}}<p>Type: Motion Graphics</p>{{/if}}
         </div>
         <div class="span6 print-cutout">
           <h4>{{project_name}}</h4>
           <h2>{{_id}}</h2>
-          {{#if typeEquals type "print"}}<p>Type: Print / Environmental</p>{{/if}}
-          {{#if typeEquals type "web"}}<p>Type: Web</p>{{/if}}
-          {{#if typeEquals type "motion"}}<p>Type: Motion Graphics</p>{{/if}}
+        </div>
+        <div class="span6 print-cutout">
+          <h4>{{project_name}}</h4>
+          <h2>{{_id}}</h2>
+        </div>
+        <div class="span6 print-cutout">
+          <h4>{{project_name}}</h4>
+          <h2>{{_id}}</h2>
         </div>
     </div>
   {{/each}}

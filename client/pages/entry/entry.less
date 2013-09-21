@@ -279,15 +279,29 @@ legend {
   }
 }
 
+@page {
+  size: A4;
+  margin: 0;
+}
 @media print {
   .navbar, .footer {
     display: none;
   }
-  .container {
-    height: 11in;
+  .print-form-container {
+    height: 29.7cm;
+    min-height: 29.7cm !important;
+    page-break-after: always;
+    padding-left: 2cm;
+    padding-right: 2cm;
+
+
+  }
+  .cutout-instructions {
+    margin-top: 50px;
+    text-align: center;
+    display: block !important;
   }
   .cutouts {
-    margin-top: 100px;
     display: block !important;
 
     h2 {
@@ -296,12 +310,15 @@ legend {
     }
   }
 }
+.project-label {
+
+}
 .print-cutout {
   margin-top: 10px;
   padding: 15px 0;
   border: 1px dotted black;
   text-align: center;
 }
-.cutouts {
+.cutouts, .cutout-instructions {
   display: none;
 }
