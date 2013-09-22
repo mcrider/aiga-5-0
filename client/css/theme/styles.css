@@ -22,38 +22,57 @@ a {
   color: #0088b3; }
 
 /* line 34, styles.scss */
-.navbar .nav {
+.navbar .navbar-inner {
+  border: none !important; }
+
+/* line 38, styles.scss */
+.navbar .page-menu .nav {
   float: right; }
-  /* line 36, styles.scss */
-  .navbar .nav a {
+  /* line 40, styles.scss */
+  .navbar .page-menu .nav a {
     font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-size: 18px !important;
     color: #0088b3 !important;
     letter-spacing: 0.1em;
     font-weight: normal;
     color: #333; }
-  /* line 44, styles.scss */
-  .navbar .nav .icon-cogs {
+  /* line 48, styles.scss */
+  .navbar .page-menu .nav .icon-cogs {
     color: #000 !important; }
+  /* line 52, styles.scss */
+  .navbar .page-menu .nav > li:first-child a {
+    padding-left: 30px;
+    padding-right: 30px;
+    background: #0088b3;
+    font-size: 24px !important;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    font-family: "atrament-web", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    color: white !important; }
 
-/* line 49, styles.scss */
+/* line 65, styles.scss */
 html {
-  height: 100%; }
-
-/* line 53, styles.scss */
-body {
+  min-height: 100%;
   background: url(/mainsite/images/eaglehalftone.jpg) no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover; }
+
+/* line 71, styles.scss */
+body {
+  height: 100%;
+  background: none; }
+
+/* line 76, styles.scss */
+#page {
   height: 100%; }
 
-/* line 60, styles.scss */
+/* line 81, styles.scss */
 #contents {
   height: 100%; }
 
-/* line 64, styles.scss */
+/* line 85, styles.scss */
 #page > .container {
   background: white url(/mainsite/images/ornate-top.gif) no-repeat;
   background-position: top center;
@@ -63,73 +82,81 @@ body {
   -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); }
 
-/* line 73, styles.scss */
+/* line 94, styles.scss */
 #adminMenu li a {
   letter-spacing: 0;
   font-weight: normal; }
 
-/* line 80, styles.scss */
+/* line 101, styles.scss */
 .login-form p {
   font-weight: normal;
   font-size: 14px; }
-  /* line 83, styles.scss */
+  /* line 104, styles.scss */
   .login-form p #signup-link {
     font-size: inherit; }
 
-/* line 90, styles.scss */
+/* line 111, styles.scss */
 .entry-container h3 {
   font-size: 50px;
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   margin-bottom: 10px;
   letter-spacing: 0; }
-/* line 96, styles.scss */
+/* line 117, styles.scss */
 .entry-container h5 {
   font-size: 18px; }
-/* line 99, styles.scss */
+/* line 120, styles.scss */
 .entry-container .row.entry {
   margin: 10px 0 !important;
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3) !important;
   -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3) !important;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3) !important; }
 
-/* line 105, styles.scss */
+/* line 126, styles.scss */
 legend h3 {
   font-family: "atrament-web", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
   font-size: 40px !important; }
 
-/* line 110, styles.scss */
+/* line 131, styles.scss */
 #deleteEntryModal {
   background: white url(/mainsite/images/ornate-top.gif) no-repeat;
   background-position: top center;
   padding: 50px 10px 30px; }
-  /* line 114, styles.scss */
+  /* line 135, styles.scss */
   #deleteEntryModal h3 {
     font-family: "atrament-web", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
-  /* line 117, styles.scss */
+  /* line 138, styles.scss */
   #deleteEntryModal .modal-header .close {
     margin-top: -53px; }
 
-/* line 122, styles.scss */
+/* line 143, styles.scss */
 .edit-user-info-form {
   margin: 20px 0 20px; }
 
-/* line 126, styles.scss */
+/* line 147, styles.scss */
 footer {
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: bold;
   text-transform: uppercase; }
-  /* line 131, styles.scss */
+  /* line 152, styles.scss */
   footer .links a {
     color: #0088b3;
     font-size: 12px !important;
     letter-spacing: 0.1em; }
-  /* line 137, styles.scss */
+  /* line 158, styles.scss */
   footer p {
     color: #000;
     font-size: 12px !important;
     text-align: right;
     letter-spacing: 0.1em; }
 
-/* line 145, styles.scss */
+/* line 166, styles.scss */
 .file-message {
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+
+/* line 171, styles.scss */
+.rate-sidebar .small {
+  font-size: 12px; }
+
+/* line 177, styles.scss */
+.footer .container {
+  width: 1024px; }
