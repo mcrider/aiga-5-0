@@ -312,3 +312,12 @@ Accounts._loginButtons.validateContactName = function (contact) {
     return false;
   }
 };
+
+Accounts._loginButtons.validateContactPhone = function (phone) {
+  if (phone.length >= 1) {
+    return true;
+  } else {
+    loginButtonsSession.errorMessage("Please include a contact phone number");
+    return false;
+  }
+};

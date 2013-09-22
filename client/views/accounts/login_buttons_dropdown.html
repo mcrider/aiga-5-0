@@ -129,7 +129,7 @@
 
           <div class="row">
             <div class="span2">
-              <label id="login-phone-label" class="profile" for="login-phone">Phone</label>
+              <label id="login-phone-label" class="profile" for="login-phone">Phone<span class="required-star">*</span></label>
               <div class="controls">
                 <input id="login-phone" name="phone" class="profile span2" type="text">
               </div>
@@ -176,7 +176,7 @@
       {{/if}}
     </div>
 
-    <div class="span8 offset2">{{> _loginButtonsMessages}}</div>
+    <div class="span8">{{> _loginButtonsMessages}}</div>
 
     {{#if inLoginFlow}}
       <div class="span6">
@@ -194,7 +194,7 @@
       </div>
     {{/if}}
     {{#if inSignupFlow}}
-      <div class="span8 offset2">
+      <div class="span8">
         <button class="btn btn-primary" id="login-buttons-password" type="button">Create</button>
         {{> _loginButtonsBackToLoginLink}}
       </div>
