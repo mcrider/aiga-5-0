@@ -26,22 +26,24 @@
                     {{> entry_list}}
                   {{/if}}
                 </div>
-                <div class="span4">
+                <div class="span4 rate-sidebar">
                 <h5 class="">Select Rate</h3>
                   <select class="input-block-level" id="rate" name="rate">
                     <option value="{{rate_member}}">Member's Rate • ${{rate_member}}/Entry</option>
                     <option value="{{rate_nonmember}}">Non-Member's Rate • ${{rate_nonmember}}/Entry</option>
                     <option value="{{rate_student}}">Student Rate • ${{rate_student}}/Entry</option>
                   </select>
-                  <p>Only members of AIGA, AAF-Hawaii and Ad2 Honolulu qualify for the member rate. Please provide your member number below:</p>
+                  <p class="small">Only members of AIGA, AAF-Hawaii and Ad2 Honolulu qualify for the member rate. Please provide your member number below:</p>
                   {{#with currentUser}}
                     <input value="{{aiga_id}}" id="aiga_id_pay" name="aiga_id_pay" class="profile span4" placeholder="Membership No. (If Applicable)" type="text">
                   {{/with}}
+                  <p class="small">AIGA Members, please find your ID number by <a href="http://my.aiga.org" target="_blank">logging into your account</a> and viewing your <a href="http://my.aiga.org/vango/core/accountmanagement/personal.aspx" target="_blank">Contact Information</a></p>
+                  <hr />
                   <h5 class="">Total Entry Fee</h3>
                   <h3 class="">${{totalFee}}</h3>
                   <a class="btn payup-sucka" href="#">Pay Online</a>
                   <a class="btn print-form-btn" href="/printForm">Print Entry Forms</a>
-                  <p>Once you pay, your total will return to $0. You can continue to add entries, paying as you go, until the deadline.</p>
+                  <p class="small">Once you pay, your total will return to $0. You can continue to add entries, paying as you go, until the deadline.</p>
                 </div>
               </div>
               <div class="row">
@@ -56,7 +58,7 @@
                               <input value="{{agency_name}}" id="login-agency_name" name="agency_name" class="profile span4" type="text">
                             </div>
                             <div class="span4">
-                              <span class="help-inline">Contact Name</span>
+                              <span class="help-inline">Main Contact Name</span>
                               <input value="{{contact_name}}" id="login-contact_name" name="contact_name" class="profile span4" type="text">
                             </div>
                           </div>

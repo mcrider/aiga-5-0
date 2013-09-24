@@ -31,7 +31,11 @@ a {
   color: $blue;
 }
 
-.navbar .nav {
+.navbar .navbar-inner {
+  border: none !important;
+}
+
+.navbar .page-menu .nav {
   float: right;
   a {
     font-family: $body;
@@ -44,15 +48,32 @@ a {
   .icon-cogs {
     color: #000 !important;
   }
+  &> li:first-child {
+    a {
+      padding-left: 30px;
+      padding-right: 30px;
+      background: $blue;
+      font-size: 24px !important;
+      letter-spacing: 0.1em;
+      font-weight: normal;
+      font-family: $headline;
+      color: white !important;
+    }
+  }
 }
 
 html {
-  height: 100%;
+  min-height: 100%;
+  background: url(/mainsite/images/eaglehalftone.jpg) no-repeat;
+  @include background-size(cover);
 }
 
 body {
-  background: url(/mainsite/images/eaglehalftone.jpg) no-repeat;
-  @include background-size(cover);
+  height: 100%;
+  background: none;
+}
+
+#page {
   height: 100%;
 }
 
@@ -144,4 +165,16 @@ footer {
 
 .file-message {
   font-family: $body;
+}
+
+.rate-sidebar {
+  .small {
+    font-size: 12px;
+  }
+}
+
+.footer {
+  .container {
+    width: 1024px;
+  }
 }
