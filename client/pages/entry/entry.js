@@ -96,7 +96,7 @@ Template.entry.events({
               receipt = receipt + 'Entry ' + entryNum + ': ' + entry.project_name + ' ('+entry.type+')\n';
               entryNum++;
             });
-            receipt = receipt + 'Total: $' + amount + '\n\n';
+            receipt = receipt + 'Total: $' + (amount/100).toFixed(2) + '\n\n';
             Meteor.call('sendPaymentEmail', Meteor.user().emails[0].address, receipt);
           }
         }
