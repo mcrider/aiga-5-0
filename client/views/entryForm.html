@@ -18,12 +18,14 @@
         <div class="span6">
           <div class="print-profile">
             <h4>Contact Information</h4>
-            <p><span class="project-label">Name:</span>{{user_project-label}}</p>
-            <p><span class="project-label">Email: </span>{{user.emails.0.address}}</p>
-            <p><span class="project-label">Agency: </span>{{user.profile.agency_name}}</p>
-            <p><span class="project-label">Address: </span>{{user.profile.address}}</p>
-            <p><span class="project-label">Phone{{#if user.profile.fax}}/Fax{{/if}}: </span>{{user.profile.phone}}{{#if user.profile.fax}}/{{user.profile.fax}}{{/if}}</p>
-            <p><span class="project-label">AIGA ID: </span>{{user.profile.aiga_id}}</p>
+            {{#with user}}
+              <p><span class="project-label">Name:</span>{{contact_name}}</p>
+              <p><span class="project-label">Email: </span>{{emails.0.address}}</p>
+              <p><span class="project-label">Agency: </span>{{profile.agency_name}}</p>
+              <p><span class="project-label">Address: </span>{{profile.address}}</p>
+              <p><span class="project-label">Phone{{#if profile.fax}}/Fax{{/if}}: </span>{{profile.phone}}{{#if profile.fax}}/{{profile.fax}}{{/if}}</p>
+              <p><span class="project-label">AIGA ID: </span>{{profile.aiga_id}}</p>
+            {{/with}}
             <br />
           </div>
           <h4>Notes</h4>

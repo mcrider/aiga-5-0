@@ -8,7 +8,7 @@ Template.print_form.user_label = function() {
 }
 
 Template.print_form.user = function() {
-  var user = Meteor.user;
+  var user = Meteor.user();
   if (user && user.profile) return user;
   else return null;
 }
