@@ -22,10 +22,12 @@
 ///////////////////////////////////
 
 // Colors
-$darkblue: #39637c;
-$blue:     #0088b3;
-$red:      #991f27;
-$grey:     #d4d4d4;
+$darkblue:   #39637c;
+$blue:       #0088b3;
+$red:        #991f27;
+$grey:       #d4d4d4;
+$dark-grey:  #999;
+$offwhite:   #f7f7f4;
 
 $slab: "ff-ernestine-web-pro", Georgia, serif;
 
@@ -34,6 +36,10 @@ $medium-max: "only screen and (max-width: #{$medium-screen})";
 $starred-breakpoint: "only screen and (max-width: 485px)";
 $topbar-media-query-max: "only screen and (max-width: #{$topbar-breakpoint})";
 
+@mixin no-pm {
+  padding:0;
+  margin:0;
+}
 
 ///////////////////////////////////
 
@@ -50,6 +56,10 @@ html {
 }
 body {
   height: 100%;
+}
+
+body > section {
+  padding:emCalc(60px) 0;
 }
 
 .container {
@@ -101,6 +111,64 @@ body {
   }
 }
 
+a.btn {
+  background:$red;
+  display:block;
+  color:#fff;
+  font-family:$header-font-family;
+  text-transform: uppercase;
+  font-size:32px;
+  padding:30px 20px;
+  margin:50px auto 40px;
+  text-align:center;
+  @include border-radius(5px);
+  @include transition(background-color 0.3s);
+  &:hover {
+    background-color:darken($red,2.5%);
+    @include box-shadow(inset rgba(0,0,0,.5) 0 0 10px);
+  }
+  @media #{$small-max} {
+    font-size:24px;
+    width:50%;
+  }
+}
+
+h1.title {
+  @include no-pm;
+  text-transform:uppercase;
+  text-align:center;
+  font-size:400%;
+  color:#fff;
+  letter-spacing: 10px;
+  margin-bottom:20px;
+  @media #{$small-max} {
+    font-size: 200%;
+  }
+}
+
+#page-title {
+  background:$red url('../images/bg-judges.jpg') top center fixed;
+  background-size:cover;
+  padding:40px 0;
+  @include box-shadow(inset rgba(0,0,0,0.25) 0 0 20px);
+  h1 {
+    @include no-pm;
+    text-transform:uppercase;
+    text-align:center;
+    font-size:650%;
+    color:#fff;
+    letter-spacing: 10px;
+    &.toobig {
+      font-size:500%;
+    }
+    @media #{$small-max} {
+      font-size: 500%;
+      &.toobig {
+        font-size:300%;
+      }
+    }
+  }
+}
 
 ///////////////////////////////////
 
@@ -108,7 +176,7 @@ body {
 
 ///////////////////////////////////
 
-.starred { // Adds white stars arround headline
+.starred  { // Adds white stars arround headline
   position: relative;
   display: inline-block;
   &:before, &:after {
@@ -253,6 +321,12 @@ body {
     font-family:$body-font-family;
     font-weight:600;
   }
+  a.btn {
+    width:33.33%;
+    background:$red url('../images/tickets.png') no-repeat 12px center;
+    background-size:40px;
+    padding-left:60px;
+  }
   .panel {
     background: #fff url(../images/ornate-top.gif) no-repeat;
     background-position: top center;
@@ -319,13 +393,13 @@ body {
           }
         }
       }
-      .small-2 {
+      .large-2 {
         h5 {
           padding-top:15px;
           text-align:right;
         }
       }
-      .small-10 {
+      .large-10 {
         border-left:4px double $grey;
       }
       .border-right {
@@ -364,6 +438,253 @@ body {
     em {
       font-family: $body-font-family;
       letter-spacing: 0.1em;
+    }
+  }
+}
+
+
+///////////////////////////////////
+
+/* 0.0 Judges Page Styles */
+
+///////////////////////////////////
+
+#judging-process {
+  background:$offwhite;
+  @media #{$small} {
+    background: url('../images/bg-letter.jpg');
+    background-size:100% auto;
+  }
+  @media #{$small-max} {
+    padding:80px 0;
+  }
+  line-height:1;
+  text-align:center;
+  h1.title {
+    color:#000;
+  }
+  p {
+    @include no-pm;
+    color:$dark-grey;
+    font-size:28px;
+    font-style: italic;
+    @media #{$small-max} {
+      font-size: 18px;
+    }
+    &:first-child {
+      margin-bottom:20px;
+    }
+  }
+}
+
+#judges {
+  background: url('../images/bg-shieldblue.jpg') no-repeat #999 fixed top center;
+  background-size:cover;
+  span {
+    font-family:$body-font-family;
+    font-weight:600;
+  }
+  h1.title {
+    color:#fff;
+  }
+  .panel {
+    background: #fff url(../images/ornate-top.gif) no-repeat;
+    background-position: top center;
+    padding: emCalc(50px) inherit;
+    margin-bottom:50px;
+    position: relative;
+    h1 {
+      @include no-pm;
+      padding:17px 0 20px;
+      font-family:$slab;
+      color:$red;
+      margin-left:12px;
+    }
+    .info {
+      text-transform: uppercase;
+      text-align:left;
+      border-bottom:4px double $grey;
+      &.info-top {
+        border-top:4px double $grey;
+      }
+      h5 {
+        letter-spacing:5px;
+        color:$dark-grey;
+      }
+      h4 {
+        font-family:$slab;
+        margin:20px 0;
+        padding-left:10px;
+      }
+      h6 {
+        font-family:$slab;
+        color:#000;
+        margin:20px 0;
+        @media #{$small-max} {
+          font-size:12px;
+        }
+      }
+      .thumbnail {
+        min-height:320px;
+        background:url('../images/bg-thumbbd.jpg') no-repeat top center;
+        img {
+          margin: 40px auto 60px;
+          display: block;
+          max-width: 80%;
+          max-height: 260px;
+          transform:rotate(-7deg);
+          -ms-transform:rotate(-7deg); /* IE 9 */
+          -webkit-transform:rotate(-7deg); /* Safari and Chrome */
+        }
+      }
+      .details {
+        @media only screen and (min-width: #{$small-screen}) {
+          border-left:1px solid $grey;
+        }
+        .row {
+          border-bottom:1px solid $grey;
+          div {
+            border-right:1px solid $grey;
+            &:last-child {
+              border:0;
+            }
+          }
+          &:last-child {
+            background:#eee;
+            p {
+              margin-top:20px;
+              text-transform: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+///////////////////////////////////
+
+/* 0.0 About Page Styles */
+
+///////////////////////////////////
+
+#about50 {
+  background:$offwhite;
+  @media #{$small} {
+    background: url('../images/bg-letter.jpg');
+    background-size:100% auto;
+  }
+  @media #{$small-max} {
+    padding:80px 0;
+  }
+  line-height:1;
+  p {
+    @include no-pm;
+    color:#000;
+    font-size:22px;
+    margin-bottom:20px;
+    @media #{$small-max} {
+      font-size: 18px;
+    }
+    &:last-child {
+      color:$red;
+      margin-bottom:0;
+    }
+  }
+}
+
+///////////////////////////////////
+
+/* 0.0 About Page Styles */
+
+///////////////////////////////////
+
+#criteria-main {
+  background:$offwhite;
+  color:#000;
+  h1.title {
+    color:#000;
+  }
+  @media #{$small} {
+    background: url('../images/bg-letter.jpg');
+    background-size:100% auto;
+  }
+  @media #{$small-max} {
+    padding:80px 0;
+  }
+  span {
+    color:$red;
+    font-style: italic;
+  }
+  ul {
+    padding-left:20px;
+    li {
+      p {
+        @include no-pm;
+        font-size:18px;
+        margin-bottom:20px;
+        @media #{$small-max} {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+#criteria-tabs {
+  background:url('../images/bg-50.jpg') repeat;
+  @include box-shadow(inset rgba(0,0,0,.5) 0 0 10px);
+  #tabmenu {
+    display:inline-block;
+    list-style:none;
+    width:100%;
+    margin-bottom:0;
+    li {
+      display:inline-block;
+      width:30%;
+      margin-right: 1.6%;
+      margin-left: 1.6%;
+      a {
+        font-family:$header-font-family;
+        font-size:28px;
+        text-transform:uppercase;
+        color:#999;
+        display:block;
+        text-align:center;
+        width:100%;
+        background-color:#eee;
+        @include border-top-radius(2px);
+        padding:20px;
+        img {
+          margin-right:20px;
+          @media #{$small-max} {
+            display:none;
+          }
+        }
+        &.active {
+          color:#000;
+          background-color:#fff;
+        }
+      }
+    }
+  }
+  #tabcontent {
+    min-height:480px;
+    background-color:#fff;
+    // @include border-radius(10px);
+    padding:20px;
+    #print, #web, #motion {
+      ul {
+        padding-left:20px;
+        color:#000;
+      }
+      p {
+        color:#000;
+        &.italic {
+          font-style:italic;
+        }
+      }
     }
   }
 }

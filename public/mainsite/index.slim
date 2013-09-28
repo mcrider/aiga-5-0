@@ -15,30 +15,8 @@ html.no-js
       
     body
       header
-        nav.top-bar
-          ul.title-area
-            li.name
-              h1: a href="#" AIGA Hawaii 5-0s
-              li.toggle-topbar.menu-icon
-                a href="#"
-                  span Menu
-          section.top-bar-section
-            ul.right
-              li: a href="#" Enter
-              li.has-dropdown-not
-                a href="#" Entry Criteria
-                / ul.dropdown
-                /   li: a href="#" Print
-                /   li: a href="#" Web
-                /   li: a href="#" Motion
-                /   li: a href="#" Fees &amp; Deadlines
-                /   li: a href="#" Drop Off Locations
-                /   li: a href="#" Winners
-              / li: a href="#" Judges
-              / li: a href="#" The Show
-          ul.secondary.inline-list
-            li: a href="#" Join AIGA
-            li: a href="#" FAQs
+        == File.read(File.join(File.dirname(__FILE__), '_nav.html'))
+
       section#intro
         .row
           .large-10.columns.large-centered
@@ -52,14 +30,13 @@ html.no-js
                 p 11 October 2013
             h1 Call for Entries
             h3
-              | As designers, we are a citizen army, tasked with the honorable pursuit and formidable challenge: good design. This is a call to all those fit to compete: submit your work to be considered for recognition among the Top 50 designs in Hawaii. <br /><br />
-              | Failure to comply will result in a missed opportunity to stand and be recognized, for camaraderie with fellow designers, and to bring honor to your profession and to Hawaii.
+              | As designers, we are a citizen army, tasked with the honorable pursuit and formidable challenge: good design. This is a call to all those fit to compete: submit your work to be considered for recognition among the Top 50 designs in Hawaii. Failure to comply will result in a missed opportunity to stand and be recognized, for camaraderie with fellow designers, and to bring honor to your profession and to Hawaii.
         .cta
-          a href="#"
+          a href="http://50.aigahonolulu.org/"
             .large-6.columns
               h4 Heed the Call
               p Enter Now
-          a href="#"
+          a href="http://aigahonolulu.org/50/2013-HI-5-O-REQS.pdf"
             .large-6.columns
               h4 Compliance
               p How to Enter
@@ -90,7 +67,7 @@ html.no-js
                   .large-6.columns
                     .border-right
                       h2 <span>1700</span> hours
-                      h5 5&#58;30P Cocktails
+                      h5 5&#58;00P Cocktails
                   .large-6.columns
                     h2 <span>1900</span> hours
                     h5 7&#58;00P Award Ceremony
@@ -112,22 +89,9 @@ html.no-js
               .small-2.columns &nbsp;
               .small-10.columns
                 h5 Attire&#58; Semi-formal
+          .row
+            .large-12.columns
+              a.btn href="http://2013hi50.eventbrite.com/" target="_blank" Buy tickets
+              p You must RSVP no later than 11 October 2013
 
-      script src="javascripts/vendor/jquery.js"
-      script src="javascripts/foundation/foundation.js"
-      / script src="javascripts/foundation/foundation.abide.js"
-      / script src="javascripts/foundation/foundation.alerts.js"
-      / script src="javascripts/foundation/foundation.clearing.js"
-      / script src="javascripts/foundation/foundation.cookie.js"
-      script src="javascripts/foundation/foundation.dropdown.js"
-      / script src="javascripts/foundation/foundation.forms.js"
-      / script src="javascripts/foundation/foundation.interchange.js"
-      / script src="javascripts/foundation/foundation.joyride.js"
-      / script src="javascripts/foundation/foundation.magellan.js"
-      / script src="javascripts/foundation/foundation.orbit.js"
-      / script src="javascripts/foundation/foundation.placeholder.js"
-      / script src="javascripts/foundation/foundation.reveal.js"
-      / script src="javascripts/foundation/foundation.section.js"
-      / script src="javascripts/foundation/foundation.tooltips.js"
-      script src="javascripts/foundation/foundation.topbar.js"
-      script $(document).foundation();
+  == File.read(File.join(File.dirname(__FILE__), '_footer.html'))

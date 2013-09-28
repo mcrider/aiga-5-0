@@ -1,0 +1,111 @@
+doctype html
+/[if IE 8]
+  | <html class="no-js lt-ie9">
+/[if IE 9]
+  | <html class="ie9">
+html.no-js
+  /! <![endif]
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width"
+    title AIGA Honolulu's Hawaii 5-0 Awards
+    link rel="stylesheet" href="stylesheets/app.css"  
+    script type="text/javascript" src="//use.typekit.net/scs0rmb.js"
+    script try{Typekit.load();}catch(e){}
+      
+    body
+      header
+        == File.read(File.join(File.dirname(__FILE__), '_nav.html'))
+
+      section#page-title
+        .row
+          .large-12.columns
+            h1.toobig Criteria &amp; Requirements
+      section#criteria-main
+        .row
+          .large-12.columns
+            h1.title Criteria
+        .row
+          .large-6.columns
+            ul
+              li
+                p <span>New!</span> Print Entries can have been printed outside of Hawaii.
+              li
+                p <span>New!</span> Motion and interactive projects are now eligible.
+              li
+                p All entries must have been designed by a Hawaii-based company or designer within the period of September 2011 through August 2013.
+              li
+                p Submissions must be the original work of the designer(s). Submissions can be made by anyone associated with the entry.
+              li
+                p All submissions must have been designed for a client or as a self-promotional piece. Unpublished work is ineligible.
+          .large-6.columns
+            ul
+              li
+                p The design firm, designer, project name, client and printer (when applicable) must be specified on the entry form for eligibility.
+              li
+                p <strong>Student Entries</strong>: All work created while attending a college or university must be submitted in this category. Work is not required to be published and may be a self-promotional piece. Three outstanding students shall receive an award certificate and a one-year AIGA student membership. Select “Student” in the 5-O Online Entry System.
+        .row
+          .large-12.columns
+            p <span>AIGA Honolulu Chapter reserves the right to forfeit any entry that does not meet these requirements.</span>
+
+      section#criteria-tabs
+        .row
+          .large-12.columns
+            h1.title Category-Specific Requirements
+        .row
+          .large-12.columns
+            #tabs
+              ul#tabmenu
+                li: a href="#print" 
+                  img src="images/print.png"
+                  | Print
+                li: a href="#web"
+                  img src="images/screen.png"
+                  | Web
+                li: a href="#motion" 
+                  img src="images/screen.png"
+                  | Motion
+              #tabcontent
+                #print
+                  h2 Print Criteria
+                  p.italic Includes: logos, stationery, brand identity sets, posters, books, packaging, screen-printed t-shirts, calendars, annual reports, book jackets/covers, brochures, catalogs, newsletters, invitations, announcements, etc., and environmental graphics including; signage, way-finding systems, mapping, exhibition design, themed environments, retail spaces, sports facilities, and special-event atmospherics.
+                  .row
+                    .large-6.columns
+                      h4 1) Provide printed samples for judging.
+                      p Do not mount. Place all parts of a single entry into one catalog envelope, no smaller than 9 x 12, with a print out of the entry submission form. Catalog envelopes are available at office supply stores up to very large sizes. Clearly mark each package “Hawaii’s 5-O” (number each package if you are sending multiples with “1 of –, 2 of –, etc.”) and include a completed official sheet with package.
+                    .large-6.columns
+                      h4 2) Upload 1-3 digital portfolio images.
+                      p Digital Files must be JPG, RGB, 1500 x 1160 @72 dpi. AIGA Honolulu reserves the right to shoot new images of any entry if needed. These images will be used in the winners’ book and the presentation at the show, if selected.
+                  .row
+                    .large-12.columns
+                      h4 Additional requirements specific to sub-categories:
+                      ul
+                        li <strong>Logos:</strong> Provide print-outs of the logo in B/W and in color on separate 8.5x11 sheets of paper or cover stock, and a sample of the logo in use (submit printed stationery, advertising, or print a screen shot of a web site).
+                        li <strong>Stationery:</strong> Provide a printed sample of a letterhead, one business card and an envelope. Second sheet may also be included. Considered a single entry.
+                        li <strong>Corporate identity set or campaign as a single entry:</strong> Enter as a set to be judged as a set. Includes logos/trademarks, stationery, brochures, identity manuals, web site or other brand collateral.
+                        li <strong>Environmental Graphics:</strong> Applications include, but are not limited to, signage, way-finding systems, mapping, exhibition design, themed environments, retail spaces, sports facilities, and special-event atmospherics. Submit printed images as necessary to represent overall features and design details of graphic elements.
+                #web
+                  h2 Web Criteria
+                  p.italic Includes web sites, micro-sites, and other interactive design. Web site entries must be published on the internet for a client or as a self-promotional piece. All entries must be in English.
+                  .row
+                    .large-4.columns
+                      h4 1) Provide URL.
+                      p You will be prompted by the online submission system to enter the URL of the web site. Web sites will be judged as live, online sites. Web site entries must work within the latest versions of Chrome, Firefox, Safari or Internet Explorer web browsers.
+                    .large-4.columns
+                      h4 2) Upload 1-3 screen shots.
+                      p These are for use in the on-screen presentation at the show and in the winners’ book. Choose screens that best represent your design. Images can show single screens, a collage, or both. Do not include the browser window or show a computer or phone. Capture screen shots at the largest possible resolution. Files must be JPG or PNG, RGB @72 dpi.
+                    .large-4.columns
+                      h4 3) Do not submit any DVDs or print outs.
+                      p Your online entry is all we need.
+                #motion
+                  h2 Motion Criteria
+                  p.italic Includes: animations for web sites, animated banners, animation for CDs and DVDs, and animation for TV & film, including holiday e-cards, animated advertising, film title credits, and animated commercials (must involve significant graphic design). All entries must be in English. Excludes live-action commercials or films.
+                  .row
+                    .large-6.columns
+                      h4 1) Upload or provide a URL for your video.
+                      p You will be prompted by the online submission system to enter the URL of the video, or you may choose to upload the video directly to our site. You can showcase your project with up to 2 videos. Please upload ONLY .mov or .mp4 videos, which must be 1280 x 720px. Max allowed size is 64MB.
+                    .large-6.columns
+                      h4 2) Upload 1-3 screen shots.
+                      p These are for use in the on-screen presentation at the show and in the winners’ book. Choose screens that best represent your design. Save as JPG, RGB, 1280 x 720px @72 dpi.
+
+  == File.read(File.join(File.dirname(__FILE__), '_footer.html'))
