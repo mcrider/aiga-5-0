@@ -1,1 +1,1 @@
-$(document).ready(function(){$("#tabs").easytabs({})});
+$(document).ready(function(){});
