@@ -7358,7 +7358,7 @@ h1.title {
   font-size: 400%;
   color: #fff;
   letter-spacing: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 @media only screen and (max-width: 768px) {
   /* line 136, ../sass/_style.scss */
@@ -7982,29 +7982,28 @@ h1.title {
   }
 }
 
-/* line 635, ../sass/_style.scss */
-#criteria-tabs {
+/* line 636, ../sass/_style.scss */
+#criteria-orbit {
   background: url("../images/bg-50.jpg") repeat;
-  -webkit-box-shadow: inset rgba(0, 0, 0, 0.5) 0 0 10px;
-  -moz-box-shadow: inset rgba(0, 0, 0, 0.5) 0 0 10px;
-  box-shadow: inset rgba(0, 0, 0, 0.5) 0 0 10px;
 }
 /* line 638, ../sass/_style.scss */
-#criteria-tabs #tabmenu {
+#criteria-orbit #tabmenu {
   display: inline-block;
   list-style: none;
   width: 100%;
+  padding: 10px 0;
   margin-bottom: 0;
+  background: #fff;
 }
-/* line 643, ../sass/_style.scss */
-#criteria-tabs #tabmenu li {
+/* line 645, ../sass/_style.scss */
+#criteria-orbit #tabmenu li {
   display: inline-block;
   width: 30%;
   margin-right: 1.6%;
   margin-left: 1.6%;
 }
-/* line 648, ../sass/_style.scss */
-#criteria-tabs #tabmenu li a {
+/* line 650, ../sass/_style.scss */
+#criteria-orbit #tabmenu li a {
   font-family: "atrament-web", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 28px;
   text-transform: uppercase;
@@ -8013,45 +8012,39 @@ h1.title {
   text-align: center;
   width: 100%;
   background-color: #eee;
-  -moz-border-radius-topleft: 2px;
-  -webkit-border-top-left-radius: 2px;
-  border-top-left-radius: 2px;
-  -moz-border-radius-topright: 2px;
-  -webkit-border-top-right-radius: 2px;
-  border-top-right-radius: 2px;
   padding: 20px;
 }
-/* line 659, ../sass/_style.scss */
-#criteria-tabs #tabmenu li a img {
+/* line 660, ../sass/_style.scss */
+#criteria-orbit #tabmenu li a img {
   margin-right: 20px;
 }
 @media only screen and (max-width: 768px) {
-  /* line 659, ../sass/_style.scss */
-  #criteria-tabs #tabmenu li a img {
+  /* line 660, ../sass/_style.scss */
+  #criteria-orbit #tabmenu li a img {
     display: none;
   }
 }
-/* line 665, ../sass/_style.scss */
-#criteria-tabs #tabmenu li a.active {
+/* line 666, ../sass/_style.scss */
+#criteria-orbit #tabmenu li a.active {
   color: #000;
   background-color: #fff;
 }
-/* line 672, ../sass/_style.scss */
-#criteria-tabs #tabcontent {
-  min-height: 480px;
-  background-color: #fff;
-  padding: 20px;
+/* line 673, ../sass/_style.scss */
+#criteria-orbit .orbit-container {
+  background: #fff;
+  color: #000;
 }
-/* line 678, ../sass/_style.scss */
-#criteria-tabs #tabcontent #print ul, #criteria-tabs #tabcontent #web ul, #criteria-tabs #tabcontent #motion ul {
+/* line 677, ../sass/_style.scss */
+#criteria-orbit ul#category-slider {
+  padding-bottom: 20px;
+}
+/* line 679, ../sass/_style.scss */
+#criteria-orbit ul#category-slider + .orbit-timer {
+  display: none;
+}
+/* line 680, ../sass/_style.scss */
+#criteria-orbit ul#category-slider li {
+  padding-right: 20px;
   padding-left: 20px;
-  color: #000;
-}
-/* line 682, ../sass/_style.scss */
-#criteria-tabs #tabcontent #print p, #criteria-tabs #tabcontent #web p, #criteria-tabs #tabcontent #motion p {
-  color: #000;
-}
-/* line 684, ../sass/_style.scss */
-#criteria-tabs #tabcontent #print p.italic, #criteria-tabs #tabcontent #web p.italic, #criteria-tabs #tabcontent #motion p.italic {
-  font-style: italic;
+  background: #fff;
 }
