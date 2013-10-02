@@ -69,6 +69,7 @@ body > section {
 
 .top-bar {
   position: relative;
+  z-index:1001;
   .name {
     text-transform: uppercase;
     letter-spacing: 0.2em;
@@ -686,13 +687,45 @@ h1.title {
 
 ///////////////////////////////////
 
-/* 0.0 About Page Styles */
+/* 0.0 Criteria & Requirements Page Styles */
 
 ///////////////////////////////////
+
+.criteriatitle {
+  a {
+    z-index:1000;
+    display:none;
+    position:absolute;
+    top:115px;
+    width:100%;
+    background:rgba(255,255,255,.5);
+    padding-top:60px;
+    padding-bottom:55px;
+    @media only screen and (min-width:769px) and (max-width: 866px) {
+      padding-top:100px;
+      padding-bottom:125px;
+    }
+    @media only screen and (min-width:624px) and (max-width: 768px) {
+      padding-top:30px;
+      padding-bottom:28px;
+    }
+    img {
+      margin: 0 auto;
+      display:block;
+      height:80px;
+      width:auto;
+    }
+  }
+}
 
 #criteria-main {
   background:$offwhite;
   color:#000;
+  a.btn {
+    width:25%;
+    margin:0 auto 20px;
+    padding:10px 0;
+  }
   h1.title {
     color:#000;
   }
