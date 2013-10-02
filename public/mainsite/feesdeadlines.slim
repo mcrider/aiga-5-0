@@ -1,0 +1,68 @@
+doctype html
+/[if IE 8]
+  | <html class="no-js lt-ie9">
+/[if IE 9]
+  | <html class="ie9">
+html.no-js
+  /! <![endif]
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width"
+    title AIGA Honolulu's Hawaii 5-0 Awards
+    link rel="stylesheet" href="stylesheets/app.css"  
+    script type="text/javascript" src="//use.typekit.net/scs0rmb.js"
+    script try{Typekit.load();}catch(e){}
+      
+    body
+      header
+        == File.read(File.join(File.dirname(__FILE__), '_nav.html'))
+
+      section#page-title-blue
+        .row
+          .large-12.columns
+            h1 Fees &amp; Deadlines
+
+      section#deadlines
+        .row
+          .large-12.columns
+            h1.title Early Bird deadline&#58;<br />October 4, 2013
+        .row
+          .large-9.large-centered.columns
+            p $60 per entry for members* of AIGA, HAF and Ad2
+            p $90 per entry for non-members
+            p $30 per entry for students**
+        .row
+          .large-12.columns
+            h1.title.regulardeadlines Regular deadline&#58;<br />October 11, 2013
+        .row
+          .large-9.large-centered.columns
+            p $70 per entry for members*
+            p $100 per entry for non-members
+            p.regulardeadlines $40 per entry for students**
+        .row
+          .large-9.large-centered.columns
+            p.fineprint &#42; Members must provide membership credentials when prompted by the entry system.
+            p.fineprint &#42;&#42; Only student project entries are eligible for student entry pricing. You do not have to currently be a student to enter student work at student pricing, however any work done for a client or since graduating must be entered at the professional price. Create two separate log-ins if you wish to enter both student work and professional work.
+
+      section#paystojoin
+        .row
+          .large-12.columns
+            h1.title It Pays to Join
+        .row
+          .large-12.large-centered.columns
+            h4 Members will pay $60 less for one entry plus one admission to the award show. Annual AIGA memberships start for as little as $50. You do the math. (Hint: it is cheaper to join.)
+        .row
+          .large-6.large-centered.columns
+            a.btn href="http://honolulu.aiga.org/membership/" target="_blank" Join AIGA now
+
+      section#about-nav
+        a.left-pag href="criteria.html"
+          .small-6.columns
+            p Previous
+            h2 Criteria &amp; Requirements
+        a.right-pag href="winners.html"
+          .small-6.columns
+            p Next
+            h2 Winners
+
+  == File.read(File.join(File.dirname(__FILE__), '_footer.html'))

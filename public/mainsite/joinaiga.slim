@@ -1,0 +1,48 @@
+
+doctype html
+/[if IE 8]
+  | <html class="no-js lt-ie9">
+/[if IE 9]
+  | <html class="ie9">
+html.no-js
+  /! <![endif]
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width"
+    title AIGA Honolulu's Hawaii 5-0 Awards
+    link rel="stylesheet" href="stylesheets/app.css"  
+    script type="text/javascript" src="//use.typekit.net/scs0rmb.js"
+    script try{Typekit.load();}catch(e){}
+      
+    body
+      header
+        == File.read(File.join(File.dirname(__FILE__), '_nav.html'))
+
+      section#page-title-black
+        .row
+          .large-12.columns
+            h1 Join AIGA
+
+      section#faqs
+        .row
+          .large-12.columns
+            h1.title Why Join?
+        .row
+          .large-12.large-centered.columns
+            p Because it will probably save you a lot of money in entry and attendance fees. The new pricing structure makes membership more affordable than ever.
+            p But also because you love design. Because you’ve chosen to be a designer despite the fact that your mom doesn’t believe that it’s a real career. Because being a designer in Hawaii comes with different challenges and different opportunities than anywhere else. Because we are entering The Design Age, when design will play a critical role in every aspect of our future. Because as long as you continue to learn and grow as a designer, you have a valuable, marketable skill set. Because if Hawaii has a thriving design community, everyone in it – designer or not – will be better off.
+            p That’s why it’s time to join. If you’re already a member, it’s time to renew.
+            a.btn href="http://honolulu.aiga.org/membership/" target="_blank" Join AIGA now
+        .row
+          .large-12.columns
+            h1.title What we do.
+        .row
+          .large-12.large-centered.columns
+            h2 Keep you employed
+            p Sure, we will promote your portfolio on our web site and provide access to job listings, but we also aim to educate the larger community about how valuable you are. At a time when every Tom, Dick and Keoni has a desktop computer, design software and stock photography, and with the alarming rise in crowd-sourcing and spec work, it’s more important than ever to have a reputable organization explaining the process and benefits of working with a professional designer. We stay on top of issues that affect our industry and take action when necessary.
+            h2 Keep you inspired
+            p We actively work to bring national design stars to Hawaii, provide workshops, secure discounts for design-related events – anything to keep you sharp and inspired. Signature events like Hawaii’s 5-0 competition, Designer Dialogues, and Drawing Under the Influence and No Go Logo socials, are just a few of the ways we bring local designers together to recognize, inspire and connect with each other. <a href="http://aigahonolulu.org/news" target="_blank">See what’s new</a>.
+            h2 Keep in touch
+            p Is there a creative professional you would like to bring to Hawaii? Is there an issue affecting designers or the design industry that you want to learn more about or feel should be officially addressed? We’d love to hear from you. We are always looking for relevant and valuable experiences to provide for our members. <a href="http://aigahonolulu.org" target="_blank">Sign up for emails</a>.
+
+  == File.read(File.join(File.dirname(__FILE__), '_footer.html'))

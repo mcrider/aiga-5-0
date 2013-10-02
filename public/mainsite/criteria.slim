@@ -17,7 +17,7 @@ html.no-js
       header
         == File.read(File.join(File.dirname(__FILE__), '_nav.html'))
 
-      section#page-title
+      section#page-title-blue
         .row
           .large-12.columns
             h1.toobig Criteria &amp; Requirements
@@ -115,5 +115,14 @@ html.no-js
                     h4 2) Upload 1-3 screen shots.
                     p These are for use in the on-screen presentation at the show and in the winners’ book. Choose screens that best represent your design. Save as JPG, RGB, 1280 x 720px @72 dpi.
 
+      section#about-nav
+        a.left-pag href="about.html"
+          .small-6.columns
+            p Previous
+            h2 About Home
+        a.right-pag href="feesdeadlines.html"
+          .small-6.columns
+            p Next
+            h2 Fees &amp; Deadlines
 
   == File.read(File.join(File.dirname(__FILE__), '_footer.html'))

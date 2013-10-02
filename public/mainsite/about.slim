@@ -17,7 +17,7 @@ html.no-js
       header
         == File.read(File.join(File.dirname(__FILE__), '_nav.html'))
 
-      section#page-title
+      section#page-title-blue
         .row
           .large-12.columns
             h1 About 5-0
@@ -25,16 +25,13 @@ html.no-js
         .row
           .large-12.large-centered.columns
             p Hawaii’s 5-O design competition seeks to celebrate graphic design excellence in all its forms. Eligible projects — including identities, printed pieces, web sites or motion graphics — will be judged by the merit of their design.
-            p This year’s competition will see several firsts. For the first time in 5-O history, we’re opening up eligibility to print projects printed outside of Hawaii as well as to motion graphics projects. Our esteemed <a href="judges.html">judges</a> will choose the top 50 designs, regardless of category. We expect a record number of entries, with fewer slots for winners. (At the last show, there were 60 winners because winning web sites were chosen in addition to the 50 print winners.) The result is that competition will be fierce.
-            p The winning selections will be announced at the Award Show on Saturday, October 26, 2013 aboard the USS Battleship Missouri. It will be a night to remember. May the best designs win.
-        .row
-          .large-3.columns
-            a.btn href="criteria.html" Criteria &amp; Requirements
-          .large-3.columns
-            a.btn Fees &amp; Deadlines
-          .large-3.columns
-            a.btn Drop off Locations
-          .large-3.columns
-            a.btn Winners
+            p This year’s competition will see several firsts. For the first time in 5-O history, we’re opening up <a href="criteria.html">eligibility</a> to print projects printed outside of Hawaii as well as to motion graphics projects. Our esteemed <a href="judges.html">judges</a> will choose the top 50 designs, regardless of category. We expect a record number of entries, with fewer slots for <a href="winners.html">winners</a>. (At the last show, there were 60 winners because winning web sites were chosen in addition to the 50 print winners.) The result is that competition will be fierce.
+            p The winning selections will be announced at the <a href="theshow.html">Award Show</a> on Saturday, October 26, 2013 aboard the USS Battleship Missouri. It will be a night to remember. May the best designs win.
+      section#about-nav
+        .whitebg.small-6.columns &nbsp;
+        a.right-pag href="criteria.html"
+          .small-6.columns
+            p Next
+            h2 Criteria
 
   == File.read(File.join(File.dirname(__FILE__), '_footer.html'))

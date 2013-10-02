@@ -1,0 +1,45 @@
+doctype html
+/[if IE 8]
+  | <html class="no-js lt-ie9">
+/[if IE 9]
+  | <html class="ie9">
+html.no-js
+  /! <![endif]
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width"
+    title AIGA Honolulu's Hawaii 5-0 Awards
+    link rel="stylesheet" href="stylesheets/app.css"  
+    script type="text/javascript" src="//use.typekit.net/scs0rmb.js"
+    script try{Typekit.load();}catch(e){}
+      
+    body
+      header
+        == File.read(File.join(File.dirname(__FILE__), '_nav.html'))
+
+      section#page-title-blue
+        .row
+          .large-12.columns
+            h1 Winners
+      section#winners
+        .row
+          .large-12.large-centered.columns
+            p Fifty entries will be selected to receive “awards of excellence” in the form of certificates and placement in the 5-O winners’ book and online winners’ gallery. The “Top 5” will receive trophies. There is no predetermined breakdown of how many of the winners will be print, web, motion, or other. The purpose of the show is to recognize the best design in Hawaii, regardless of the form it takes.
+        .row
+          .large-12.columns
+            h1.title Student Winners
+        .row
+          .large-12.large-centered.columns
+            p Three student projects will be recognized as Student Winners. Winning students will receive an award certificate and a one-year AIGA Contributor Level Membership.
+
+      section#about-nav
+        a.left-pag href="feesdeadlines.html"
+          .small-6.columns
+            p Previous
+            h2 Fees &amp; Deadlines
+        a.right-pag href="faqs.html"
+          .small-6.columns
+            p Next
+            h2 FAQ&rsquo;s
+
+  == File.read(File.join(File.dirname(__FILE__), '_footer.html'))

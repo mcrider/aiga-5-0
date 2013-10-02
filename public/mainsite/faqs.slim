@@ -1,0 +1,50 @@
+
+doctype html
+/[if IE 8]
+  | <html class="no-js lt-ie9">
+/[if IE 9]
+  | <html class="ie9">
+html.no-js
+  /! <![endif]
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width"
+    title AIGA Honolulu's Hawaii 5-0 Awards
+    link rel="stylesheet" href="stylesheets/app.css"  
+    script type="text/javascript" src="//use.typekit.net/scs0rmb.js"
+    script try{Typekit.load();}catch(e){}
+      
+    body
+      header
+        == File.read(File.join(File.dirname(__FILE__), '_nav.html'))
+
+      section#page-title-blue
+        .row
+          .large-12.columns
+            h1 FAQ's
+
+      section#faqs
+        .row
+          .large-12.large-centered.columns
+            h3 How many of the 50 awards will be web sites?
+            p The number of awards given per category will be at the discretion of the judges. They may choose to give 10 awards for web and 40 for other categories, or they may choose to give 40 awards for web and 10 for other categories.
+            h3 If the winners are not chosen by category, why do we have to enter by category?
+            p Different kinds of entries have different submission requirements. That is the only reason they are separated in the entry system. Printed project entries must provide actual samples of printed pieces in order to be properly judged. Web sites have no physical submission requirements, but require that a URL be entered. Ultimately, the judges will decide which 50 entries are the best, regardless of category.
+            h3 Can I enter a ________?
+            p The Hawaii 5-O show is meant to celebrate the best of design in Hawaii, interpreted as anything designed for a client for commercial use. It must incorporate graphic design, specifically some combination of typography and images. We realize this is open-ended, but we believe that limiting the definition of “design” to print, environmental or web projects is a dated concept. If we did not specifically list the type of project you would like to enter, you may enter it under whatever category allows you to provide us with visuals/links/samples we need to have your project judged fairly. If we determine that your submission to be ineligible due to this ambiguity, we will remove it from the competition and refund your entry fee.
+            h3 Why do I have to provide the last four digits of my social security number to attend the show?
+            p Ford Island is an active military base. As with all military bases, there are strict procedures for gaining access for safety and security reasons. The information you provide will be given to the Ford Island gate specifically for access on the night of the event and will not be used for any other purpose.
+
+
+      section#about-nav
+        a.left-pag href="winners.html"
+          .small-6.columns
+            p Previous
+            h2 Winners
+        a.right-pag href="about.html"
+          .small-6.columns
+            p Next
+            h2 About Home
+
+
+  == File.read(File.join(File.dirname(__FILE__), '_footer.html'))

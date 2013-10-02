@@ -1,0 +1,35 @@
+
+doctype html
+/[if IE 8]
+  | <html class="no-js lt-ie9">
+/[if IE 9]
+  | <html class="ie9">
+html.no-js
+  /! <![endif]
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width"
+    title AIGA Honolulu's Hawaii 5-0 Awards
+    link rel="stylesheet" href="stylesheets/app.css"  
+    script type="text/javascript" src="//use.typekit.net/scs0rmb.js"
+    script try{Typekit.load();}catch(e){}
+      
+    body
+      header
+        == File.read(File.join(File.dirname(__FILE__), '_nav.html'))
+
+      section#page-title-black
+        .row
+          .large-12.columns
+            h1 About AIGA
+
+      section#faqs
+        .row
+          .large-12.large-centered.columns
+            p AIGA Honolulu is Hawaii’s chapter of the international AIGA, the professional association for design. Hawaii’s chapter works to inform, inspire, and represent the local design community.
+            p The Honolulu chapter created the 5-O show 12 years ago to recognize and celebrate design in Hawaii, and to give local businesses an opportunity to realize the quality and expertise that exists in our industry. We are proud of this competition. Last year one of our 5-O judges, Sean Adams told us “All the other chapters say, ‘We want our competition to be like the 5-O.’”
+            p If 5-O is your first exposure to AIGA Honolulu, we encourage you to visit our web site, sign up for e-mails and like us on Facebook so you can get all our announcements about events and other opportunities.
+            a.btn href="http://honolulu.aiga.org/membership/" target="_blank" Visit AIGA Honolulu&rsquo;s web site
+            p And if you’ve been aware of us for a while, been meaning to join, or have let your membership lapse, there’s never been a better time to join. <a href="joinaiga.html">Click here to find out why</a>.
+
+  == File.read(File.join(File.dirname(__FILE__), '_footer.html'))

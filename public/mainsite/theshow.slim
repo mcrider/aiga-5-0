@@ -1,0 +1,53 @@
+
+doctype html
+/[if IE 8]
+  | <html class="no-js lt-ie9">
+/[if IE 9]
+  | <html class="ie9">
+html.no-js
+  /! <![endif]
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width"
+    title AIGA Honolulu's Hawaii 5-0 Awards
+    link rel="stylesheet" href="stylesheets/app.css"  
+    script type="text/javascript" src="//use.typekit.net/scs0rmb.js"
+    script try{Typekit.load();}catch(e){}
+      
+    body
+      header
+        == File.read(File.join(File.dirname(__FILE__), '_nav.html'))
+
+      section#showdetails
+        .panel.row
+          .large-12.columns
+            img.seal src="images/seal-designersunite.png"
+            h2 Attend the Show
+            h3.subheader <span class="slab">Ad Aspera Ad Astra</span> / <em>Through Adversity to the Stars</em>
+          .row
+            .large-2.columns
+              h3 When
+            .large-10.columns	
+              p <strong>26 OCTOBER 2013 / 1700 – 2130</strong> (5:00-9:30pm)<br />1700: Cocktails and Tours of the Ship<br />1800: Heavy Pupus are Served<br />1900: Awards Show<br />2000: Dessert is Served
+          .row
+            .large-2.columns
+              h3 Where
+            .large-10.columns	
+              p <strong>BATTLESHIP MISSOURI MEMORIAL</strong><br />63 Cowpens Street, Honolulu, Hawaii 96818<br />Historic Ford Island, Pearl Harbor
+              p The Battleship Missouri is the site of the end of World War II. Japanese officials signed the surrender documents before General Douglas MacArthur on the deck of the Missouri on September 2, 1945. Today the Missouri is docked at Ford Island, where it serves as a museum and an epic venue for military and civilian events.
+          .row
+            .large-2.columns
+              h3 Tickets
+            .large-10.columns	
+              p $60 for members of AIGA, HAF or AD2 <span>//</span> $90 for non-members <span>//</span> $30 or students with student ID
+              p This unique venue does have some extra security requirements. It’s a battleship, after all. When you purchase tickets, you will be asked to provide the names and last four digits of the social security numbers of all attendees. There will be a list at the gate at Ford Island. Anyone who does not provide the required information will not be allowed on base. <strong>You must purchase tickets no later than 11 October 2013</strong>.
+          .row
+            .large-2.columns
+              h3 Attire
+            .large-10.columns	
+              p <strong>Semi-Formal</strong>. 1940’s-era attire would be awesome, but is not required. The teak deck of the ship is weathered and uneven in places, so women who wear stilettos or high heels do so at their peril. Flats or wedges will be easier to walk in. Also the deck of the ship can be windy, so to avoid any unwanted Marilyn Monroe moments (wrong era), dress accordingly.
+          .row
+            .large-12.columns
+              a.btn href="http://2013hi50.eventbrite.com/" target="_blank" Buy tickets
+
+  == File.read(File.join(File.dirname(__FILE__), '_footer.html'))

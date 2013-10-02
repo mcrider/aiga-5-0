@@ -1,0 +1,50 @@
+
+doctype html
+/[if IE 8]
+  | <html class="no-js lt-ie9">
+/[if IE 9]
+  | <html class="ie9">
+html.no-js
+  /! <![endif]
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width"
+    title AIGA Honolulu's Hawaii 5-0 Awards
+    link rel="stylesheet" href="stylesheets/app.css"  
+    script type="text/javascript" src="//use.typekit.net/scs0rmb.js"
+    script try{Typekit.load();}catch(e){}
+      
+    body
+      header
+        == File.read(File.join(File.dirname(__FILE__), '_nav.html'))
+
+      section#page-title-blue
+        .row
+          .large-12.columns
+            h1 Drop-off Locations
+
+      section#dropoff
+        .row
+          .large-12.large-centered.columns
+            p You may deliver or mail physical entries to any of the following locations during the times noted. (Only print and identity entries require physical samples be submitted.) All entries must be received by closing time on October 11, 2013. These are only drop-off points. They will not be able to answer questions relating to the competition.
+            p <span>Neighbor Island Entrants:</span> Please send by mail or courier to Electric Pencil. Be sure that they arrive no later than Friday, October 11, 2013.
+
+      section#droplocations
+        .row
+          .large-12.columns
+            h1.title Locations
+        .panel.row
+        	.large-12.columns
+        		.row
+		          .large-6.columns
+		            h2.title Electric Pencil
+		            p Monday through Friday from 8:00AM – 4:30PM<br /> 501 Sumner Street, #3B1 <br />Honolulu, Hawaii 96817
+		          .large-6.columns
+		            h2.title HonBlue Downtown
+		            p Monday through Friday from 8:00AM – 5:00PM<br /> 19 Merchant Street<br />Honolulu, Hawaii 96813<br /><span>Do not send mail to this location</span>
+        		.row
+		          .large-6.large-centered.columns
+		            h2.title R/D
+		            p Tuesday through Friday 7:00AM – 7:00PM<br /> Saturday 11:00AM – 5:00PM<br />691 Auahi Street<br />Honolulu, Hawaii 96817<br /><span>Do not send mail to this location</span>
+
+  == File.read(File.join(File.dirname(__FILE__), '_footer.html'))

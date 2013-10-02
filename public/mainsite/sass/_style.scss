@@ -81,11 +81,15 @@ body > section {
     }
   }
   .secondary {
-    display: none;
     position: absolute;
     z-index: 10;
     top: 8px;
     right: 30px;
+    li {
+      font-family:$header-font-family;
+      color:$grey;
+      vertical-align: center;
+    }
     li a {
       font-family: $slab;
       color: #000;
@@ -124,7 +128,7 @@ a.btn {
   @include border-radius(5px);
   @include transition(background-color 0.3s);
   &:hover {
-    background-color:darken($red,2.5%);
+    background-color: darken($red,2.5%);
     @include box-shadow(inset rgba(0,0,0,.5) 0 0 10px);
   }
   @media #{$small-max} {
@@ -146,9 +150,56 @@ h1.title {
   }
 }
 
-#page-title {
+#page-title-red {
   background:$red url('../images/bg-judges.jpg') top center fixed;
   background-size:cover;
+  padding:40px 0;
+  @include box-shadow(inset rgba(0,0,0,0.25) 0 0 20px);
+  h1 {
+    @include no-pm;
+    text-transform:uppercase;
+    text-align:center;
+    font-size:650%;
+    color:#fff;
+    letter-spacing: 10px;
+    &.toobig {
+      font-size:500%;
+    }
+    @media #{$small-max} {
+      font-size: 500%;
+      &.toobig {
+        font-size:300%;
+      }
+    }
+  }
+}
+
+#page-title-blue {
+  background:#1a3e6b url('../images/bg-yell.jpg') top center fixed no-repeat;
+  background-size:100% auto;
+  padding:40px 0;
+  @include box-shadow(inset rgba(0,0,0,0.25) 0 0 20px);
+  h1 {
+    @include no-pm;
+    text-transform:uppercase;
+    text-align:center;
+    font-size:650%;
+    color:#fff;
+    letter-spacing: 10px;
+    &.toobig {
+      font-size:500%;
+    }
+    @media #{$small-max} {
+      font-size: 500%;
+      &.toobig {
+        font-size:300%;
+      }
+    }
+  }
+}
+#page-title-black {
+  background:#333 url('../images/bg-blackboard.jpg') top center fixed no-repeat;
+  background-size:100% auto;
   padding:40px 0;
   @include box-shadow(inset rgba(0,0,0,0.25) 0 0 20px);
   h1 {
@@ -593,7 +644,45 @@ h1.title {
       margin-bottom:0;
     }
   }
+  .about-pages a.btn {
+    margin-bottom:0;
+    background-color:#1a3e6b;
+    padding:10px;
+  }
 }
+
+#about-nav {
+  padding:0;
+  div {
+    background:$red;
+    padding:60px 50px 0;
+    height:200px;
+    text-transform: uppercase;
+    &:hover {
+      background-color: darken($red,2.5%);
+    }
+    p {
+      color:lighten($red,15%);
+      margin-bottom:-10px;
+    }
+    h2 {
+      color:#fff;
+    }
+  }
+  div.whitebg {
+    background-color:$red;
+  }
+  a.left-pag {
+    text-align:left;
+    div {
+      border-right:solid 3px darken($red,2.5%);
+    }
+  }
+  a.right-pag {
+    text-align:right;
+  }
+}
+
 
 ///////////////////////////////////
 
@@ -634,7 +723,7 @@ h1.title {
 }
 
 #criteria-orbit {
-  background:url('../images/bg-50.jpg') repeat;
+  background:url('../images/bg-50.jpg') fixed repeat;
   #tabmenu {
     display:inline-block;
     list-style:none;
@@ -681,59 +770,265 @@ h1.title {
   }
 }
 
-// #criteria-tabs {
-//   background:url('../images/bg-50.jpg') repeat;
-//   @include box-shadow(inset rgba(0,0,0,.25) 0 0 10px);
-//   #tabmenu {
-//     display:inline-block;
-//     list-style:none;
-//     width:100%;
-//     margin-bottom:0;
-//     li {
-//       display:inline-block;
-//       width:30%;
-//       margin-right: 1.6%;
-//       margin-left: 1.6%;
-//       a {
-//         font-family:$header-font-family;
-//         font-size:28px;
-//         text-transform:uppercase;
-//         color:#999;
-//         display:block;
-//         text-align:center;
-//         width:100%;
-//         background-color:#eee;
-//         @include border-top-radius(2px);
-//         padding:20px;
-//         img {
-//           margin-right:20px;
-//           @media #{$small-max} {
-//             display:none;
-//           }
-//         }
-//         &.active {
-//           color:#000;
-//           background-color:#fff;
-//         }
-//       }
-//     }
-//   }
-//   #tabcontent {
-//     min-height:480px;
-//     background-color:#fff;
-//     // @include border-radius(10px);
-//     padding:20px;
-//     #print, #web, #motion {
-//       ul {
-//         padding-left:20px;
-//         color:#000;
-//       }
-//       p {
-//         color:#000;
-//         &.italic {
-//           font-style:italic;
-//         }
-//       }
-//     }
-//   }
-// }
+
+///////////////////////////////////
+
+/* 0.0 Fees & Deadlines Page Styles */
+
+///////////////////////////////////
+
+
+#deadlines {
+  background:$offwhite;
+  @media #{$small} {
+    background: url('../images/bg-letter.jpg');
+    background-size:100% auto;
+  }
+  @media #{$small-max} {
+    padding:80px 0;
+  }
+  line-height:1;
+  text-align:center;
+  h1.title {
+    color:#000;
+    &.regulardeadlines {
+      margin-top:50px;
+    }
+  }
+  p {
+    @include no-pm;
+    // margin-bottom:30px;
+    color:#000;
+    font-size:28px;
+    @media #{$small-max} {
+      font-size: 18px;
+    }
+    &.regulardeadlines {
+      margin-bottom:10px;
+    }
+    &.fineprint {
+      color:#000;
+      font-size:14px;
+      line-height:1;
+      margin-top:20px;
+    }
+  }
+}
+
+#paystojoin {
+  background: url('../images/bg-shieldblue.jpg') no-repeat #999 fixed top center;
+  background-size:cover;
+  h1.title {
+    color:#fff;
+  }
+  h4 {
+    color:#fff;
+  }
+  a.btn {
+    margin:0;
+  }
+}
+
+///////////////////////////////////
+
+/* 0.0 Drop-off Locations Page Styles */
+
+///////////////////////////////////
+
+
+#dropoff {
+  background:$offwhite;
+  @media #{$small} {
+    background: url('../images/bg-letter.jpg');
+    background-size:100% auto;
+  }
+  @media #{$small-max} {
+    padding:80px 0;
+  }
+  line-height:1;
+  h1.title {
+    color:#000;
+    text-align:center;
+    &.regulardeadlines {
+      margin-top:50px;
+    }
+  }
+  p {
+    @include no-pm;
+    margin-bottom:30px;
+    color:#000;
+    font-size:28px;
+    @media #{$small-max} {
+      font-size: 18px;
+    }
+    span {
+      color:$red;
+      font-style: italic;
+    }
+  }
+}
+
+#droplocations {
+  background: url('../images/bg-shieldblue.jpg') no-repeat #999 fixed top center;
+  background-size:cover;
+  h1.title {
+    color:#fff;
+    text-align:center;
+  }
+  .panel {
+    background: #fff url(../images/ornate-top.gif) no-repeat;
+    background-position: top center;
+    padding: emCalc(50px) inherit;
+    margin-bottom:50px;
+    position: relative;
+    h2.title {
+      color:#000;
+      font-family:$header-font-family;
+      margin-bottom:20px;
+      text-align:center;
+    }
+    p {
+      color:#000;
+      text-align:center;
+      font-size:120%;
+      span {
+        color:$red;
+        font-style: italic;
+      }
+    }
+    .row:last-child p {
+      margin-bottom:0;
+    }
+  }
+}
+
+///////////////////////////////////
+
+/* 0.0 Winners Page Styles */
+
+///////////////////////////////////
+
+#winners {
+  background:$offwhite;
+  @media #{$small} {
+    background: url('../images/bg-letter.jpg');
+    background-size:100% auto;
+  }
+  @media #{$small-max} {
+    padding:80px 0;
+  }
+  line-height:1;
+  h1.title {
+    color:#000;
+    margin-bottom:30px;
+    text-align:center;
+  }
+  p {
+    @include no-pm;
+    color:#000;
+    font-size:28px;
+    @media #{$small-max} {
+      font-size: 18px;
+    }
+    &:first-child {
+      margin-bottom:20px;
+    }
+  }
+}
+
+
+///////////////////////////////////
+
+/* 0.0 2013 5-0 Show Page Styles */
+
+///////////////////////////////////
+
+#showdetails {
+  background: url(../images/eaglehalftone.jpg);
+  @include background-size(cover);
+  padding: emCalc(120px) 0;
+  text-align: center;
+  span {
+    font-family:$body-font-family;
+    font-weight:600;
+  }
+  a.btn {
+    width:33.33%;
+    background:$red url('../images/tickets.png') no-repeat 12px center;
+    background-size:40px;
+    padding-left:60px;
+  }
+  .panel {
+    background: #fff url(../images/ornate-top.gif) no-repeat;
+    background-position: top center;
+    padding-bottom: emCalc(30px);
+    position: relative;
+    p {
+      text-align:left;
+      span {
+        color:$red;
+        font-size:120%;
+        vertical-align: center;
+      }
+    }
+    .row {
+      margin-bottom:10px;
+      .large-10 {
+        @media #{$small} {
+         border-left:1px solid $grey;
+        }
+      }
+    }
+    &:before {
+      content: " ";
+      display: block;
+      width: 300px;
+      height: 90px;
+      background: url(../images/year-2013.png);
+      position: absolute;
+      top: -60px;
+      right: -10px;
+      @media only screen and (max-width: 1020px) {
+        right: 0px;
+      }
+    }
+  }
+}
+
+///////////////////////////////////
+
+/* 0.0 FAQ's Page Styles */
+
+///////////////////////////////////
+
+
+#faqs {
+  background:$offwhite;
+  @media #{$small} {
+    background: url('../images/bg-letter.jpg');
+    background-size:100% auto;
+  }
+  @media #{$small-max} {
+    padding:80px 0;
+  }
+  line-height:1;
+  h1.title {
+    color:#000;
+    text-align:center;
+    &.regulardeadlines {
+      margin-top:50px;
+    }
+  }
+  p {
+    @include no-pm;
+    margin-bottom:30px;
+    color:#000;
+    font-size:28px;
+    @media #{$small-max} {
+      font-size: 18px;
+    }
+  }
+  a.btn {
+    width:50%;
+  }
+}
