@@ -33,7 +33,7 @@ utils = {
     if(min < 10) min = "0" + min;
     var sec = a.getSeconds();
     if(sec < 10) sec = "0" + sec;
-    var time = date+'/'+month+1+'/'+year.toString().slice(2)+' @ '+hour+':'+min+':'+sec ;
+    var time = month+'/'+date+'/'+year.toString().slice(2)+' @ '+hour+':'+min+':'+sec ;
     return time;
   },
   displayHumanReadableDate: function(timestamp){
@@ -42,7 +42,7 @@ utils = {
     var year = a.getFullYear();
     var month = a.getMonth() + 1;
     var date = a.getDate();
-    var time = date+'/'+month+'/'+year.toString().slice(2);
+    var time = month+'/'+date+'/'+year.toString().slice(2);
     return time;
   },
   loadTemplate: function(template) {
