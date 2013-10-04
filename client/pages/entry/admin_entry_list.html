@@ -20,6 +20,40 @@
           <span class="file-list">Attachments</span>
           {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="icon-file-alt"></i> <a href="{{url}}" target="_blank" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
         </div>
+        <h5><a href="#" class="show-entry-info"><i class="icon-plus-sign"></i>Entry Information</a></h5>
+        <div class="entry-overview-container">
+          <h5>Project Information</h5>
+          <p>
+            {{#if typeEquals type "print"}}Type: Print / Environmental{{/if}}
+            {{#if typeEquals type "web"}}Type: Web / Interactive{{/if}}
+            {{#if typeEquals type "motion"}}Type: Motion Graphics{{/if}}
+          </p>
+          <p>
+            {{#if typeEquals type 'print'}}Printer: {{url}}{{/if}}
+            {{#if typeEquals type 'web'}}URL: {{url}}{{/if}}
+            {{#if typeEquals type 'motion'}}URL: {{url}}{{/if}}
+          </p>
+
+          <h5>Project Team</h5>
+          <p>Art Director: {{art_director}}</p>
+          <p>Designer: {{designer}}</p>
+          <p>Illustrator: {{illustrator}}</p>
+          <p>Copywriter: {{copywriter}}</p>
+          <p>Photographer: {{photographer}}</p>
+          <p>Special Consultant: {{special_consultant}}</p>
+          {{#if typeEquals type "print"}}
+            <p>Paper: {{paper}}</p>
+          {{/if}}
+          {{#if typeEquals type "web"}}
+            <p>Developer: {{developer}}</p>
+          {{/if}}
+          {{#if typeEquals type "web"}}
+            <h4>Technical Information</h4>
+            <p>{{tech_info}}</p>
+          {{/if}}
+          <h5>Notes</h5>
+          <p>{{notes}}</p>
+        </div>
         <div class="admin-edit-entry hidden">{{#isolate}}{{> admin_edit_entry}}{{/isolate}}</div>
       </div>
       <div class="span3 entry-buttons">

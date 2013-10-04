@@ -46,5 +46,26 @@ Template.admin_entry_list.events({
   'click .delete-entry': function(e) {
     $('#deleteEntryModal').modal('hide');
     Entries.remove(Session.get('currentEntry'));
+  },
+  'click .show-entry-info': function(e) {
+    e.preventDefault();
+    $entryOverviewContainer = $(e.currentTarget).parent().next('.entry-overview-container');
+    if($entryOverviewContainer.is(':visible')) {
+      $entryOverviewContainer.hide();
+      $(this).find('i').addClass('icon-plus-sign').removeClass('icon-minus-sign');
+    } else {
+      $entryOverviewContainer.show();
+      $(this).find('i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
+    }
+
   }
 });
+
+
+Template.admin_entry_list.typeEquals = function (typeOne, typeTwo) {
+  return typeOne === typeTwo;
+};
+
+Template.admin_entry_list.typeNotEquals = function (typeOne, typeTwo) {
+  return typeOne !== typeTwo;
+};
