@@ -15,19 +15,19 @@
         <option value="motion">Motion Graphics</option>
       </select>
       <div id="print_fields" class="project_fields hidden">
-        <input class="input-block-level" type="text" id="url" name="url" placeholder="Print Company" />
+        <input class="input-block-level print-url" type="text" id="url" name="url" placeholder="Print Company" />
         <a class="btn filepicker-file" title="File(s)"><i class="icon-left icon-file"></i>Add File(s)</a>
         {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="file-icon icon-remove-sign"></i> <a href="{{url}}" target="_blank" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
         <div class="file-message">Upload up to four digital portfolio images. Images must be JPG, RGB, 1500 x 1160 @72 dpi. These can be photos or digital compilations, and can be horizontal or vertical. These images will not be used for judging, but will be used in the winners’ book and the presentation at the show, if the entry is selected as a winner.<br /><br />You may add image files later. Click the "Add Entry" button at the bottom of this screen to save the entry. You can log in at any time to add the images when you're ready.</div>
       </div>
       <div id="web_fields" class="project_fields hidden">
-        <input class="input-block-level" type="text" id="url" name="url" placeholder="URL" />
+        <input class="input-block-level web-url" type="text" id="url" name="url" placeholder="URL" />
         <a class="btn filepicker-file" title="File(s)"><i class="icon-left icon-file"></i>Add File(s)</a>
         {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="file-icon icon-remove-sign"></i> <a href="{{url}}" target="_blank" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
         <div class="file-message">Upload up to 4 screen shots. Images must be JPG or PNG, RGB @72 dpi. These are for use in the on-screen presentation at the show and in the winners’ book. Choose screens that best represent your design. Images can show single screens, a collage, or both. Do not include the browser window or show a computer or phone. Capture screen shots at the largest possible resolution.<br /><br />You may add image files later. Click the "Add Entry" button at the bottom of this screen to save the entry. You can log in at any time to add the images when you're ready.</div>
       </div>
       <div id="motion_fields" class="project_fields hidden">
-        <input class="input-block-level" type="text" id="url" name="url" placeholder="URL" />
+        <input class="input-block-level motion-url" type="text" id="url" name="url" placeholder="URL" />
         <a class="btn filepicker-file" title="File(s)"><i class="icon-left icon-file"></i>Add File(s)</a>
         {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="file-icon icon-remove-sign"></i> <a href="{{url}}" target="_blank" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
         <div class="file-message">Upload your video(s) using the Add File(s) button. You may include up to two videos. Please upload ONLY .mov or .mp4 videos, which must be 1280 x 720px. These will be used for judging.<br />

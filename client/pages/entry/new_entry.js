@@ -25,6 +25,10 @@ Template.new_entry.events({
 
     e.preventDefault();
     var entryData = utils.getFormValues("#newEntryForm");
+    if($(".motion-url").val() != "") entryData.url = $(".motion-url").val();
+    if($(".print-url").val() != "") entryData.url = $(".print-url").val();
+    if($(".web-url").val() != "") entryData.url = $(".web-url").val();
+
     entryData.userId = Meteor.userId();
     entryData.paid = false;
 

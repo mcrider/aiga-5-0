@@ -9,21 +9,27 @@
       <option value="web" {{#if typeEquals type "web"}}selected="selected"{{/if}}>Web / Interactive</option>
       <option value="motion" {{#if typeEquals type "motion"}}selected="selected"{{/if}}>Motion Graphics</option>
     </select>
-    <div id="print_fields" class="project_fields {{#if typeNotEquals type 'print'}}hidden{{/if}}">
+    {{#if typeEquals type 'print'}}
+    <div id="print_fields" class="project_fields">
       <input class="input-block-level" value="{{url}}" type="text" id="url" name="url" placeholder="Print Company" />
       <a class="btn filepicker-file" title="File(s)"><i class="icon-left icon-file"></i>Add File(s)</a>
       {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="file-icon icon-remove-sign"></i> <a href="{{url}}" target="_blank" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
     </div>
-    <div id="web_fields" class="project_fields {{#if typeNotEquals type 'web'}}hidden{{/if}}">
+    {{/if}}
+    {{#if typeEquals type 'web'}}
+    <div id="web_fields" class="project_fields">
       <input class="input-block-level" value="{{url}}" type="text" id="url" name="url" placeholder="URL" />
       <a class="btn filepicker-file" title="File(s)"><i class="icon-left icon-file"></i>Add File(s)</a>
       {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="file-icon icon-remove-sign"></i> <a href="{{url}}" target="_blank" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
     </div>
+    {{/if}}
+    {{#if typeEquals type 'motion'}}
     <div id="motion_fields" class="project_fields {{#if typeNotEquals type 'motion'}}hidden{{/if}}">
       <input class="input-block-level" value="{{url}}" type="text" id="url" name="url" placeholder="URL" />
       <a class="btn filepicker-file" title="File(s)"><i class="icon-left icon-file"></i>Add File(s)</a>
       {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="file-icon icon-remove-sign"></i> <a href="{{url}}" target="_blank" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
     </div>
+    {{/if}}
 
     <h4>Project Team</h4>
 
@@ -46,7 +52,7 @@
     	<h4>Technical Information</h4>
       <input class="input-block-level" value="{{tech_info}}" type="text" id="tech_info" name="tech_info" placeholder="e.g. Server stack, frameworks used, etc." />
     {{/if}}
-    
+
     <h4>Notes</h4>
 		<textarea class="input-block-level" type="textarea" id="notes" name="notes" placeholder="Miscellaneous notes" />{{notes}}</textarea>
 

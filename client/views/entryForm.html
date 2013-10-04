@@ -11,6 +11,7 @@
           {{#if typeEquals type "print"}}<p>Type: </span>Print / Environmental</p>{{/if}}
           {{#if typeEquals type "web"}}<p>Type: </span>Web</p>{{/if}}
           {{#if typeEquals type "motion"}}<p>Type: </span>Motion Graphics</p>{{/if}}
+          <p>{{url}}</p>
           <br />
         </div>
       </div>
@@ -19,7 +20,7 @@
           <div class="print-profile">
             <h4>Contact Information</h4>
             {{#with user}}
-              <p><span class="project-label">Name:</span>{{contact_name}}</p>
+              <p><span class="project-label">Name:</span>{{profile.contact_name}}</p>
               <p><span class="project-label">Email: </span>{{emails.0.address}}</p>
               <p><span class="project-label">Agency: </span>{{profile.agency_name}}</p>
               <p><span class="project-label">Address: </span>{{profile.address}}</p>
