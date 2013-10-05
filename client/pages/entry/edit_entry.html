@@ -46,6 +46,7 @@
       <input class="input-block-level" value="{{developer}}" type="text" id="developer" name="developer" placeholder="Developer" />
     {{/if}}
     {{#if typeEquals type "motion"}}
+      <input class="input-block-level" value="{{animator}}" type="text" id="animator" name="Animator" placeholder="Animator" />
     {{/if}}
 
 		{{#if typeEquals type "web"}}
@@ -54,7 +55,7 @@
     {{/if}}
 
     <h4>Notes</h4>
-		<textarea class="input-block-level" type="textarea" id="notes" name="notes" placeholder="Miscellaneous notes" />{{notes}}</textarea>
+		<textarea class="input-block-level" type="textarea" id="notes" name="notes" placeholder="Miscellaneous notes">{{notes}}</textarea>
 
     <button class="entry-back btn">Cancel</button>
     <button type="submit" class="btn pull-right">Save</button>

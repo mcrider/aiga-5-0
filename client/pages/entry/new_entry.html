@@ -55,6 +55,8 @@
         class="input-block-level team_member show_for_print show_for_web show_for_motion" />
       <input type="text" id="special_consultant" name="special_consultant" placeholder="Special Consultant(s)"
         class="input-block-level team_member show_for_print show_for_web show_for_motion" />
+      <input type="text" id="animator" name="animator" placeholder="Animator(s)"
+        class="input-block-level team_member show_for_motion" />
 
       <div class="team_member show_for_web">
 	    	<h4>Technical Information</h4>
@@ -62,7 +64,7 @@
 			</div>
 
 			<h4>Notes</h4>
-			<textarea class="input-block-level" type="textarea" id="notes" name="notes" placeholder="Miscellaneous notes" />{{notes}}</textarea>
+			<textarea class="input-block-level" type="textarea" id="notes" name="notes" placeholder="Miscellaneous notes">{{notes}}</textarea>
 
       {{#if entryErrorMessage}}
         <div class="alert alert-error">{{entryErrorMessage}}</div>
