@@ -33,12 +33,12 @@
         <div class="span6 print-team">
           <h4>Project Team</h4>
 
-          {{#if foo}}<p><span class="project-label">Art Director: </span>{{art_director}}</p>{{/if}}
-          {{#if foo}}<p><span class="project-label">Designer: </span>{{designer}}</p>{{/if}}
-          {{#if foo}}<p><span class="project-label">Illustrator: </span>{{illustrator}}</p>{{/if}}
-          {{#if foo}}<p><span class="project-label">Copywriter: </span>{{copywriter}}</p>{{/if}}
-          {{#if foo}}<p><span class="project-label">Photographer: </span>{{photographer}}</p>{{/if}}
-          {{#if foo}}<p><span class="project-label">Special Consultant: </span>{{special_consultant}}</p>{{/if}}
+          {{#if art_director}}<p><span class="project-label">Art Director: </span>{{art_director}}</p>{{/if}}
+          {{#if designer}}<p><span class="project-label">Designer: </span>{{designer}}</p>{{/if}}
+          {{#if illustrator}}<p><span class="project-label">Illustrator: </span>{{illustrator}}</p>{{/if}}
+          {{#if copywriter}}<p><span class="project-label">Copywriter: </span>{{copywriter}}</p>{{/if}}
+          {{#if photographer}}<p><span class="project-label">Photographer: </span>{{photographer}}</p>{{/if}}
+          {{#if special_consultant}}<p><span class="project-label">Special Consultant: </span>{{special_consultant}}</p>{{/if}}
           {{#if typeEquals type "print"}}
             <p><span class="project-label">Paper: {{paper}}</p>
           {{/if}}
