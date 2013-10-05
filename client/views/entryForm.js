@@ -27,7 +27,7 @@ Template.print_form.typeNotEquals = function (typeOne, typeTwo) {
 };
 
 Template.print_form.rendered = function() {
-  window.setTimeout(function() {
-    window.print();
-  }, 3000);
+  // window.setTimeout(function() {
+  //   window.print();
+  // }, 3000);
 }
