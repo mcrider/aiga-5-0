@@ -223,3 +223,7 @@ legend {
 .ui-pnotify-closer .icon-remove {
   line-height: 21px;
 }
+
+.fine-print {
+  font-size: .9em;
+}

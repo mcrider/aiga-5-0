@@ -103,6 +103,10 @@ Handlebars.registerHelper("humanReadableDate", function (timestamp) {
   return utils.displayHumanReadableDate(timestamp);
 });
 
+Handlebars.registerHelper("snip", function (words, max) {
+  return words.substr(0, max);
+});
+
 // Get a setting value
 Handlebars.registerHelper("getSetting", function (settingName) {
   var settingValue = utils.getSetting(settingName);

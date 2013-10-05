@@ -5,19 +5,19 @@
         <div class="span12 print-top">
           <h1>AIGA Honolulu 5-0 Awards Entry Form</h1>
           <h2><span class="project-label">Id:</span>{{_id}}</h2>
-          <br /><br />
-          <p><span class="project-label">Client name: </span>{{client_name}}</p>
-          <p><span class="project-label">Project Name: </span>{{project_name}}</p>
-          {{#if typeEquals type "print"}}<p>Type: </span>Print / Environmental</p>{{/if}}
-          {{#if typeEquals type "web"}}<p>Type: </span>Web</p>{{/if}}
-          {{#if typeEquals type "motion"}}<p>Type: </span>Motion Graphics</p>{{/if}}
-          <p>{{url}}</p>
           <br />
         </div>
       </div>
       <div class="row">
         <div class="span6">
           <div class="print-profile">
+            <p><span class="project-label">Client name: </span>{{client_name}}</p>
+            <p><span class="project-label">Project Name: </span>{{project_name}}</p>
+            {{#if typeEquals type "print"}}<p>Type: </span>Print / Environmental</p>{{/if}}
+            {{#if typeEquals type "web"}}<p>Type: </span>Web</p>{{/if}}
+            {{#if typeEquals type "motion"}}<p>Type: </span>Motion Graphics</p>{{/if}}
+            <p>{{url}}</p>
+            <br />
             <h4>Contact Information</h4>
             {{#with user}}
               <p><span class="project-label">Name:</span>{{profile.contact_name}}</p>
@@ -29,18 +29,16 @@
             {{/with}}
             <br />
           </div>
-          <h4>Notes</h4>
-          <p>{{#if notes}}{{notes}}{{else}}(none){{/if}}</p>
         </div>
         <div class="span6 print-team">
           <h4>Project Team</h4>
 
-          <p><span class="project-label">Art Director: </span>{{art_director}}</p>
-          <p><span class="project-label">Designer: </span>{{designer}}</p>
-          <p><span class="project-label">Illustrator: </span>{{illustrator}}</p>
-          <p><span class="project-label">Copywriter: </span>{{copywriter}}</p>
-          <p><span class="project-label">Photographer: </span>{{photographer}}</p>
-          <p><span class="project-label">Special Consultant: </span>{{special_consultant}}</p>
+          {{#if foo}}<p><span class="project-label">Art Director: </span>{{art_director}}</p>{{/if}}
+          {{#if foo}}<p><span class="project-label">Designer: </span>{{designer}}</p>{{/if}}
+          {{#if foo}}<p><span class="project-label">Illustrator: </span>{{illustrator}}</p>{{/if}}
+          {{#if foo}}<p><span class="project-label">Copywriter: </span>{{copywriter}}</p>{{/if}}
+          {{#if foo}}<p><span class="project-label">Photographer: </span>{{photographer}}</p>{{/if}}
+          {{#if foo}}<p><span class="project-label">Special Consultant: </span>{{special_consultant}}</p>{{/if}}
           {{#if typeEquals type "print"}}
             <p><span class="project-label">Paper: {{paper}}</p>
           {{/if}}
@@ -58,18 +56,21 @@
           {{/if}}
         </div>
       </div>
+
+      <div class="row">
+        <div class="span-12">
+          <h4>Project Description</h4>
+          <p class="fine-print">{{#if project_description}}{{snip project_description 400}}{{else}}(none){{/if}}</p>
+          <h4>Notes</h4>
+          <p class="fine-print">{{#if notes}}{{snip notes 400}}{{else}}(none){{/if}}</p>
+        </div>
+      </div>
+
+
       <div class="row cutout-instructions">
-        <div class="span12 centered">------------------------------------------------------------ Cut these out and attach to all parts of your print entry ------------------------------------------------------------</div>
+        <div class="span12 centered">------------------------------------------------------------ Cut these out and attach to all parts of your print entry -----------------------------------------------------------</div>
       </div>
       <div class="row cutouts">
-        <div class="span6 print-cutout">
-          <h4>{{project_name}}</h4>
-          <h2>{{_id}}</h2>
-        </div>
-        <div class="span6 print-cutout">
-          <h4>{{project_name}}</h4>
-          <h2>{{_id}}</h2>
-        </div>
         <div class="span6 print-cutout">
           <h4>{{project_name}}</h4>
           <h2>{{_id}}</h2>

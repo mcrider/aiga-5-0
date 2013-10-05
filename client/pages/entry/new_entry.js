@@ -17,37 +17,46 @@ Template.new_entry.events({
     $("#project_team").hide().removeClass('hidden').fadeIn(200);
   },
   'submit #newEntryForm': function (e) {
+    var error = false;
     // Form Validation
     if($('#type').val() == "none" || !$('#project_name').val()) {
       Session.set('entryErrorMessage', 'Please ensure all required fields are completed.');
-      return false;
+      error = true;
+    }
+    if($('#notes').val().length > 400 || $('#project_description').val().length > 400) {
+      Session.set('entryErrorMessage', 'Please limit your notes and project description to 400 characters.');
+      error = true;
     }
 
     e.preventDefault();
-    var entryData = utils.getFormValues("#newEntryForm");
-    if($(".motion-url").val() != "") entryData.url = $(".motion-url").val();
-    if($(".print-url").val() != "") entryData.url = $(".print-url").val();
-    if($(".web-url").val() != "") entryData.url = $(".web-url").val();
 
-    entryData.userId = Meteor.userId();
-    entryData.paid = false;
+    if(!error) {
+      var entryData = utils.getFormValues("#newEntryForm");
+      if($(".motion-url").val() != "") entryData.url = $(".motion-url").val();
+      if($(".print-url").val() != "") entryData.url = $(".print-url").val();
+      if($(".web-url").val() != "") entryData.url = $(".web-url").val();
 
-    // Add any uploaded files
-    var files = Session.get('entry-files');
-    var fileArray = [];
-    if (files) fileArray = JSON.parse(Session.get('entry-files'));
-    entryData.files = fileArray;
+      entryData.userId = Meteor.userId();
+      entryData.paid = false;
 
-    Entries.insert(entryData);
-    $.pnotify({
-      text: 'Your entry was added.',
-      type: 'success',
-      icon: false,
-      addclass: "stack-bottomright",
-      stack: utils.pnotify_stack_bottomright,
-      sticker: false
-    });
-    Session.set('newEntry', false);
+      // Add any uploaded files
+      var files = Session.get('entry-files');
+      var fileArray = [];
+      if (files) fileArray = JSON.parse(Session.get('entry-files'));
+      entryData.files = fileArray;
+
+      Entries.insert(entryData);
+      $.pnotify({
+        text: 'Your entry was added.',
+        type: 'success',
+        icon: false,
+        addclass: "stack-bottomright",
+        stack: utils.pnotify_stack_bottomright,
+        sticker: false
+      });
+      Session.set('newEntry', false);
+    }
+    
   },
   'click .filepicker-file': function(e) {
     e.preventDefault();
