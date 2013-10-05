@@ -18,42 +18,42 @@
             {{#if typeEquals type "motion"}}<p>Type: </span>Motion Graphics</p>{{/if}}
             <p>{{url}}</p>
             <br />
-            <h4>Contact Information</h4>
-            {{#with user}}
-              <p><span class="project-label">Name:</span>{{profile.contact_name}}</p>
-              <p><span class="project-label">Email: </span>{{emails.0.address}}</p>
-              <p><span class="project-label">Agency: </span>{{profile.agency_name}}</p>
-              <p><span class="project-label">Address: </span>{{profile.address}}</p>
-              <p><span class="project-label">Phone{{#if profile.fax}}/Fax{{/if}}: </span>{{profile.phone}}{{#if profile.fax}}/{{profile.fax}}{{/if}}</p>
-              <p><span class="project-label">AIGA ID: </span>{{profile.aiga_id}}</p>
-            {{/with}}
-            <br />
+            <h4>Project Team</h4>
+
+            {{#if art_director}}<p><span class="project-label">Art Director: </span>{{art_director}}</p>{{/if}}
+            {{#if designer}}<p><span class="project-label">Designer: </span>{{designer}}</p>{{/if}}
+            {{#if illustrator}}<p><span class="project-label">Illustrator: </span>{{illustrator}}</p>{{/if}}
+            {{#if copywriter}}<p><span class="project-label">Copywriter: </span>{{copywriter}}</p>{{/if}}
+            {{#if photographer}}<p><span class="project-label">Photographer: </span>{{photographer}}</p>{{/if}}
+            {{#if special_consultant}}<p><span class="project-label">Special Consultant: </span>{{special_consultant}}</p>{{/if}}
+            {{#if typeEquals type "print"}}
+              {{#if paper}}<p><span class="project-label">Paper: {{paper}}</p>{{/if}}
+            {{/if}}
+            {{#if typeEquals type "motion"}}
+              {{#if animator}}<p><span class="project-label">Animator: {{animator}}</p>{{/if}}
+            {{/if}}
+            {{#if typeEquals type "web"}}
+              {{#if developer}}<p><span class="project-label">Developer: {{developer}}</p>{{/if}}
+            {{/if}}
+
+            {{#if typeEquals type "web"}}
+              <br />
+              <h4>Technical Information</h4>
+              <p>{{#if tech_info}}{{tech_info}}{{else}}(none){{/if}}</p>
+            {{/if}}
           </div>
         </div>
         <div class="span6 print-team">
-          <h4>Project Team</h4>
-
-          {{#if art_director}}<p><span class="project-label">Art Director: </span>{{art_director}}</p>{{/if}}
-          {{#if designer}}<p><span class="project-label">Designer: </span>{{designer}}</p>{{/if}}
-          {{#if illustrator}}<p><span class="project-label">Illustrator: </span>{{illustrator}}</p>{{/if}}
-          {{#if copywriter}}<p><span class="project-label">Copywriter: </span>{{copywriter}}</p>{{/if}}
-          {{#if photographer}}<p><span class="project-label">Photographer: </span>{{photographer}}</p>{{/if}}
-          {{#if special_consultant}}<p><span class="project-label">Special Consultant: </span>{{special_consultant}}</p>{{/if}}
-          {{#if typeEquals type "print"}}
-            <p><span class="project-label">Paper: {{paper}}</p>
-          {{/if}}
-          {{#if typeEquals type "motion"}}
-            <p><span class="project-label">Animator: {{animator}}</p>
-          {{/if}}
-          {{#if typeEquals type "web"}}
-            <p><span class="project-label">Developer: {{developer}}</p>
-          {{/if}}
-
-          {{#if typeEquals type "web"}}
-            <br />
-            <h4>Technical Information</h4>
-            <p>{{tech_info}}</p>
-          {{/if}}
+          <h4>Contact Information</h4>
+          {{#with user}}
+            <p><span class="project-label">Name:</span>{{profile.contact_name}}</p>
+            <p><span class="project-label">Email: </span>{{emails.0.address}}</p>
+            <p><span class="project-label">Agency: </span>{{profile.agency_name}}</p>
+            <p><span class="project-label">Address: </span>{{profile.address}}</p>
+            <p><span class="project-label">Phone{{#if profile.fax}}/Fax{{/if}}: </span>{{profile.phone}}{{#if profile.fax}}/{{profile.fax}}{{/if}}</p>
+            <p><span class="project-label">AIGA ID: </span>{{profile.aiga_id}}</p>
+          {{/with}}
+          <br />
         </div>
       </div>
 
