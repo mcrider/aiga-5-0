@@ -53,11 +53,11 @@ a {
 /* line 65, styles.scss */
 html {
   min-height: 100%;
-  background: url(/mainsite/images/eaglehalftone.jpg) no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  background: url(/mainsite/images/eaglehalftone.jpg) fixed no-repeat;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto; }
 
 /* line 71, styles.scss */
 body {
