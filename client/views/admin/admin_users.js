@@ -43,7 +43,7 @@ Template.admin_users.events = {
   'click .get-user-data': function(e) {
     data = [["ID","Type","Submitter's Name","Submitter's Email","Submitter's AIGA ID","Project Name","Client Name","Date paid","URL/Paper Company","Art Director","Designer","Illustrator","Copywriter","Photographer","Special Consultant","Paper","Developer","Animator","Technical information","Project Description","Notes"]];
     var blankOrVal = function(val) {
-      if(val) return val.replace(/(\r\n|\n|\r)/gm," ").replace(/,/g , ";").replace(/"/g, '&quot;').replace(/'/g, '&quot;');
+      if(val) return val.replace(/(\r\n|\n|\r)/gm," ").replace(/,/g , ";").replace(/"/g, '\"').replace(/'/g, '\'');
       else return "";
     }
     Entries.find().forEach(function(item) {
