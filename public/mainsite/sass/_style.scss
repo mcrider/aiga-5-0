@@ -282,6 +282,12 @@ h1.title {
   padding: emCalc(80px) 0 0;
   .graphic {
     position: relative;
+    h5 {
+      color: #FFF;
+      text-transform: uppercase;
+      font-size: emCalc(24px);
+      letter-spacing: 0.1em;
+    }
     .early, .final {
       position: absolute;
       top: 40%;
@@ -291,15 +297,12 @@ h1.title {
     }
     .early {
       left: 0;
+      p, h5 {
+        color:#58849c;
+      }
     }
     .final {
       right: 0;
-    }
-    h5 {
-      color: #FFF;
-      text-transform: uppercase;
-      font-size: emCalc(24px);
-      letter-spacing: 0.1em;
     }
   }
   .eagle {
