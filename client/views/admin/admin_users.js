@@ -43,7 +43,7 @@ Template.admin_users.events = {
   'click .get-user-data': function(e) {
     data = [["ID","Type","Submitter's Name","Submitter's Email","Submitter's AIGA ID","Project Name","Client Name","Date paid","URL/Paper Company","Art Director","Designer","Illustrator","Copywriter","Photographer","Special Consultant","Paper","Developer","Animator","Technical information","Project Description","Notes"]];
     var blankOrVal = function(val) {
-      if(val) return val.replace(/(\r\n|\n|\r)/gm," ");
+      if(val) return val.replace(/(\r\n|\n|\r)/gm," ").replace(/,/g , ";").replace(/"/g, '&quot;').replace(/'/g, '&quot;');
       else return "";
     }
     Entries.find().forEach(function(item) {
@@ -86,7 +86,7 @@ Template.admin_users.events = {
     var csvContent = "data:text/csv;charset=utf-8,";
     data.forEach(function(infoArray, index){
        dataString = infoArray.join(",");
-       csvContent += index < infoArray.length ? dataString+ "\n" : dataString;
+       csvContent += dataString + "\n";
     });
 
     var encodedUri = encodeURI(csvContent);
