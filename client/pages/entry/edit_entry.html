@@ -3,7 +3,7 @@
     <h4>Project Information</h4>
     <input class="input-block-level" type="text" value="{{project_name}}" id="project_name" name="project_name" placeholder="Project Name" class="required" />
     <input class="input-block-level" type="text" value="{{client_name}}" id="client_name" name="client_name" placeholder="Client Name" class="required" />
-    <select class="input-block-level" id="type" name="type">
+    <select disabled="disabled" class="input-block-level" id="type" name="type">
       <option>Project Type</option>
       <option value="print" {{#if typeEquals type "print"}}selected="selected"{{/if}}>Print / Environmental</option>
       <option value="web" {{#if typeEquals type "web"}}selected="selected"{{/if}}>Web / Interactive</option>
@@ -11,7 +11,7 @@
     </select>
     {{#if typeEquals type 'print'}}
     <div id="print_fields" class="project_fields">
-      <input class="input-block-level prin-url" value="{{url}}" type="text" id="url" name="url" placeholder="Print Company" />
+      <input class="input-block-level print-url" value="{{url}}" type="text" id="url" name="url" placeholder="Print Company" />
       <a class="btn filepicker-file" title="File(s)"><i class="icon-left icon-file"></i>Add File(s)</a>
       {{#isolate}}<ul class='file-list'>{{#each files}}<li><i class="file-icon icon-remove-sign"></i> <a href="{{url}}" target="_blank" class="uploaded-file">{{filename}}</a>{{else}}<span class="no-files">No Files</span>{{/each}}</li></ul>{{/isolate}}
     </div>
