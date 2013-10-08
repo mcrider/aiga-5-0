@@ -60,6 +60,8 @@ Template.admin_users.events = {
         entry.aiga_id = blankOrVal(user.profile.aiga_id); // Submitter's AIGA ID
       }
 
+      entry.project_name = blankOrVal(item.project_name); // Project Name
+      entry.client_name = blankOrVal(item.client_name); // Client Name
       entry.url = blankOrVal(item.url); // URL/Paper Company
       entry.art_director = blankOrVal(item.art_director); // Art Director
       entry.designer = blankOrVal(item.designer); // Designer
