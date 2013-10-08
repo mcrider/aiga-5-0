@@ -79,7 +79,6 @@ Template.admin_users.events = {
       data.push(entry);
     });
 
-    debugger;
     var json = JSON.stringify(data);
     var blob = new Blob([json], {type: "application/json"});
     var url  = URL.createObjectURL(blob);
