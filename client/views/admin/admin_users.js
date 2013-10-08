@@ -40,8 +40,57 @@ Template.admin_users.events = {
     e.preventDefault();
     Session.set('adminUserId', this._id);
   },
+  'click .get-file-data': function(e) {
+    var data = [];
+    var blankOrVal = function(val) {
+      if(val) return val.replace(/(\r\n|\n|\r)/gm," ").replace(/,/g , ";").replace(/"/g, '\"').replace(/'/g, '\'');
+      else return "";
+    }
+
+    Entries.find().forEach(function(item) {
+      var user = Meteor.users.findOne(item.userId);
+      entry = {};
+
+      entry.id = blankOrVal(item._id); // ID
+      if(user) {
+        entry.contact_name = blankOrVal(user.profile.contact_name); // Submitter's Name
+        entry.email = blankOrVal(user.emails[0].address); // Submitter's Email
+        entry.phone = blankOrVal(user.profile.phone); // Submitter's Agency
+        entry.agency_name = blankOrVal(user.profile.agency_name); // Submitter's Agency
+        entry.aiga_id = blankOrVal(user.profile.aiga_id); // Submitter's AIGA ID
+      }
+
+      entry.url = blankOrVal(item.url); // URL/Paper Company
+      entry.art_director = blankOrVal(item.art_director); // Art Director
+      entry.designer = blankOrVal(item.designer); // Designer
+      entry.illustrator = blankOrVal(item.illustrator); // Illustrator
+      entry.copywriter = blankOrVal(item.copywriter); // Copywriter
+      entry.photographer = blankOrVal(item.photographer); // Photographer
+      entry.special_consultant = blankOrVal(item.special_consultant); // Special Consultant
+      entry.paper = blankOrVal(item.paper); // Paper
+      entry.developer = blankOrVal(item.developer); // Developer
+      entry.animator = blankOrVal(item.animator); // Animator
+      entry.tech_info = blankOrVal(item.tech_info); // Technical information
+      entry.project_description = blankOrVal(item.project_description); // Project Description
+      entry.notes = blankOrVal(item.notes); // Notes
+
+      if(item.files) entry.files = item.files;
+
+      data.push(entry);
+    });
+
+    debugger;
+    var json = JSON.stringify(data);
+    var blob = new Blob([json], {type: "application/json"});
+    var url  = URL.createObjectURL(blob);
+
+    var a = document.createElement('a');
+    a.download    = "entries.json";
+    a.href        = url;
+    a.click();
+  },
   'click .get-user-data': function(e) {
-    data = [["ID","Type","Submitter's Name","Submitter's Email","Submitter's AIGA ID","Project Name","Client Name","Date paid","URL/Paper Company","Art Director","Designer","Illustrator","Copywriter","Photographer","Special Consultant","Paper","Developer","Animator","Technical information","Project Description","Notes"]];
+    data = [["ID","Type","Submitter's Name","Submitter's Email","Submitter's Phone","Submitter's Agency","Submitter's AIGA ID","Project Name","Client Name","Date paid","URL/Paper Company","Art Director","Designer","Illustrator","Copywriter","Photographer","Special Consultant","Paper","Developer","Animator","Technical information","Project Description","Notes"]];
     var blankOrVal = function(val) {
       if(val) return val.replace(/(\r\n|\n|\r)/gm," ").replace(/,/g , ";").replace(/"/g, '\"').replace(/'/g, '\'');
       else return "";
@@ -55,8 +104,10 @@ Template.admin_users.events = {
       if(user) {
         entry.push(blankOrVal(user.profile.contact_name)); // Submitter's Name
         entry.push(blankOrVal(user.emails[0].address)); // Submitter's Email
+        entry.push(blankOrVal(user.profile.phone)); // Submitter's Agency
+        entry.push(blankOrVal(user.profile.agency_name)); // Submitter's Agency
         entry.push(blankOrVal(user.profile.aiga_id)); // Submitter's AIGA ID
-      } else entry.concat(["","",""]);
+      } else entry.concat(["","","","",""]);
       entry.push(blankOrVal(item.project_name)); // Project Name
       entry.push(blankOrVal(item.client_name)); // Client Name
       if(!item.paid) {
