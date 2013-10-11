@@ -9,8 +9,9 @@
     <p>Phone{{#if user.profile.fax}}/Fax{{/if}}: {{user.profile.phone}}{{#if user.profile.fax}}/{{user.profile.fax}}{{/if}}</p>
     <p>AIGA ID: {{user.profile.aiga_id}}</p>
   </div>
-
-  <h4>Entries</h4>
+  <a href="#" class="btn set-as-paid"><i class="icon-thumbs-up"></i> Set as paid</a>
+  <a href="#" class="btn set-as-unpaid" style="margin-left: 6px;"><i class="icon-thumbs-down"></i> Set as unpaid</a>
+  <h4 style="margin-top: 10px;">Entries</h4>
   {{#each entries}}
     <div class="row entry">
       <div class="span3">

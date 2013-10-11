@@ -57,7 +57,16 @@ Template.admin_entry_list.events({
       $entryOverviewContainer.show();
       $(this).find('i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
     }
-
+  },
+  'click .set-as-paid': function(e) {
+    e.preventDefault();
+    var userId = Session.get('adminUserId');
+    if(userId) Meteor.call('setAsPaid', userId);
+  },
+  'click .set-as-unpaid': function(e) {
+    e.preventDefault();
+    var userId = Session.get('adminUserId');
+    if(userId) Meteor.call('setAsUnpaid', userId);
   }
 });
 
