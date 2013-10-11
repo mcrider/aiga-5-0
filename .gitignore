@@ -2,3 +2,5 @@ meteor.sh
 
 
 *.scssc
+
+public/entry_files/
