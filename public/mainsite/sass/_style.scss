@@ -112,6 +112,18 @@ body > section {
         color:#fff;
       }
     }
+    ul li:last-child {
+      //pointer-events: none;
+      //cursor: default;
+      a {
+        color: $red !important;
+      }
+      &:hover a {
+        //pointer-events: none;
+        //cursor: default;
+        //color: #DDD !important;
+      }
+    }
     .dropdown > li a {
       padding-top: 20px;
       padding-bottom: 20px;
@@ -272,7 +284,7 @@ h1.title {
 ///////////////////////////////////
 
 #intro {
-  min-height: 100%;
+  //min-height: 100%;
   background: url(../images/bg-intro.jpg);
   @media #{$medium-max} {
     background: none !important;
@@ -303,6 +315,9 @@ h1.title {
     }
     .final {
       right: 0;
+      p, h5 {
+        color:#58849c;
+      }
     }
   }
   .eagle {
@@ -381,9 +396,9 @@ h1.title {
   }
   a.btn {
     width:33.33%;
-    background:$red url('../images/tickets.png') no-repeat 12px center;
+    //background:$red url('../images/tickets.png') no-repeat 12px center;
     background-size:40px;
-    padding-left:60px;
+    //padding-left:60px;
   }
   .panel {
     background: #fff url(../images/ornate-top.gif) no-repeat;
