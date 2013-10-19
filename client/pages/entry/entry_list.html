@@ -1,7 +1,7 @@
 <template name="entry_list">
   <div class="row">
     <span class="span4"><h2>List of Entries</h2></span>
-    <span class="span6"><p>New entries have been disabled.  You may still edit your existing entries until October 18, 2013.</p></span>
+    <span class="span6"><p>The entry system has been disabled.  See you at the show!</p></span>
   </div>
 
   {{#each entries}}
@@ -16,8 +16,6 @@
         {{#isolate}}{{> edit_entry}}{{/isolate}}
       </div>
       <div class="span2 entry-buttons">
-        <a class="btn remove-project pull-right"><i class="icon-middle icon-remove"></i></a>
-        <a class="btn edit-project pull-right">Edit</a>
         {{#if paid}}<p class="squared-away pull-right">Paid on {{humanReadableDate paid}}</p>{{/if}}
       </div>
     </div>
