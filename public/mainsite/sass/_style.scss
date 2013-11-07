@@ -283,6 +283,68 @@ h1.title {
 
 ///////////////////////////////////
 
+#eventdone {
+  padding:0;
+  .copy {
+    position:relative;
+    top:525px;
+    z-index:98;
+    margin-top:-450px;
+    background:#eee;
+    color:$body-bg;
+    @include box-shadow(rgba(0,0,0,.5) 0 0 80px);
+    padding:30px;
+    max-height:450px;
+    @media #{$small-max} {
+      position:inherit;
+      top:auto;
+      margin-top:0;
+    }
+  }
+  .photolink,
+  .winnerbooklink {
+    min-height:600px;
+    @include box-shadow(inset rgba(0,0,0,.5) 0 0 150px);
+    transition: box-shadow 500ms ease-in;
+    @media #{$small-max} {
+      min-height:300px;
+    }
+    &:hover {
+      @include box-shadow(inset rgba(0,0,0,.75) 0 0 300px);
+    }
+    p, h2 {
+      position:relative;
+      top:300px;
+      color:#fff;
+      text-shadow:0 0 10px rgba(0,0,0,.75);
+      margin:0;
+      @media #{$small-max} {
+        top:120px;
+        text-align:center;
+      }
+    }
+    h2 {
+      text-transform: uppercase;
+    }
+  }
+  .photolink {
+    background: url(../images/bg-missouri.jpg);
+    
+    @media #{$small-max} {
+      background-position:left center;
+    }
+  }
+  .winnerbooklink {
+    background: url(../images/bg-50book.jpg);
+    p, h2 {
+      text-align:right;
+      @media #{$small-max} {
+        text-align:center;
+      }
+    }
+  }
+}
+
 #intro {
   //min-height: 100%;
   background: url(../images/bg-intro.jpg);
