@@ -7730,7 +7730,7 @@ h1.title {
 /* line 365, ../sass/_style.scss */
 #intro .graphic .early, #intro .graphic .final {
   position: absolute;
-  top: 40%;
+  top: 75%;
 }
 @media only screen and (max-width: 768px) {
   /* line 365, ../sass/_style.scss */
