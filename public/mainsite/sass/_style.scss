@@ -112,18 +112,18 @@ body > section {
         color:#fff;
       }
     }
-    ul li:last-child {
-      //pointer-events: none;
-      //cursor: default;
-      a {
-        color: $red !important;
-      }
-      &:hover a {
-        //pointer-events: none;
-        //cursor: default;
-        //color: #DDD !important;
-      }
-    }
+    // ul li:last-child {
+    //   //pointer-events: none;
+    //   //cursor: default;
+    //   a {
+    //     color: $red !important;
+    //   }
+    //   &:hover a {
+    //     //pointer-events: none;
+    //     //cursor: default;
+    //     //color: #DDD !important;
+    //   }
+    // }
     .dropdown > li a {
       padding-top: 20px;
       padding-bottom: 20px;
@@ -285,20 +285,33 @@ h1.title {
 
 #eventdone {
   padding:0;
+  width: 100%;
+  float: left;
   .copy {
     position:relative;
-    top:525px;
+    top: 500px;
     z-index:98;
     margin-top:-450px;
     background:#eee;
     color:$body-bg;
+    min-height: 430px;
     @include box-shadow(rgba(0,0,0,.5) 0 0 80px);
     padding:30px;
-    max-height:450px;
     @media #{$small-max} {
       position:inherit;
       top:auto;
       margin-top:0;
+      min-height:0;
+    }
+    p {
+      &:first-child {
+        @media screen and (min-width:1150px) {
+          margin-top: 50px;
+        }
+      }
+      &:last-child {
+          margin-bottom:0;
+      }
     }
   }
   .photolink,
@@ -306,6 +319,10 @@ h1.title {
     min-height:600px;
     @include box-shadow(inset rgba(0,0,0,.5) 0 0 150px);
     transition: box-shadow 500ms ease-in;
+    min-height: 680px;
+    @media #{$small} {
+      margin-top: -130px;
+    }
     @media #{$small-max} {
       min-height:300px;
     }
@@ -602,7 +619,7 @@ h1.title {
   p {
     @include no-pm;
     color:$dark-grey;
-    font-size:28px;
+    font-size:20px;
     font-style: italic;
     @media #{$small-max} {
       font-size: 18px;
@@ -664,7 +681,7 @@ h1.title {
         min-height:320px;
         background:url('../images/bg-thumbbd.jpg') no-repeat top center;
         img {
-          margin: 40px auto 60px;
+          margin: 20px auto 60px;
           display: block;
           max-width: 80%;
           max-height: 260px;
@@ -725,7 +742,6 @@ h1.title {
       font-size: 18px;
     }
     &:last-child {
-      color:$red;
       margin-bottom:0;
     }
   }
